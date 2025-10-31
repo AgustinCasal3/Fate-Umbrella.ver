@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorFooter {
+    display: flex;
+
+    align-content: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: auto;
+
+    border-top: 1px solid black;
+}
+
+.devs {
+    width: 25vw;
+    height: auto;
+}
+
+.dev {
+    display: flex;
+    width: auto;
+    height: 15vh;
+}
+
+.dev a {
+    text-decoration: none;
+}
+
+.devImg {
+    display: flex;
+
+    height: 15vh;
+    width: 15vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.dev img {
+    border-radius: 50%;
+
+    width: 10vh;
+    height: 10vh;
+}
+
+.devText {
+    display: flex;
+
+    align-items: center;
+    justify-content: left;
+}
+
+.devText p {
+    font-size: 1.3em;
+
+    
+}
+
+.copyImg {
+    display: flex;
+    
+    height: 20vh;
+    width: 100%;
+    
+    align-items: center;
+    justify-content: center;
+    
+    margin: 2.5vh 0;
+}
+
+.copyImg img {
+    width: auto;
+    height: 100%;
+}
+
+.copyText {
+    margin: 2.5vh 0;
+}
+
+.copyText p {
+    text-align: center;
+}
+
+.legal {
+    display: flex;
+
+    height: 30vh;
+    width: 25vw;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.legalText p {
+    margin: 1vh 2.5vh 1vh 0;
+}
+
+.legalText a {
+    margin: 1vh 0;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: black;
+
+    transition: 0.15s;
+}
+
+.legalText a:hover {
+    color: gray;
+}
