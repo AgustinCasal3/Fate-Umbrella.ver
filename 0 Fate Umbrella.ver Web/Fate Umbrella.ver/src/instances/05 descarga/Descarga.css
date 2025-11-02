@@ -1,0 +1,139 @@
+.descarga {
+    width: 100%;
+    height: 92.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Descarga/Fondo.png);
+    background-position: top;
+    background-size: cover;
+}
+
+.contenedorDescarga {
+    width: auto;
+    height: auto;
+
+    border-radius: 2vh;
+
+    /* background-color: rgba(255, 255, 255, 0.682); */
+}
+
+.tituloDescarga {
+    width: 100%;
+
+    margin: 5vh 0;
+}
+
+.tituloDescarga h1 {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.botonesDescarga {
+    width: 100%;
+    height: auto;
+    
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonDescarga {
+    border-radius: 2.5vh;
+
+    width: 15vw;
+    height: auto;
+    margin: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+}
+
+.botonDescarga img {
+    height: 5vh;
+    width: 5vh;
+
+    padding: 2.5vh 0;
+    margin-right: 2.5vh;
+}
+
+.botonDescarga span {
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* Windows 10 */
+.w10 {
+    transition: all 0.25s ease-in-out;
+}
+
+.w10:hover {
+  background-color: #0078D7; /* azul Windows 10 */
+  filter: drop-shadow(0px 0px 5px #0078D780);
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.w10:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.15s ease;
+}
+
+.w10:hover span {
+  color: white;
+}
+
+/* Windows 11 */
+.w11 {
+    transition: all 0.25s ease-in-out;
+}
+
+.w11:hover {
+  background-color: #0099FF; /* azul Windows 11 */
+  filter: drop-shadow(0px 0px 5px #0099ff80);
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.w11:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.15s ease;
+}
+
+.w11:hover span {
+  color: white;
+}
+
+/* Mac */
+.mac {
+    transition: all 0.25s ease-in-out;
+}
+
+.mac:hover {
+  background-color: #000000; /* negro de Apple */
+  filter: drop-shadow(0px 0px 5px #00000080);
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.mac:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.15s ease;
+}
+
+.mac:hover span {
+  color: white;
+}

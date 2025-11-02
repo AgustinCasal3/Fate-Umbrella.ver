@@ -112,6 +112,8 @@
 .personajes {
     width: 100%;
     height: auto;
+
+    border-top: 1px solid lightgray;
 }
 
 .fichaPersonaje {

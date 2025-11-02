@@ -1,0 +1,214 @@
+.registro {
+    width: 100%;
+    height: 92.5vh;
+
+    background-image: url(../../../imgs/Registro/ChaldeaInside.png);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorRegistro {
+    width: auto;
+    height: auto;
+
+    padding: 2.5vh 7.5vh;
+
+    background-color: rgba(255, 255, 255, 0.79);
+    border-radius: 2.5vh;
+}
+
+.imagenRegistro {
+    width: 30vw;
+    height: 100%;
+
+    margin-left: 10vw;
+
+    background-image: url(../../../imgs/Registro/RomaniTorso.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.47));
+}
+
+.tituloRegistro {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5vh 0;
+}
+
+.tituloRegistro h1 {
+    font-size: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formularioRegistro {
+    width: 100%;
+    height: auto;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formularioRegistro form {
+    width: 30vw;
+}
+
+.formularioRegistro form label {
+    width: 100%;
+
+    font-size: 1.5em;
+
+    margin-bottom: 1vh;
+    
+    border: none;
+    
+    display: block;
+}
+
+.formularioRegistro form input {
+    width: 100%;
+    
+    font-size: 1.5em;
+
+    margin-bottom: 5vh;
+
+    border: none;
+    border-bottom: 1px solid black;
+
+    background: none;
+
+    display: block;
+    transition: 0.3s ease;
+}
+
+/* quita el borde o glow al enfocar */
+.formularioRegistro input:focus {
+
+    padding-bottom: 0.5vh;
+    margin-bottom: 4.5vh;
+    outline: none;
+    box-shadow: none;
+    transition: 0.3s ease;
+}
+
+/* quita fondo amarillo o gris del autocompletado (Chrome/Safari) */
+.formularioRegistro input:-webkit-autofill,
+.formularioRegistro input:-webkit-autofill:hover,
+.formularioRegistro input:-webkit-autofill:focus,
+.formularioRegistro input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: black !important;
+}
+
+/* opcional: evita que cambie el fondo al autocompletar */
+.formularioRegistro input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+}
+
+
+.formularioRegistro button {
+    width: 90%;
+    height: 7vh;
+
+    margin: 0.25vh 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #ffd700, #ffbe19, #fff3b0);
+    background-size: 200%;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+    
+    border: 1px solid goldenrod;
+    border-radius: 5vh;
+
+    transition: 0.3s ease;
+
+    color: rgb(49, 41, 12);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+
+    transition: background-position 0.6s ease, transform 0.3s, border 0.3s, 0.3s ease;
+}
+
+.formularioRegistro button:hover {
+    box-shadow: 0 4px 10px rgba(139, 119, 0, 0.575);
+    border: 1px solid rgb(255, 225, 119);
+    
+    background-position: right center;
+
+    transform: scale(1.025);
+
+    cursor: pointer;
+}
+
+.infoRegistro {
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+
+    padding-top: 8vh;
+    padding-bottom: 15vh;
+}
+
+.info {
+    width: 100%;
+    height: 45vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info img {
+    height: auto;
+    max-height: 60vh;
+
+    width: auto;
+    max-width: 20vw;
+
+    margin: 5vh;
+}
+
+.textoInfo {
+    width: 60vw;
+}
+
+.textoInfo h2 {
+    font-size: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5vh;
+}
+
+.textoInfo p {
+    font-size: 1.2em;
+    text-align: center;
+
+    margin: 1.25vh 0;
+}

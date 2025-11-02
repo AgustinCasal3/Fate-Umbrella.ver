@@ -8,7 +8,7 @@ export function Login() {
 
     return (
         <>
-            { Header() }
+            <Header></Header>
             <section className="login">
                 <div className="contenedorLogin">
                     <div className="imagenLogin"></div>
@@ -21,7 +21,7 @@ export function Login() {
                             <input type="text" />
                             
                             <label>Password</label>
-                            <input type="text" hidden/>
+                            <input type="password"/>
 
                             <button>Login</button>
                         </form>
@@ -30,7 +30,7 @@ export function Login() {
                     </div>
                 </div>
             </section>
-            { Footer() }
+            <Footer></Footer>
         </>
     )
 }

@@ -8,7 +8,7 @@ export function Home() {
     return (
 
         <>
-            { Header() }
+            <Header></Header>
             <div className="contenedorHome">
                 <section className="titulo">
                     <div className="tituloContenido">
@@ -19,7 +19,7 @@ export function Home() {
                             <h2>"No es un deseo propio, es una leccion para el mundo que no aprecia la belleza del arte." - Emir</h2>
                         </div>
                         <div className="tituloButton">
-                            <a href="#">Register Now</a>
+                            <a href="/register">Register Now</a>
                         </div>
                     </div>
                 </section>
@@ -226,7 +226,7 @@ export function Home() {
                     </div>
                 </section>
             </div>
-            { Footer() }
+            <Footer></Footer>
         </>
     )
 }

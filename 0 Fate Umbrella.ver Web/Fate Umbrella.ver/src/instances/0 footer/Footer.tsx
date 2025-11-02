@@ -38,6 +38,7 @@ export function Footer() {
                     </div>
                     <div className="legal">
                         <div className="legalText">
+                            <a href="/empresa">sobre nosotros :3</a>
                             <a href="">termino y cindisione</a>
                             <a href="">aviso legal</a>
                             <p>no somo produtore no nos denunsie</p>
