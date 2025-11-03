@@ -1,0 +1,346 @@
+.empresa {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-image: url(../../../imgs/Empresa/FondoEmpresa.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Capa superpuesta para blur y opacidad */
+.empresa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: inherit; /* usa la misma imagen de fondo */
+    background-position: center;
+    background-size: cover;
+
+    filter: blur(6px) brightness(1.2); /* blur + un poco menos de brillo */
+    opacity: 0.7; /* controla la transparencia */
+    z-index: 0;
+}
+
+/* Asegura que el contenido quede por encima */
+.empresa > * {
+    position: relative;
+    z-index: 1;
+}
+
+.nombreEmpresa {
+    user-select: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombreEmpresa img {
+    margin: 5vh;
+    max-height: 25vh;
+
+    max-width: 90vw;
+
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.separadorBlanco {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.integrantesEmpresa h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 2em;
+    margin-top: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineaBlanca {
+    width: 50vw;
+
+    border: 2px solid white;
+}
+
+.ownersEmpresa {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.owner {
+    user-select: none;
+
+    margin: 2.5vh;
+}
+
+.owner a {
+    color: black;
+    text-decoration: none;
+
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.owner img {
+    width: 40vh;
+    max-width: 40vw;
+    height: 40vh;
+    max-height: 40vw;
+    
+
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.owner span {
+    width: 100%;
+    height: auto;
+
+    filter: drop-shadow(0px 0px 5px white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empleadosEmpresa {
+    width: 100%;
+    height: auto;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.empleado {
+    user-select: none;
+
+    width: 30vh;
+    max-width: 20vw;
+    height: 100%;
+    max-height: 15vw;
+
+    margin: 5vh 2.5vh;
+    background-color: rgba(255, 255, 255, 0.746);
+    border-radius: 2.5vh;
+
+    transition: 0.3s ease;
+}
+
+.empleado:hover {
+    transform: scale(1.025);
+}
+
+.empleado img {
+    width: 15vh;
+    height: 15vh;
+
+    border-radius: 50%;
+
+    filter: drop-shadow(0px 0px 10px white);
+
+    margin: 2.5vh;
+}
+
+.empleado a {
+    color: black;
+    text-decoration: none;
+}
+
+.empleado span {
+    width: 100%;
+
+    margin-bottom: 2.5vh;
+
+    font-size: 1.2em;
+    font-weight: bold;
+
+    filter: drop-shadow(0px 0px 5px white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quienesSomos {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-repeat: repeat;
+    background-size: 50px;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.contenedorQuienesSomos {
+    width: 80%;
+
+    margin: 5vh 0;
+}
+
+.contenedorQuienesSomos h2 {
+    font-size: 4em;
+    margin: 5vh 0;
+
+    font-weight: normal;
+}
+
+.contenedorQuienesSomos p {
+    margin: 5vh 10vh;
+    font-size: 1.8em;
+    text-indent: 4em;
+
+    font-weight: lighter;
+}
+
+.misionVision {
+    width: 100%;
+    height: 80vh;
+
+    background-image: url(../../../imgs/Empresa/FondoMV.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 3px solid #C9A740;
+    border-bottom: 3px solid #C9A740;
+}
+
+.contenedorMisionVision {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separadorMV {
+    height: calc(100% - 5vh);
+    width: 3px;
+
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    filter: drop-shadow(0px 0px 8px rgba(255, 215, 100, 0.4));
+
+    margin: 0 2.5vw;
+}
+
+.mision, .vision {
+    width: 40vw;
+    height: 100%;
+
+    transition: 0.5s ease;
+}
+
+.mision:hover, .vision:hover {
+    transform: translateY(-5px);
+}
+
+.mision h2, .vision h2 {
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    font-size: 4em;
+
+    width: 100%;
+    height: 30%;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision p, .vision p {
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    height: 70%;
+    padding: 0 10vh;
+
+    font-size: 1.5em;
+    line-height: 1.6em;
+
+    text-align: center;
+}
+
+.valores {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-repeat: repeat;
+    background-size: 50px;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.contenedorValores {
+    width: 80%;
+
+    margin: 5vh 0;
+}
+
+.contenedorValores h2 {
+    font-size: 4em;
+    margin: 5vh 0;
+
+    font-weight: normal;
+}
+
+.contenedorValores p {
+    padding: 2.5vh 10vh;
+    font-size: 1.8em;
+
+    font-weight: lighter;
+
+    transition: 0.5s ease;
+}
+
+.contenedorValores p:hover {
+    padding-left: 12vh;
+}
