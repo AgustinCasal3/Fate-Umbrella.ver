@@ -66,7 +66,7 @@ export function Home() {
 
                     <div className="trailerVideo">
                         <iframe className='botonPlay'
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            src="https://www.youtube.com/embed/11vAh33_2eI"
                             title="Trailer ultima version">
                         </iframe>
                     </div>
@@ -205,22 +205,27 @@ export function Home() {
                             <div className="listaVersiones">
 
                                 <label className="opcionVersionado">
-                                    <input type="radio" name="version" checked />
+                                    <input type="radio" name="version" />
                                     <div className="imgSelector"></div>
                                     <span>0.01 "El Comienzo" - 01/11/2025</span>
                                 </label>
 
                                 <label className="opcionVersionado">
-                                    <input type="radio" name="version" checked />
+                                    <input type="radio" name="version" />
                                     <div className="imgSelector"></div>
                                     <span>0.02 "La Catastrofe Estelar" - 16/11/2025</span>
                                 </label>
                                 
                                 <label className="opcionVersionado">
-                                    <input type="radio" name="version" checked />
+                                    <input type="radio" name="version" />
                                     <div className="imgSelector"></div>
                                     <span>0.03 "La Caida del Imperio Tehuelche" - 30/11/2025</span>
                                 </label>
+
+                                <a href="/versionado" className="opcionVersionado">
+                                    <span>Todas las Versiones</span>
+                                </a>
+
                             </div>
                         </div>
                     </div>

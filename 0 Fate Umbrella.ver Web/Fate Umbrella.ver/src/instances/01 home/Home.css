@@ -552,6 +552,22 @@
     border-bottom: 1px solid black;
 }
 
+.listaVersiones a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    height: 3vh;
+}
+
+.listaVersiones a span{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    width: 100%;
+}
+
 .opcionVersionado {
     display: flex;
     

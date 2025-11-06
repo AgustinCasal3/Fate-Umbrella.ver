@@ -26,7 +26,7 @@ export function Login() {
                             <button>Login</button>
                         </form>
                         <p>Olvidaste tu contraseña? <a href="">Recuperar Contraseña</a></p>
-                        <p>No tenes una cuenta? <a href="">Registrarse Ahora</a></p>
+                        <p>No tenes una cuenta? <a href="/register">Registrarse Ahora</a></p>
                     </div>
                 </div>
             </section>

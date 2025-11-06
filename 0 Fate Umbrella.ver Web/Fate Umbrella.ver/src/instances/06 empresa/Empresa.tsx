@@ -6,6 +6,13 @@ import { Footer } from '../0 footer/Footer';
 export function Empresa() {
     document.title = 'CunnyWorks | Fate/Umbrella.ver';
 
+    function abrirDonacion() {
+        window.open(
+            "https://www.paypal.com/paypalme/ElParaguaCorp?country.x=AR&locale.x=es_XC",
+            "_blank"
+        );
+    }
+
     return (
         <>
             <Header/>
@@ -47,87 +54,87 @@ export function Empresa() {
                     <div className="empleadosEmpresa">
                         {/* Componente empleado */}
                         <div className="empleado">
-                            <a href="https://danbooru.donmai.us/posts/7704321?q=possummachine+kokona_%28blue_archive%29+" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/7704321" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Kokona.png" alt="Foto de Kokona" />
                             </a>
-                            <span><a href="">Kokona</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/7704321">Kokona</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/10108243" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Kisaki.png" alt="Foto de Kisaki" />
                             </a>
-                            <span><a href="">Kisaki</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/10108243">Kisaki</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/9937494" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Arona.png" alt="Foto de Arona" />
                             </a>
-                            <span><a href="">Arona</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/9937494">Arona</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/9827519" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Ibuki.png" alt="Foto de Ibuki" />
                             </a>
-                            <span><a href="">Ibuki</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/9827519">Ibuki</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/10140821" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Hoshino.png" alt="Foto de Hoshino" />
                             </a>
-                            <span><a href="">Hoshino</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/10140821">Hoshino</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/10172147" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Shiroko.png" alt="Foto de Shiroko" />
                             </a>
-                            <span><a href="">Shiroko</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/10172147">Shiroko</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/9871095" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Arisu.png" alt="Foto de Arisu" />
                             </a>
-                            <span><a href="">Arisu</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/9871095">Arisu</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/10116423" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Serika.png" alt="Foto de Serika" />
                             </a>
-                            <span><a href="">Serika</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/10116423">Serika</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/10102895" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Hikari.png" alt="Foto de Hikari" />
                             </a>
-                            <span><a href="">Hikari</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/10102895">Hikari</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/9760705" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Midori.png" alt="Foto de Midori" />
                             </a>
-                            <span><a href="">Midori</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/9760705">Midori</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/9566104" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Momoi.png" alt="Foto de Momoi" />
                             </a>
-                            <span><a href="">Momoi</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/9566104">Momoi</a></span>
                         </div>
 
                         <div className="empleado">
-                            <a href="" target='_blank'>
+                            <a href="https://danbooru.donmai.us/posts/9628579" target='_blank'>
                                 <img src="../../../imgs/Empresa/Workers/Seia.png" alt="Foto de Seia" />
                             </a>
-                            <span><a href="">Seia</a></span>
+                            <span><a href="https://danbooru.donmai.us/posts/9628579">Seia</a></span>
                         </div>                        
                     </div>
                 </div>
@@ -218,7 +225,7 @@ export function Empresa() {
                     </div>
                     <h3>En CunnyWorks siempre estamos en busca de nuevos taletos</h3>
                     <div className="contenedorButtonReclutamiento">
-                        <button>Cuentanos tu historia</button>
+                        <button onClick={abrirDonacion}>Cuentanos tu historia</button>
                     </div>
                     <div className="contenedorImgReclutamiento">
                         <img src="../../../imgs/Empresa/SeparadorDiv2.png" alt="" className='invertidoVertical'/>
