@@ -60,8 +60,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets\Scripts\Historia.cs" />
     <Compile Include="Assets\Assets\Scripts\DatosJugador.cs" />
+    <Compile Include="Assets\Assets\Scripts\ControlTransicion.cs" />
     <Compile Include="Assets\Assets\Scripts\MenuUIController.cs" />
+    <Compile Include="Assets\Assets\Scripts\ControladorNovelaVisual.cs" />
+    <Compile Include="Assets\Assets\Scripts\LineaDialogo.cs" />
     <Compile Include="Assets\Assets\Scripts\ControlEscenas.cs" />
   </ItemGroup>
   <ItemGroup>
