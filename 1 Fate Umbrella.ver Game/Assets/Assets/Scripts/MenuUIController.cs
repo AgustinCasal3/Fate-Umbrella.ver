@@ -9,7 +9,7 @@ public class MenuUIController : MonoBehaviour
     // 1. Referencia al Script de Datos
     public DatosJugador datosJugador;
 
-    // 2. Referencias a la Interfaz Visual (Arrastrar desde el Inspector)
+    // 2. Referencias a la Interfaz Visual 
     public TextMeshProUGUI textoNombre;
     public TextMeshProUGUI textoNivel;
     public Slider barraExperiencia;
@@ -32,5 +32,13 @@ public class MenuUIController : MonoBehaviour
             barraExperiencia.maxValue = datosJugador.experienciaNecesaria;
             barraExperiencia.value = datosJugador.experienciaActual;
         }
+    }
+    public string idProgresoHistoria = "1.01";
+
+    void Awake()
+    {
+        // Al iniciar el juego, intenta cargar el ID guardado.
+        // Si no encuentra "ProgresoHistoria", usará "1.01" como valor inicial.
+        idProgresoHistoria = PlayerPrefs.GetString("ProgresoHistoria", "1.01");
     }
 }

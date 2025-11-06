@@ -9,9 +9,10 @@ public class LineaDialogo
     public string NombrePersonaje;
 
     // El texto del diálogo
-    [TextArea(3, 10)] // Para tener un área de texto grande en el Inspector
+    [TextArea(3, 10)]  //inspector
     public string Texto;
 
-    // (Opcional) Nombre del Sprite a cargar, si cambias de personaje
+    // Nombre del Sprite a cargar, 
     public Sprite SpritePersonaje;
+
 }
