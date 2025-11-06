@@ -9,7 +9,7 @@ export function Header() {
                         
                         <a href="/">Home</a>
                         <a href="/login">Login</a>
-                        <a href="/register">Register</a>
+                        <a href="">Guide</a>
                         <a href="/download">Download</a>
                         
                         {/* <a href="">News</a>
@@ -21,15 +21,15 @@ export function Header() {
                     </div>
                     <div className="links">
                         <a href="/empresa">Company</a>
+                        <a href="/account">Cuenta</a>
 
                         {/* <a href="">Gallery</a> */}
-                        <a href="">Guide</a>
-                        <a href="">Twitter</a>
+                        <a href="https://x.com/ItzAgus386" target='_blank'>Twitter</a>
                         <a href="">Facebook</a>
                     </div>
                 </div>
             </header>
-            <div className="espaciadorHeader"></div>
+            <div className="espaciadorHeader" id='principio'></div>
         </>
     )
 }

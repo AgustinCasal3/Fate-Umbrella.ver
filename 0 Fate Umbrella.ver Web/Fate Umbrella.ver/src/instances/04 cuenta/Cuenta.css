@@ -1,0 +1,185 @@
+/* CUENTA */
+
+.cuenta {
+    width: 100%;
+    height: auto;
+
+    border: 1px solid black;
+}
+
+.contenedorCuenta {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-position: center;
+    background-size: cover;
+
+    padding: 5vh 0;
+
+    border: 2px solid burlywood;
+}
+
+.contenedorCuenta img {
+    width: 50vh;
+    height: 50vh;
+
+    border: 2px solid black;
+    border-radius: 5vh;
+
+    margin: 5vh;
+}
+
+.infoCuenta h1 {
+    user-select: none;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    margin: 5vh 0 0;
+
+    font-weight: normal;
+    font-size: 10vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.progresoNivel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 0 5vh;
+}
+
+.barraNivel {
+    width: 50vw;
+    height: 1vh;
+
+    background: linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 34%, #6a83e8 68%, #FFF 68%);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a2a;
+
+    margin: 2.5vh 0;
+}
+
+.numeroNivel {
+    user-select: none;
+
+    width: 10vh;
+    height: 10vh;
+
+    background-image: url(../../../imgs/Cuenta/RecuadroNivel.png);
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroNivel span {
+    color: white;
+    font-size: 3vh;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bioCuenta {
+    width: 52.5vw;
+    height: 17.5vh;
+
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    padding: 3vh 5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bioCuenta p {
+    user-select: none;
+
+    color: #f8f8f8;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1.4;
+    font-size: 4vh;
+    text-align: justify;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* SERVANTS CUENTA */
+
+.servantsCuenta {
+    width: 100%;
+    height: auto;
+
+    padding: 5vh 0;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+
+}
+
+.contenedorServantsCuenta {
+    width: 100%;
+    height: auto;
+}
+
+.contenedorServantsCuenta h2 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 5vh;
+
+    margin-bottom: 5vh;
+}
+
+.listaServantsCuenta {
+    width: 100%;
+    height: 30vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flechaListaServants {
+    width: 7.5vh;
+    height: 7.5vh;
+    
+    background-color: #4c3d34;
+}
+
+.tarjetasServants {
+    border: 1px solid black;
+    width: 80%;
+    height: auto;
+
+    padding: 2.5vh;
+}
