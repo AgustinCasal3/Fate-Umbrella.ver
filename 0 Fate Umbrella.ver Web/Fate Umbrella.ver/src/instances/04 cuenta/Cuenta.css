@@ -3,8 +3,6 @@
 .cuenta {
     width: 100%;
     height: auto;
-
-    border: 1px solid black;
 }
 
 .contenedorCuenta {
@@ -21,7 +19,8 @@
 
     padding: 5vh 0;
 
-    border: 2px solid burlywood;
+    border-top: 2px solid burlywood;
+    border-bottom: 2px solid burlywood;
 }
 
 .contenedorCuenta img {
@@ -146,6 +145,8 @@
 .contenedorServantsCuenta {
     width: 100%;
     height: auto;
+
+    margin-bottom: 5vh;
 }
 
 .contenedorServantsCuenta h2 {
@@ -170,16 +171,112 @@
 }
 
 .flechaListaServants {
-    width: 7.5vh;
-    height: 7.5vh;
+    width: 5vw;
+    height: 5vw;
     
-    background-color: #4c3d34;
+    background-image: url(../../../imgs/Cuenta/Flecha.png);
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.3s ease;
+}
+
+.flechaListaServants:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.flechaInvertidaHorizontal {
+    background-image: url(../../../imgs/Cuenta/FlechaI.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .tarjetasServants {
-    border: 1px solid black;
+    max-width: 80vw;
+    padding: 2.5vh 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    scrollbar-width: none; /* firefox */
+}
+
+.tarjetasServants::-webkit-scrollbar { display: none; }
+
+/* TARJETA SERVANT */
+
+.tarjetaServant {
+    user-select: none;
+
+    position: relative;
+    box-sizing: border-box;
+
+    width: 25vh;
+    aspect-ratio: 1 / 1;
+
+    flex: 0 0 25vh;
+
+    margin: 0 2.5vh;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 2.5vh;
+    transition: transform 0.3s ease;
+}
+
+.tarjetaServant:hover {
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.claseServant {
+    position: absolute;
+
+    top: 1vh;
+    left: 1vh;
+
+    width: 6.5vh;
+    height: 6.5vh;
+
+    z-index: 2;
+
+    object-fit: contain;
+    display: block;
+
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.6));
+}
+
+.imagenServant {
+    position: absolute;
+
+    inset: 0;                /* top:0; right:0; bottom:0; left:0 */
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;       /* IMPORTANT: cubre y recorta */
+    object-position: center; /* centra la parte visible */
+
+    display: block;          /* quita gaps debajo de img inline */
+    
+    z-index: 1;
+}
+
+/* SERVANT SELECCIONADO */
+
+.contenidoServantSeleccionado {
     width: 80%;
     height: auto;
 
-    padding: 2.5vh;
+    background-color: #b5c6ff;
+    border: #8ea2ff 2px solid;
+    border-radius: 2.5vh;
 }
