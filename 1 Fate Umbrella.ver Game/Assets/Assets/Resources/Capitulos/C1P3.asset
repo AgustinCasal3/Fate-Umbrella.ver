@@ -16,3 +16,4 @@ MonoBehaviour:
   - NombrePersonaje: ETE SECH
     Texto: 'ETE SECH!! No esperabas verme aca cierto? HAHAHAHAHAHAHA '
     SpritePersonaje: {fileID: 21300000, guid: 21e81de5c7415044cb264cea7279a3e1, type: 3}
+    FondoEscena: {fileID: 21300000, guid: 97ccdb2b1de4cac4bb5cefc77935eb84, type: 3}

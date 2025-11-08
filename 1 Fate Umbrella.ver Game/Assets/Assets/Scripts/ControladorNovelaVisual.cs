@@ -1,10 +1,10 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections; // Necesario para Corrutinas
+using System.Collections; 
 using TMPro;
-using System.Text; // Necesario para StringBuilder (LOG)
-using UnityEngine.SceneManagement; // Opcional, si quieres cargar la siguiente escena/menú al final
+using System.Text; 
+using UnityEngine.SceneManagement; 
 
 public class ControladorNovelaVisual : MonoBehaviour
 {
@@ -22,8 +22,10 @@ public class ControladorNovelaVisual : MonoBehaviour
     public float velocidadEscritura = 0.05f; // Segundos entre cada letra
 
     [Header("Orden de Partes (Rellenar en Inspector)")]
-    // Lista de las partes de la historia en orden (ej: C1P1, C1P2, C2P1)
-    public string[] ordenDePartes = { "C1P1", "C1P2" };
+    public string[] ordenDePartes = { "C1P1", "C1P2", "C1P3" };
+
+    [Header("Referencias Visuales")]
+    public UnityEngine.UI.Image imagenFondo;
 
     // --- VARIABLES INTERNAS ---
     private Historia historiaActual;
@@ -61,10 +63,10 @@ public class ControladorNovelaVisual : MonoBehaviour
 
     void Update()
     {
-        // Detecta el clic (Input.GetMouseButtonDown(0)) o la tecla (Input.GetKeyDown(KeyCode.Space))
+        
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            // Solo avanza si el panel de LOG NO está activo
+            
             if (panelLog == null || !panelLog.activeSelf)
             {
                 AvanzarDialogo();
@@ -102,7 +104,6 @@ public class ControladorNovelaVisual : MonoBehaviour
     {
         if (estaEscribiendo)
         {
-            // Lógica de SKIP: muestra el texto completo y detiene la corrutina
             StopAllCoroutines();
             textoDialogo.maxVisibleCharacters = 9999;
             estaEscribiendo = false;
@@ -117,7 +118,6 @@ public class ControladorNovelaVisual : MonoBehaviour
             }
             else
             {
-                // ¡FIN DE PARTE! Avanza y guarda la siguiente parte
                 AvanzarParte();
             }
         }
@@ -130,7 +130,7 @@ public class ControladorNovelaVisual : MonoBehaviour
 
         if (indiceActual != -1 && indiceActual < ordenDePartes.Length - 1)
         {
-            // Obtener el nombre y GUARDAR el progreso de la siguiente parte
+            // Obtener el nombre y guardar el progreso de la siguiente parte
             string siguienteParte = ordenDePartes[indiceActual + 1];
             datos.GuardarProgreso(siguienteParte);
 
@@ -139,20 +139,24 @@ public class ControladorNovelaVisual : MonoBehaviour
         }
         else
         {
-            // FIN DE TODA LA HISTORIA (O DEL LISTADO)
+            
             Debug.Log("FIN DE HISTORIA. Cargar menú principal.");
-            // Ejemplo de cómo cargar el menú principal (usando tu Gestor de Transición)
-            // Encuentra el gestor de transición y úsalo aquí.
-            // SceneManager.LoadScene("Escena_MenuPrincipal"); 
+            
+            SceneManager.LoadScene("Escena_MenuPrincipal"); 
         }
     }
 
     void CargarLinea(LineaDialogo linea)
     {
-        // 1. Guarda la línea en el historial (LOG) ANTES de iniciar la escritura
+        if (linea.FondoEscena != null)
+        {
+            // Solo cambia el fondo si se ha asignado un nuevo sprite en la línea
+            imagenFondo.sprite = linea.FondoEscena;
+        }
+
         GuardarEnHistorial(linea.NombrePersonaje, linea.Texto);
 
-        // 2. Actualiza la UI de Nombre y Sprite
+        
         textoNombre.text = linea.NombrePersonaje;
         if (linea.SpritePersonaje != null)
         {
@@ -163,8 +167,6 @@ public class ControladorNovelaVisual : MonoBehaviour
         {
             spritePersonaje.enabled = false;
         }
-
-        // 3. Inicia el efecto de escritura
         StartCoroutine(EfectoEscribir(linea.Texto));
     }
 

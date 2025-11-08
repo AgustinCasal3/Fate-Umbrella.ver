@@ -16,3 +16,4 @@ MonoBehaviour:
   - NombrePersonaje: Investigador B
     Texto: Estoy testeando esto, no joda pe webon.
     SpritePersonaje: {fileID: 21300000, guid: 815406fbe3012c34d9529d24766a285d, type: 3}
+    FondoEscena: {fileID: 21300000, guid: 61b60a3a7072bf146a903def930d14c7, type: 3}

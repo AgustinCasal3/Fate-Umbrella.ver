@@ -15,4 +15,7 @@ public class LineaDialogo
     // Nombre del Sprite a cargar, 
     public Sprite SpritePersonaje;
 
+    // fomdo de la escena
+    public Sprite FondoEscena;
+
 }
