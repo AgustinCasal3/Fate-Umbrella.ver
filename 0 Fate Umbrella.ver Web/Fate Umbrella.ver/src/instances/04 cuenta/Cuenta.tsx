@@ -76,80 +76,84 @@ export function Cuenta() {
                     </div>
                 </div>
 
-                <div className="contenidoServantSeleccionado">
-                    <div className="tituloServantSeleccionado">
-                        <img src="../../../imgs/Cuenta/Clases/Avenger.png" alt="Clase del Servant" />
-                        <h1>Avenger - Edmond Dantes</h1>
-                        <div className="estrellasServant">
-                            <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
-                            <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
-                            <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
-                            <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
-                            <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
-                        </div>
-                    </div>
-
-                    <div className="infoServantSeleccionado">
-                        <div className="portadaImagenServant">
-                            <img src="../../../imgs/Cuenta/Portadas/AvengerEdmondDantes2.png" alt="" />
-                        </div>
-
-                        <div className="statsServantSeleccionado">
-                            <div className="ataqueServant">
-                                <h2>--------- Ataque ---------</h2>
-                                <div className="ataqueServantValores">
-                                    <div className="ataqueBase">
-                                        <h3>Base</h3>
-                                        <p>1900</p>
-                                    </div>
-                                    <div className="ataqueActual">
-                                        <h3>Actual</h3>
-                                        <p>2249</p>
-                                    </div>
-                                    <div className="ataqueMaximo">
-                                        <h3>maximo</h3>
-                                        <p>12700</p>
-                                    </div>
+                <div className="contenedorContenidoServantSeleccionado">
+                    <div className="contenidoServantSeleccionado">
+                        <div className="tituloServantSeleccionado">
+                            <div className="izqTituloServant">
+                                <img src="../../../imgs/Cuenta/Clases/Avenger.png" alt="Clase del Servant" />
+                                <h1>Avenger - Edmond Dantes</h1>
+                            </div>
+                            <div className="derTituloServant">
+                                <div className="estrellasServant">
+                                    <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
+                                    <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
+                                    <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
+                                    <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
+                                    <img src="../../../imgs/Cuenta/Estrellas/Estrella.png" alt="" />
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="vidaServant">
-                                <h2>----------- Vida -----------</h2>
-                                <div className="vidaServantValores">
-                                    <div className="vidaBase">
-                                        <h3>Base</h3>
-                                        <p>1700</p>
-                                    </div>
-                                    <div className="vidaActual">
-                                        <h3>Actual</h3>
-                                        <p>1963</p>
-                                    </div>
-                                    <div className="vidaMaximo">
-                                        <h3>maximo</h3>
-                                        <p>12000</p>
-                                    </div>
-                                </div>
+                        <div className="infoServantSeleccionado">
+                            <div className="portadaImagenServant">
+                                <img src="../../../imgs/Cuenta/Portadas/AvengerEdmondDantes2.png" alt="" />
                             </div>
 
-                            <h2>Craft Essence</h2>
-                            <div className="infoCraftEssence">
-                                <div className="imgCraftEssence">
-                                    <img src="../../../imgs/Cuenta/CraftEssence/EncounterAtGojouBridge.png" alt="Craft Essence Equipada" />
+                            <div className="statsServantSeleccionado">
+                                <div className="ataqueServant">
+                                    <h2>--------- Ataque ---------</h2>
+                                    <div className="ataqueServantValores">
+                                        <div className="ataqueBase">
+                                            <h3>Base</h3>
+                                            <p>1900</p>
+                                        </div>
+                                        <div className="ataqueActual">
+                                            <h3>Actual</h3>
+                                            <p>2249</p>
+                                        </div>
+                                        <div className="ataqueMaximo">
+                                            <h3>Maximo</h3>
+                                            <p>12700</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="textoCraftEssence">
-                                    <h2>Encounter At Gojou Bridge</h2>
 
-                                    <ul>
-                                        <li>
-                                            <p>Fuerza Base: +12</p>
-                                        </li>
-                                        <li>
-                                            <p>Vida Base: +5</p>
-                                        </li>
-                                        <li>
-                                            <p>Buff: Aumenta daño booster en 30%</p>
-                                        </li>
-                                    </ul>
+                                <div className="vidaServant">
+                                    <h2>----------- Vida -----------</h2>
+                                    <div className="vidaServantValores">
+                                        <div className="vidaBase">
+                                            <h3>Base</h3>
+                                            <p>1700</p>
+                                        </div>
+                                        <div className="vidaActual">
+                                            <h3>Actual</h3>
+                                            <p>1963</p>
+                                        </div>
+                                        <div className="vidaMaximo">
+                                            <h3>Maximo</h3>
+                                            <p>12000</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 className='nombreCraftEssence'>Craft Essence</h2>
+                                <div className="infoCraftEssence">
+                                    <div className="imgCraftEssence">
+                                        <img src="../../../imgs/Cuenta/CraftEssence/EncounterAtGojouBridge.png" alt="Craft Essence Equipada" />
+                                    </div>
+                                    <div className="textoCraftEssence">
+                                        <h2>Encounter At Gojou Bridge</h2>
+
+                                        <p>
+                                            - Fuerza Base: +12
+                                        </p>
+                                        <p>
+                                            - Vida Base: +5
+                                        </p>
+                                        <p>
+                                            - Buff: Aumenta daño booster en 30%
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +162,111 @@ export function Cuenta() {
             </section>
 
             <section className="amigosCuenta">
+                <div className="contenedorAmigosCuenta">
+                    <h2>
+                        Amigos:
+                    </h2>
+                    <div className="listaAmigosCuenta">
+                        <div className="contenedorListaAmigosCuenta">
+                            
+                            <div className="tarjetaAmigoCuenta">
+                                <div className="contenidoTarjetaAmigoCuenta">
+                                    <div className="imgAmigoCuenta">
+                                        <img src="../../../imgs/Cuenta/Pfp/Astolfo4.png" alt="" />
+                                    </div>
+                                    <div className="infoAmigoCuenta">
+                                        <span>Aquwus</span>
+                                        <div className="nivelAmigoCuenta">
+                                            <div className="barraNivelAmigoCuenta" style={{
+                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 23%, #6a83e8 46%, #FFF 46%)'
+                                            }}></div>
+                                            <div className="numeroNivelAmigoCuenta">
+                                                <span>12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div className="tarjetaAmigoCuenta">
+                                <div className="contenidoTarjetaAmigoCuenta">
+                                    <div className="imgAmigoCuenta">
+                                        <img src="../../../imgs/Cuenta/Pfp/MedeaLily2.png" alt="" />
+                                    </div>
+                                    <div className="infoAmigoCuenta">
+                                        <span>ivan.fablab</span>
+                                        <div className="nivelAmigoCuenta">
+                                            <div className="barraNivelAmigoCuenta" style={{
+                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 45%, #6a83e8 90%, #FFF 90%)'
+                                            }}></div>
+                                            <div className="numeroNivelAmigoCuenta">
+                                                <span>478</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="tarjetaAmigoCuenta">
+                                <div className="contenidoTarjetaAmigoCuenta">
+                                    <div className="imgAmigoCuenta">
+                                        <img src="../../../imgs/Cuenta/Pfp/Caligula3.png" alt="" />
+                                    </div>
+                                    <div className="infoAmigoCuenta">
+                                        <span>torsido27</span>
+                                        <div className="nivelAmigoCuenta">
+                                            <div className="barraNivelAmigoCuenta" style={{
+                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 11.5%, #6a83e8 23%, #FFF 23%)'
+                                            }}></div>
+                                            <div className="numeroNivelAmigoCuenta">
+                                                <span>69</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="tarjetaAmigoCuenta">
+                                <div className="contenidoTarjetaAmigoCuenta">
+                                    <div className="imgAmigoCuenta">
+                                        <img src="../../../imgs/Cuenta/Pfp/JamesMoriarty2.png" alt="" />
+                                    </div>
+                                    <div className="infoAmigoCuenta">
+                                        <span>emir220</span>
+                                        <div className="nivelAmigoCuenta">
+                                            <div className="barraNivelAmigoCuenta" style={{
+                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 26.5%, #6a83e8 57%, #FFF 57%)'
+                                            }}></div>
+                                            <div className="numeroNivelAmigoCuenta">
+                                                <span>220</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="tarjetaAmigoCuenta">
+                                <div className="contenidoTarjetaAmigoCuenta">
+                                    <div className="imgAmigoCuenta">
+                                        <img src="../../../imgs/Cuenta/Pfp/IllyasvielVonEinzbern2.png" alt="" />
+                                    </div>
+                                    <div className="infoAmigoCuenta">
+                                        <span>tobbiebie(gay)</span>
+                                        <div className="nivelAmigoCuenta">
+                                            <div className="barraNivelAmigoCuenta" style={{
+                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 36.5%, #6a83e8 77%, #FFF 77%)'
+                                            }}></div>
+                                            <div className="numeroNivelAmigoCuenta">
+                                                <span>7</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <Footer/>

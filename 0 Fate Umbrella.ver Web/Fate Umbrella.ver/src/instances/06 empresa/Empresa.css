@@ -356,7 +356,7 @@
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
 
-    font-size: 4em;
+    font-size: 7.5vh;
 
     width: 100%;
 
@@ -376,8 +376,8 @@
     height: 70%;
     padding: 0 10vh;
 
-    font-size: 1.5em;
-    line-height: 1.6em;
+    font-size: 3vh;
+    line-height: 4vh;
 
     text-align: center;
 }
