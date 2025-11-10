@@ -31,7 +31,7 @@
 }
 
 .tituloImg {
-    height: auto;
+    height: 40vh;
     width: auto;
 
     display: flex;
@@ -42,7 +42,7 @@
 }
 
 .tituloImg img {
-    height: 40vh;
+    height: 60vh;
     width: auto;
 }
 
