@@ -1,6 +1,9 @@
 import './Home.css'
+
 import { Header } from '../0 header/Header'
 import { Footer } from '../0 footer/Footer'
+
+import { Titulo } from './components/01 titulo/Titulo'
 
 export function Home() {
     document.title = "Home | Fate/Umbrella.ver"
@@ -10,19 +13,7 @@ export function Home() {
         <>
             <Header></Header>
             <div className="contenedorHome">
-                <section className="titulo">
-                    <div className="tituloContenido">
-                        <div className="tituloImg">
-                            <img src="../../../imgs/Home/Titulo/Logo.png" alt="" />
-                        </div>
-                        <div className="tituloTexto">
-                            <h2>"No es un deseo propio, es una leccion para el mundo que no aprecia la belleza del arte." - Emir</h2>
-                        </div>
-                        <div className="tituloButton">
-                            <a href="/register">Register Now</a>
-                        </div>
-                    </div>
-                </section>
+                <Titulo/>
 
                 <section className="personajes">
                     <div className="fichaPersonaje">

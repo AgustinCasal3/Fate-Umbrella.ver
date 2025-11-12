@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineas:
   - NombrePersonaje: 
-    Texto: "-El silencio penumbral de la habitaci\xF3n habia sido interrumpido por
-      dos cient\xEDficos-"
+    Texto: "- El silencio penumbral de la habitaci\xF3n fue interrumpido por dos
+      cient\xEDficos -"
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
   - NombrePersonaje: Tundra
@@ -24,7 +24,7 @@ MonoBehaviour:
     FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
   - NombrePersonaje: Tundra
     Texto: "Niveles de presi\xF3n normales, pulsaciones estables. Sin da\xF1os en
-      sus circuitos m\xE1gicos. Clara comprensi\xF3n de la Orden establecida"
+      sus circuitos m\xE1gicos. Clara comprensi\xF3n de la Orden establecida."
     SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
     FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
   - NombrePersonaje: Caelestis
@@ -32,11 +32,11 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
     FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
   - NombrePersonaje: Tundra
-    Texto: "Correcto mando sobre el Servant. Buena toma de decisiones en situaci\xF3n
+    Texto: "..correcto mando sobre el Servant; buena toma de decisiones en situaci\xF3n
       cr\xEDtica.."
     SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
     FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
   - NombrePersonaje: Caelestis
-    Texto: "No te parece cruel tratar as\xED a una persona?\r\n"
+    Texto: "No te parece cruel, tratar as\xED a una persona?\r\n"
     SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
     FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}

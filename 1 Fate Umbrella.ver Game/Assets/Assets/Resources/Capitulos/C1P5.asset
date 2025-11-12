@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineas:
   - NombrePersonaje: ???
-    Texto: Se fueron..
+    Texto: ya.. se fueron..?
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
   - NombrePersonaje: ???
-    Texto: "Contin\xFAan analizandome.."
+    Texto: "...contin\xFAan analizandome."
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
   - NombrePersonaje: ???

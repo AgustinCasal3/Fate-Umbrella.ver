@@ -26,22 +26,24 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
     FondoEscena: {fileID: 21300000, guid: d60827ca9afa34d48b4c97b459266957, type: 3}
   - NombrePersonaje: Tundra
-    Texto: 'No te preocupes, cuando salga vamos con el resto, ya es hora del almuerzo
+    Texto: 'No te preocupes, cuando salga vamos con el resto, ya casi es hora del
+      almuerzo.
 
 '
     SpritePersonaje: {fileID: 21300000, guid: 6657c0de032e16448a62df3ac3ddc198, type: 3}
     FondoEscena: {fileID: 21300000, guid: d60827ca9afa34d48b4c97b459266957, type: 3}
   - NombrePersonaje: Caelestis
-    Texto: "\r sii, vayamos a pasar el tiempo con el resto del equipo!!\n"
-    SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
-    FondoEscena: {fileID: 21300000, guid: d60827ca9afa34d48b4c97b459266957, type: 3}
-  - NombrePersonaje: Caelestis
-    Texto: '-Ya tengo hambre... espero que se apure-
+    Texto: 'Siii, vayamos a pasar el tiempo con el resto del equipo!!
 
 '
     SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
     FondoEscena: {fileID: 21300000, guid: d60827ca9afa34d48b4c97b459266957, type: 3}
+  - NombrePersonaje: Caelestis
+    Texto: '- Ya me dio hambre... por favor espero que se apure -'
+    SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
+    FondoEscena: {fileID: 21300000, guid: d60827ca9afa34d48b4c97b459266957, type: 3}
   - NombrePersonaje: 
-    Texto: "-Tundra entra a la oficina del jefe sin voltear a ver a su compa\xF1ero-\n"
+    Texto: "- Tundra entra a la oficina del jefe sin voltear a ver a su compa\xF1ero
+      -"
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: d60827ca9afa34d48b4c97b459266957, type: 3}

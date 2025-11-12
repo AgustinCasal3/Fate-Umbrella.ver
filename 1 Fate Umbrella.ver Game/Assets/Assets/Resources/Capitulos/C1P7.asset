@@ -18,17 +18,21 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: 6657c0de032e16448a62df3ac3ddc198, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: oh Tundra.. te estaba esperando.
+    Texto: Tundra.. estaba esperando tu llegada.
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
-  - NombrePersonaje: Tundra
-    Texto: "-La oficina de Arnold trae una sensaci\xF3n de elegancia y misterio.
-      Como logro poner ventanas en un b\xFAnker?-"
+  - NombrePersonaje: 
+    Texto: '- Tundra se posiciona frente al escritorio del Jefe -'
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Tundra
-    Texto: "-Toda esta habitaci\xF3n parece no pertenecer a las instalaciones de
-      Chaldea-"
+    Texto: "- La oficina de Arnold trae una sensaci\xF3n de elegancia y misterio.
+      Como logro poner ventanas en un b\xFAnker? -"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: "- Toda esta habitaci\xF3n parece no pertenecer a las instalaciones de
+      Chaldea -"
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Tundra
@@ -37,11 +41,14 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: 6657c0de032e16448a62df3ac3ddc198, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Tundra
-    Texto: Aca le dejo los informes.
+    Texto: Aca le entrego los informes.
     SpritePersonaje: {fileID: 21300000, guid: 6657c0de032e16448a62df3ac3ddc198, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: 'Hum.. Despues los leo '
+    Texto: 'Hum. Despues los veo.
+
+      - Arnold pone los documentos a un lado de
+      la mesa -'
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
@@ -50,11 +57,11 @@ MonoBehaviour:
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Tundra
     Texto: "El sujeto tambi\xE9n demostr\xF3 una mayor conexi\xF3n con el Servant
-      de pr\xE1ctica y logr\xF3 salir de las simulaciones sin ning\xFAn rasgu\xF1o"
+      de pr\xE1ctica y logr\xF3 salir de las simulaciones sin ning\xFAn rasgu\xF1o."
     SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: "Ah. Ya iba siendo hora de que el experimento del Se\xF1or Lev comenzar\xE1
+    Texto: "Bien. Ya iba siendo hora de que el experimento del Se\xF1or Lev comenzar\xE1
       a dar frutos."
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
@@ -67,17 +74,21 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: XXXX
-    Texto: "Se\xF1or le recuerdo que tiene una reuni\xF3n con los L\xEDderes de Presupuesto
-      dentro de 5 minutos. Y le aseguro que NO puede llegar tarde."
+    Texto: "Se\xF1or, le recuerdo que tiene una reuni\xF3n con los L\xEDderes de
+      Presupuesto dentro de 5 minutos."
+    SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: XXXX
+    Texto: Y le aseguro que NO puede llegar tarde.
     SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: Entendido, querida
+    Texto: Entendido, querida.
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: Sr Tundra, que se retire y se tome un descanso. Esta que se le cae la
-      cara de tanto esfuerzo.
+    Texto: Sr Tundra, le pido que se retire y se tome un descanso. Esta que se le
+      cae la cara del cansancio.
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Tundra
@@ -86,14 +97,33 @@ MonoBehaviour:
 '
     SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: 
+    Texto: '- Tundra se retira de la oficina -'
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: 
+    Texto: '- Arnold voltea y se dirije hacia su asistente -'
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: "Si mi memoria me falla no recuerdo que haya una reuni\xF3n tan pronto
-      hoy, Querida XXXX"
+    Texto: "Si mi memoria no me falla, no recuerdo que haya una reuni\xF3n tan pronto
+      hoy, querida XXXX."
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: XXXX
-    Texto: "Estos valores en su encefalograma.. demuestran que est\xE1 generando
-      una conciencia propia, m\xE1s profunda y capaz de obviar \xF3rdenes a su voluntad."
+    Texto: 'Es que.. '
+    SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: XXXX
+    Texto: 'Estos valores en su encefalograma.. '
+    SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: XXXX
+    Texto: "Demuestran que est\xE1 generando una conciencia propia, m\xE1s profunda.. "
+    SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: XXXX
+    Texto: "Podria ser capaz de obviar \xF3rdenes a su voluntad."
     SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
@@ -103,12 +133,16 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: Arnold
-    Texto: HAHAHA Esto comienza a ponerse interesante.
+    Texto: HAHAHA. Esto comienza a ponerse interesante.
     SpritePersonaje: {fileID: 21300000, guid: 9bb53ccf99ecb85449b25bd4dd211812, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: 
-    Texto: "-Arnold abandona la habitaci\xF3n sin decir nada, pero con un brillo
-      sagaz en sus ojos-"
+    Texto: "- Arnold se levanta de su escritorio y abandona la habitaci\xF3n sin
+      palabra alguna, pero con un brillo sagaz en sus ojos -"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
+  - NombrePersonaje: 
+    Texto: '- XXXX suspira, va a los sillones y se deja caer sobre ellos -'
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: XXXX
@@ -116,6 +150,6 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}
   - NombrePersonaje: XXXX
-    Texto: 'En que estara pensando el abuelo. Pomf =3    '
+    Texto: 'En que estara pensando el abuelo..?             Pomf =3    '
     SpritePersonaje: {fileID: 21300000, guid: f2432b03e0329d94383685fb5439bdb2, type: 3}
     FondoEscena: {fileID: 21300000, guid: 56d379d5e8c40d2478a90b70ba118387, type: 3}

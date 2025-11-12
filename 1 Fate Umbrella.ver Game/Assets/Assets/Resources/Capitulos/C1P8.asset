@@ -18,16 +18,19 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 21300000, guid: f451ff1e8d2b82e4b810ace355b64d9c, type: 3}
     FondoEscena: {fileID: 21300000, guid: dabe5793b45057a4caed3e006caa4efd, type: 3}
   - NombrePersonaje: Ete Sech
-    Texto: ah? Queres seguir?   HAHAHAHAHAHAHAHAH
+    Texto: Ah? Queres seguir?   HAHAHAHAHAHAHAHAH
     SpritePersonaje: {fileID: 21300000, guid: f451ff1e8d2b82e4b810ace355b64d9c, type: 3}
     FondoEscena: {fileID: 21300000, guid: dabe5793b45057a4caed3e006caa4efd, type: 3}
   - NombrePersonaje: Ete Sech
     Texto: "Lo lamento eso no va a ser posible, esta \xE1rea est\xE1 en construcci\xF3n
-      todav\xEDa"
+      todav\xEDa."
     SpritePersonaje: {fileID: 21300000, guid: f451ff1e8d2b82e4b810ace355b64d9c, type: 3}
     FondoEscena: {fileID: 21300000, guid: dabe5793b45057a4caed3e006caa4efd, type: 3}
   - NombrePersonaje: Ete Sech
-    Texto: "Volve despu\xE9s de un tiempo y tal vez puedas continuar. Aqu\xED Ete
-      Sech, Nos vemos pronto."
+    Texto: "Volv\xE9 despu\xE9s de un tiempo y tal vez puedas continuar."
+    SpritePersonaje: {fileID: 21300000, guid: f451ff1e8d2b82e4b810ace355b64d9c, type: 3}
+    FondoEscena: {fileID: 21300000, guid: dabe5793b45057a4caed3e006caa4efd, type: 3}
+  - NombrePersonaje: Ete Sech
+    Texto: "Aqu\xED Ete Sech, Nos vemos pronto."
     SpritePersonaje: {fileID: 21300000, guid: f451ff1e8d2b82e4b810ace355b64d9c, type: 3}
     FondoEscena: {fileID: 21300000, guid: dabe5793b45057a4caed3e006caa4efd, type: 3}

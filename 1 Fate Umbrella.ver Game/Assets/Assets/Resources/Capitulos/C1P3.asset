@@ -18,12 +18,19 @@ MonoBehaviour:
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: cd919389b58cc6741bb0edbe811318d8, type: 3}
   - NombrePersonaje: Tundra
-    Texto: "Sabemos de lo podr\xEDa ser capaz y por eso tenemos que controlarlo.
-      No puede haber equivocaciones."
+    Texto: "Sabemos de lo podr\xEDa ser capaz y por eso tenemos que controlarlo."
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: cd919389b58cc6741bb0edbe811318d8, type: 3}
   - NombrePersonaje: Tundra
-    Texto: "Los superiores no aceptar\xE1n otro incidente m\xE1s. No podemos permitir
-      que sea enviado a una mision antes de descubrir su potencial al completo."
+    Texto: No puede haber equivocaciones.
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: cd919389b58cc6741bb0edbe811318d8, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: "Los superiores no aceptar\xE1n otro incidente."
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: cd919389b58cc6741bb0edbe811318d8, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: No podemos permitir que sea enviado a una mision antes de descubrir su
+      potencial al completo.
     SpritePersonaje: {fileID: 0}
     FondoEscena: {fileID: 21300000, guid: cd919389b58cc6741bb0edbe811318d8, type: 3}
