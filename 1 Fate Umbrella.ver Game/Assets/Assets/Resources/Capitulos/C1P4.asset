@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb68ca9d6173964d949eb8f2a00bc2e, type: 3}
+  m_Name: C1P4
+  m_EditorClassIdentifier: 
+  lineas:
+  - NombrePersonaje: Caelestis
+    Texto: "Hablas de esa pobre chica\u2026"
+    SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: Eso no es relevante eso ahora, gordo.
+    SpritePersonaje: {fileID: 21300000, guid: 6657c0de032e16448a62df3ac3ddc198, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: "Vayamos a entregar los resultados al jefe. Ya deber\xEDamos haber salido
+      hace rato."
+    SpritePersonaje: {fileID: 21300000, guid: 6657c0de032e16448a62df3ac3ddc198, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Caelestis
+    Texto: "Tenes raz\xF3n, al jefe no le gusta cuando nos retrasamos con las entregas."
+    SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: 
+    Texto: "-La habitaci\xF3n entera vuelve a la penumbra tras la partida de los
+      cient\xEDficos-"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: ???
+    Texto: Estoy tan cansado...
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}

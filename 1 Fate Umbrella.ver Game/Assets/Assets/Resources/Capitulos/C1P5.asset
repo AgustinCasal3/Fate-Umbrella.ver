@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb68ca9d6173964d949eb8f2a00bc2e, type: 3}
+  m_Name: C1P5
+  m_EditorClassIdentifier: 
+  lineas:
+  - NombrePersonaje: ???
+    Texto: Se fueron..
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
+  - NombrePersonaje: ???
+    Texto: "Contin\xFAan analizandome.."
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
+  - NombrePersonaje: ???
+    Texto: "Cu\xE1nto tiempo m\xE1s tengo que estar pasando por esto..?"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
+  - NombrePersonaje: ???
+    Texto: Ya es.. aburrido hacer siempre lo mismo, viendo la misma gente, siguiendo
+      los mismos entrenamientos..
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
+  - NombrePersonaje: ???
+    Texto: ..soportando el mismo dolor.
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}
+  - NombrePersonaje: ???
+    Texto: "Desearia poder experimentar m\xE1s."
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: 18fdb55ef19ed0c4db48ce66c275defe, type: 3}

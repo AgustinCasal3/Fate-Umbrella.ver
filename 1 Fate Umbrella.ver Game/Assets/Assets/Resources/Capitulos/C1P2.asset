@@ -13,7 +13,30 @@ MonoBehaviour:
   m_Name: C1P2
   m_EditorClassIdentifier: 
   lineas:
-  - NombrePersonaje: Investigador B
-    Texto: Estoy testeando esto, no joda pe webon.
-    SpritePersonaje: {fileID: 21300000, guid: 815406fbe3012c34d9529d24766a285d, type: 3}
-    FondoEscena: {fileID: 21300000, guid: 61b60a3a7072bf146a903def930d14c7, type: 3}
+  - NombrePersonaje: 
+    Texto: "-El silencio penumbral de la habitaci\xF3n habia sido interrumpido por
+      dos cient\xEDficos-"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: "Su desempe\xF1o en el entrenamiento de hoy fue excelente."
+    SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: "Niveles de presi\xF3n normales, pulsaciones estables. Sin da\xF1os en
+      sus circuitos m\xE1gicos. Clara comprensi\xF3n de la Orden establecida"
+    SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Caelestis
+    Texto: "Supongo que estos a\xF1os de entrenamiento est\xE1n yendo por buen camino.."
+    SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Tundra
+    Texto: "Correcto mando sobre el Servant. Buena toma de decisiones en situaci\xF3n
+      cr\xEDtica.."
+    SpritePersonaje: {fileID: 21300000, guid: d72b5e2c9b3cea948b89e42af717a11b, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: Caelestis
+    Texto: "No te parece cruel tratar as\xED a una persona?\r\n"
+    SpritePersonaje: {fileID: 21300000, guid: 5d6cd35bf732c9e4eadf6108c3b6b594, type: 3}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}

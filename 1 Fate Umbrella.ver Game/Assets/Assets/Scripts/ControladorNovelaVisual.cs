@@ -22,7 +22,7 @@ public class ControladorNovelaVisual : MonoBehaviour
     public float velocidadEscritura = 0.05f; // Segundos entre cada letra
 
     [Header("Orden de Partes (Rellenar en Inspector)")]
-    public string[] ordenDePartes = { "C1P1", "C1P2", "C1P3" };
+    public string[] ordenDePartes = { "C1P1", "C1P2", "C1P3","C1P4", "C1P5", "C1P6", "C1P7","C1P8" };
 
     [Header("Referencias Visuales")]
     public UnityEngine.UI.Image imagenFondo;
@@ -34,9 +34,6 @@ public class ControladorNovelaVisual : MonoBehaviour
     private StringBuilder historialConversacion = new StringBuilder();
     private const string RUTA_BASE_HISTORIA = "Capitulos/"; // Carpeta dentro de Resources
 
-    // =================================================================
-    // MÉTODOS PRINCIPALES
-    // =================================================================
 
     void Start()
     {
@@ -170,9 +167,7 @@ public class ControladorNovelaVisual : MonoBehaviour
         StartCoroutine(EfectoEscribir(linea.Texto));
     }
 
-    // =================================================================
-    // LÓGICA VISUAL Y CORRUTINAS
-    // =================================================================
+    // log
 
     IEnumerator EfectoEscribir(string textoObjetivo)
     {
@@ -189,9 +184,7 @@ public class ControladorNovelaVisual : MonoBehaviour
         estaEscribiendo = false;
     }
 
-    // =================================================================
-    // LÓGICA DEL LOG/HISTORIAL
-    // =================================================================
+
 
     void GuardarEnHistorial(string nombre, string texto)
     {

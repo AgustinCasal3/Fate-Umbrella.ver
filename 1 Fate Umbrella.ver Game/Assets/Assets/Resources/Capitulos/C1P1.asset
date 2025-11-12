@@ -13,27 +13,31 @@ MonoBehaviour:
   m_Name: C1P1
   m_EditorClassIdentifier: 
   lineas:
-  - NombrePersonaje: Investigador A
-    Texto: "                           -Informe del dia 05/11-                                                                       
-      Estuvimos haciendo varios an\xE1lisis de la estructura y contenido de la Regi\xF3n
-      Nula. Nuestras investigaciones entregaron datos muy interesantes, pero uno
-      de ellos es el que m\xE1s nos interesa."
-    SpritePersonaje: {fileID: 21300000, guid: 815406fbe3012c34d9529d24766a285d, type: 3}
-    FondoEscena: {fileID: 21300000, guid: 8f1e65161ea71ec47ac42583dd4a7975, type: 3}
-  - NombrePersonaje: Investigador A
-    Texto: "Detectamos que en la Region Nula hay una gran poblacion de seres de peque\xF1a
-      estatura que viven separados en diferentes \"tribus\" que no tienen mucho contacto
-      con el resto de las cosas de la region nula."
-    SpritePersonaje: {fileID: 21300000, guid: 815406fbe3012c34d9529d24766a285d, type: 3}
-    FondoEscena: {fileID: 21300000, guid: 8f1e65161ea71ec47ac42583dd4a7975, type: 3}
-  - NombrePersonaje: Investigador A
-    Texto: Tras mucho tiempo de investigacion logramos descubri que son esas criaturas
-      de la Region Nula, los resultados nos dejaron muy sorprendidos y exaltados.
-      Esas cosas son....
-    SpritePersonaje: {fileID: 21300000, guid: 815406fbe3012c34d9529d24766a285d, type: 3}
-    FondoEscena: {fileID: 21300000, guid: 8f1e65161ea71ec47ac42583dd4a7975, type: 3}
-  - NombrePersonaje: Investigador A
-    Texto: "\xA1\xA1SON NENITAS UUUUOOOHHHH!!!  \xA1\xA1\xA1\xA1\xA1\xA1\xA1\xA1\xA1FREE
-      CUNNY!!!!!!!!!"
-    SpritePersonaje: {fileID: 21300000, guid: b044d55b3275a4b449107651883793d5, type: 3}
-    FondoEscena: {fileID: 21300000, guid: 8f1e65161ea71ec47ac42583dd4a7975, type: 3}
+  - NombrePersonaje: ???
+    Texto: Me duele todo...
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: ???
+    Texto: El entrenamiento fue muy duro...
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: ???
+    Texto: 'Mi mente se siente tan exausta... '
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: ???
+    Texto: "..no recuerdo nada m\xE1s despu\xE9s de..."
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: 
+    Texto: "-Del otro de la puerta se escuchan pasos acerc\xE1ndose hasta la habitaci\xF3n-"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: 
+    Texto: "-El sonido de la puerta abri\xE9ndose invade toda la habitaci\xF3n-"
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
+  - NombrePersonaje: ???
+    Texto: Hasta cuando continuara esto..
+    SpritePersonaje: {fileID: 0}
+    FondoEscena: {fileID: 21300000, guid: ca150fe4a3b65b44b895fdaf46dd67aa, type: 3}
