@@ -32,7 +32,7 @@ public class ControladorNovelaVisual : MonoBehaviour
     private int indiceLineaActual = 0;
     private bool estaEscribiendo = false;
     private StringBuilder historialConversacion = new StringBuilder();
-    private const string RUTA_BASE_HISTORIA = "Capitulos/"; // Carpeta dentro de Resources
+    private const string RUTA_BASE_HISTORIA = "Capitulos/"; 
 
 
     void Start()
@@ -48,10 +48,8 @@ public class ControladorNovelaVisual : MonoBehaviour
             }
         }
 
-        // 2. Carga la parte guardada (usa el nombre guardado en DatosJugador)
         CargarParteHistoria(datos.nombreParteActual);
-
-        // 3. Ocultar el LOG al inicio
+        
         if (panelLog != null)
         {
             panelLog.SetActive(false);
@@ -61,7 +59,7 @@ public class ControladorNovelaVisual : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             
             if (panelLog == null || !panelLog.activeSelf)
@@ -71,9 +69,6 @@ public class ControladorNovelaVisual : MonoBehaviour
         }
     }
 
-    // =================================================================
-    // LÓGICA DE CARGA Y GUARDADO
-    // =================================================================
 
     void CargarParteHistoria(string nombreParte)
     {
@@ -183,7 +178,6 @@ public class ControladorNovelaVisual : MonoBehaviour
 
         estaEscribiendo = false;
     }
-
 
 
     void GuardarEnHistorial(string nombre, string texto)
