@@ -1,0 +1,1 @@
+mongodb+srv://Aquwus:fateumbrellaversion@fate-umbrelladb.ydxzfcc.mongodb.net/
