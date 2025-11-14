@@ -5,7 +5,7 @@ export function InfoCuenta() {
         <>
             <section className="cuenta">
                 <div className="contenedorCuenta">
-                    <img src="../../../imgs/Cuenta/Pfp/OkitaSoujiAlter2.png" alt="Foto de Okita Souji Alter *NOMBRE PERSOANJE*" />
+                    <img src="../../../imgs/Cuenta/Pfp/013_Okita_Souji_Alter_2.png" alt="Foto de Okita Souji Alter *NOMBRE PERSOANJE*" />
                     <div className="infoCuenta">
                         <h1>
                             izuru.skibidi

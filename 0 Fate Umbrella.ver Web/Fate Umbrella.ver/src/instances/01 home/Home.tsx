@@ -45,7 +45,7 @@ export function Home() {
                         <a href="">Saber</a>
                         <a href="">Archer</a>
                         <a href="">Lancer</a>
-                        <a href="">Femboy</a>
+                        <a href="">Caster</a>
                     </div>
                 </section>
 
