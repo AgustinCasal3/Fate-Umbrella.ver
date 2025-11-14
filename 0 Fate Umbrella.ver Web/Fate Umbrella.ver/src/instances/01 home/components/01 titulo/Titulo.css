@@ -21,34 +21,36 @@
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 7.5vh;
+    transition: 0.5s ease;
 }
 
 .tituloImg img {
     user-select: none;
     
-    height: 60vh;
+    height: 40vh;
     width: auto;
 }
 
 .tituloTexto h2 {
+    transition: 0.5s ease;
+    
     user-select: none;
-
+    
     text-align: center;
     font-size: 2em;
-
-    margin: 2vh 0 ;
+    
+    margin: 7.5vh 0 ;
     
     color: white;
-
+    
     font-family: "Quintessential", serif;
     font-weight: 400;
     font-style: normal;
-
+    
     filter: drop-shadow(0px 0px 10px black);
     
     text-shadow:
-        1px 1px 0 black,
+    1px 1px 0 black,
         -1px 1px 0 black,
         1px -1px 0 black,
         -1px -1px 0 black,
@@ -61,7 +63,7 @@
 
 .tituloButton {
     width: auto;
-    height: 15vh;
+    height: auto;
 
     display: flex;
     align-items: center;
@@ -92,4 +94,16 @@
     transform: scale(1.025);
 
     background-position: right center;
+}
+
+/* Cuando activo = true → se mueve a la izquierda */
+.animarTitulo {
+    transform: translateY(-7.5px);
+    transition: 2s ease-in-out;
+}
+
+/* Cuando activo = false → vuelve a su lugar */
+.volverTitulo {
+    transform: translateY(0px);
+    transition: 2s ease-in-out;
 }
