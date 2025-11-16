@@ -21,7 +21,7 @@ export function Header() {
                     </div>
                     <div className="links">
                         <a href="/empresa">Company</a>
-                        <a href="/account">Cuenta</a>
+                        <a href="/account/izuru.furry">Cuenta</a>
 
                         {/* <a href="">Gallery</a> */}
                         <a href="https://x.com/ItzAgus386" target='_blank'>Twitter</a>

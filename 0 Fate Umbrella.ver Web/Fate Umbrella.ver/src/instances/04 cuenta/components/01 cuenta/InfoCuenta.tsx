@@ -1,23 +1,52 @@
+
+import { useState, useEffect } from 'react';
 import './InfoCuenta.css'
 
-export function InfoCuenta() {
+interface InfoCuentaProps {
+    usuario: {
+        username: string;
+        picture: string;
+        level: number;
+        exp: number;
+        description: string;
+    };
+}
+
+export function InfoCuenta({ usuario }: InfoCuentaProps) {
+    const [porcentajeExp, setPorcentajeExp] = useState(0);
+
+    useEffect(() => {
+        const porcentaje = (((usuario.exp * 1000) / 5000) / 10);
+
+        console.log(porcentaje);
+
+        setTimeout(() => {
+            setPorcentajeExp(porcentaje);
+        }, 200);
+    }, [usuario]);
+
     return (
         <>
             <section className="cuenta">
                 <div className="contenedorCuenta">
-                    <img src="../../../imgs/Cuenta/Pfp/013_Okita_Souji_Alter_2.png" alt="Foto de Okita Souji Alter *NOMBRE PERSOANJE*" />
+                    <img src={`../../../imgs/Cuenta/Pfp/${usuario.picture}`} alt={`Foto de perfil de ${usuario.username}`} />
                     <div className="infoCuenta">
                         <h1>
-                            izuru.skibidi
+                            {usuario.username}
                         </h1>
                         <div className="progresoNivel">
-                            <div className="barraNivel"></div>
+                            <div className="barraNivel">
+                                <div 
+                                    className="barraRelleno" 
+                                    style={{ width: porcentajeExp + '%'}}
+                                ></div>
+                            </div>
                             <div className="numeroNivel">
-                                <span>167</span>
+                                <span>{usuario.level}</span>
                             </div>
                         </div>
                         <div className="bioCuenta">
-                            <p>"Juego solo, no por costumbre, sino porque el silencio me deja pensar. No busco destacar, pero siempre estoy ahí, constante… incluso cuando nadie nota mi presencia."</p>
+                            <p>"{usuario.description}"</p>
                         </div>
                     </div>
                 </div>

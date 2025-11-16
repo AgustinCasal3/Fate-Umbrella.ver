@@ -96,14 +96,13 @@
     background-position: right center;
 }
 
-/* Cuando activo = true → se mueve a la izquierda */
-.animarTitulo {
-    transform: translateY(-7.5px);
-    transition: 2s ease-in-out;
+@keyframes flotacion {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-5px); }  /* Sube */
+  100% { transform: translateY(0px); }   /* Baja */
 }
 
-/* Cuando activo = false → vuelve a su lugar */
-.volverTitulo {
-    transform: translateY(0px);
-    transition: 2s ease-in-out;
+/* Aplicación a elementos */
+.flotando {
+  animation: flotacion 5s ease-in-out infinite;
 }

@@ -1,14 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import './Titulo.css'
 
 export function Titulo() {
 
     const [frase, setFrase] = useState('');
-
-    const imgTituloRef = useRef<HTMLDivElement>(null);
-    const textoTituloRef = useRef<HTMLDivElement>(null);
-
-    const [activo, setActivo] = useState(false);
 
     useEffect(() => {
         const random = Math.floor(Math.random() * 6);
@@ -33,44 +28,18 @@ export function Titulo() {
                 setFrase('"El Líder sabía lo que hacía al crear este ser." - Arnold');
                 break;
         }
-
-        const intervalo = setInterval(() => {
-            setActivo(prev => !prev);
-        }, 1500);
-
-        return () => clearInterval(intervalo);
     }, []);
-
-    useEffect(() => {
-        const img = imgTituloRef.current;
-        const txt = textoTituloRef.current;
-        if (!img || !txt) return;
-
-        if (activo) {
-            img.classList.add("animarTitulo");
-            img.classList.remove("volverTitulo");
-
-            txt.classList.add("animarTitulo");
-            txt.classList.remove("volverTitulo");
-        } else {
-            img.classList.add("volverTitulo");
-            img.classList.remove("animarTitulo");
-
-            txt.classList.add("volverTitulo");
-            txt.classList.remove("animarTitulo");
-        }
-    }, [activo]);
 
     return (
         <>
             <section className="titulo">
                 <div className="tituloContenido">
 
-                    <div className="tituloImg" ref={imgTituloRef}>
+                    <div className="tituloImg flotando">
                         <img src="../../../imgs/Home/Titulo/Logo.png" alt="" />
                     </div>
 
-                    <div className="tituloTexto" ref={textoTituloRef}>
+                    <div className="tituloTexto flotando">
                         <h2>{frase}</h2>
                     </div>
 
