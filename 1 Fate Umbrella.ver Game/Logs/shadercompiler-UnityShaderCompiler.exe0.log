@@ -2,6 +2,9 @@ Base path: 'C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data', plugins 
 Cmd: initializeCompiler
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Cmd: shutdown
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -120,7 +120,11 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 97
+=======
+  controlID: 39
+>>>>>>> Stashed changes
 =======
   controlID: 39
 >>>>>>> Stashed changes
@@ -276,8 +280,13 @@ MonoBehaviour:
     x: 688.8
     y: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     width: 364
     height: 730.8
+=======
+    width: 344.00006
+    height: 714.8
+>>>>>>> Stashed changes
 =======
     width: 344.00006
     height: 714.8
@@ -350,15 +359,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 175.80002}
     m_SelectedIDs: ac5c0000
     m_LastClickedID: 23724
     m_ExpandedIDs: 00000000945c0000965c0000985c00009a5c00009c5c000000ca9a3bffffff7f
 =======
+=======
+>>>>>>> Stashed changes
     scrollPos: {x: 0, y: 165.40002}
     m_SelectedIDs: 025d0000
     m_LastClickedID: 23810
     m_ExpandedIDs: 00000000ea5c0000ec5c0000ee5c0000f05c0000f25c0000fe5c000000ca9a3bffffff7f
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -388,7 +403,11 @@ MonoBehaviour:
     m_SelectedIDs: 7e020000
     m_LastClickedID: 638
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000945c0000965c0000985c00009a5c00009c5c0000
+=======
+    m_ExpandedIDs: 00000000ea5c0000ec5c0000ee5c0000f05c0000f25c0000
+>>>>>>> Stashed changes
 =======
     m_ExpandedIDs: 00000000ea5c0000ec5c0000ee5c0000f05c0000f25c0000
 >>>>>>> Stashed changes
@@ -417,10 +436,13 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
 =======
+=======
+>>>>>>> Stashed changes
     m_SelectedInstanceIDs: 34a40000
     m_LastClickedInstanceID: 42036
     m_HadKeyboardFocusLastEvent: 1
@@ -491,9 +513,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d0f8ffff12f9ffff54f9ffff94f9ffffdcf9ffff1efaffff2efbffff
+=======
+      m_SelectedIDs: f2a40000
+      m_LastClickedID: 42226
+      m_ExpandedIDs: 5ea4ffff08a8ffff00acffff86acffff8aadfffffeadffff2cb1ffff6cb9ffffbebdfffff0c0ffff82c5ffff48c6ffffcac7fffff8d2ffff72d4ffff2ad7ffffe0d8ffffcee1ffff9ee4ffffb0e5ffff30e7ffff52f2ffff36f3ffff66f4ffff4cf5fffff8f8ffff68fafffff4ffffff5e5d0000705d0000e25e0000505f0000b05f0000b4600000cc60000022610000886100009a610000a46100006a6500007c650000346d0000606d0000726d00008e6d000096740000a8740000747900008679000090790000b87d0000d07e00000c8c0000108c0000be8c0000128f0000168f0000c48f0000b698000068990000789900008c9900008c9c00002aa3000030a400007ea40000e2a4000006a50000cca6000006a90000b4a90000d8ad00008aae0000e6b30000eab3000098b40000
+>>>>>>> Stashed changes
 =======
       m_SelectedIDs: f2a40000
       m_LastClickedID: 42226
@@ -1020,7 +1048,11 @@ MonoBehaviour:
     m_Target: {x: 0.029103383, y: 0.01081868, z: -0.00032050928, w: 0.9995398}
     speed: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Value: {x: -0.012307478, y: 0.014375109, z: -0.00017341085, w: -0.99983877}
+=======
+    m_Value: {x: 0.029102745, y: 0.010818442, z: -0.00032050224, w: 0.99951786}
+>>>>>>> Stashed changes
 =======
     m_Value: {x: 0.029102745, y: 0.010818442, z: -0.00032050224, w: 0.99951786}
 >>>>>>> Stashed changes
