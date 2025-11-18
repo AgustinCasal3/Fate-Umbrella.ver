@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\aguzc\\OneDrive\\Escritorio\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|C:\\Users\\aguzc\\OneDrive\\Escritorio\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\assets\\assets\\scripts\\datosjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|c:\\users\\aguzc\\onedrive\\escritorio\\fate-umbrella.ver\\1 fate umbrella.ver game\\assets\\assets\\scripts\\datosjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|solutionrelative:assets\\assets\\scripts\\datosjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|solutionrelative:assets\\assets\\scripts\\lineadialogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|c:\\users\\aguzc\\onedrive\\escritorio\\fate-umbrella.ver\\1 fate umbrella.ver game\\assets\\assets\\scripts\\controladornovelavisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|C:\\Users\\aguzc\\OneDrive\\Escritorio\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\assets\\assets\\scripts\\controladornovelavisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F9128A1-C28F-8FC3-A681-CCE9114F68F6}|Assembly-CSharp.csproj|solutionrelative:assets\\assets\\scripts\\controladornovelavisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Assets\\Assets\\Scripts\\ControladorNovelaVisual.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAuwBgAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T20:09:17.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T20:09:17.953Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Assets\\Assets\\Scripts\\LineaDialogo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T19:53:25.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T19:53:25.533Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "Assets\\Assets\\Scripts\\MenuUIController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T14:17:43.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T14:17:43.128Z"
             },
             {
               "$type": "Document",

@@ -6,39 +6,49 @@ using UnityEngine.UI; // Para el Slider y Image
 
 public class MenuUIController : MonoBehaviour
 {
-    // 1. Referencia al Script de Datos
-    public DatosJugador datosJugador;
 
-    // 2. Referencias a la Interfaz Visual 
+    private DatosJugador datosJugadorInstancia;
+
     public TextMeshProUGUI textoNombre;
     public TextMeshProUGUI textoNivel;
     public Slider barraExperiencia;
 
+    void Start()
+    {
+
+        datosJugadorInstancia = DatosJugador.Instancia;
+
+        ActualizarDatosUI();
+    }
+
+
     void Update()
     {
-        // Update se llama en cada frame, asegurando que la UI esté actualizada
         ActualizarDatosUI();
     }
 
     void ActualizarDatosUI()
     {
-        if (datosJugador != null)
+        if (datosJugadorInstancia != null)
         {
-            // Actualiza Textos
-            textoNombre.text = datosJugador.nombre;
-            textoNivel.text = "Nivel " + datosJugador.nivel.ToString() + " / 100";
-
-            // Actualiza Slider
-            barraExperiencia.maxValue = datosJugador.experienciaNecesaria;
-            barraExperiencia.value = datosJugador.experienciaActual;
+            
+            textoNombre.text = datosJugadorInstancia.nombre;
+            textoNivel.text = "Nivel " + datosJugadorInstancia.nivel.ToString(); // Ajustado a solo Nivel
+ 
+            barraExperiencia.maxValue = datosJugadorInstancia.experienciaNecesaria;
+            barraExperiencia.value = datosJugadorInstancia.experienciaActual;
         }
     }
-    public string idProgresoHistoria = "1.01";
 
-    void Awake()
+    // --- LÓGICA DEL BOTÓN DE REINICIAR PROGRESO ---
+
+    public void OnClickReiniciarYRefrescar()
     {
-        // Al iniciar el juego, intenta cargar el ID guardado.
-        // Si no encuentra "ProgresoHistoria", usará "1.01" como valor inicial.
-        idProgresoHistoria = PlayerPrefs.GetString("ProgresoHistoria", "1.01");
+        if (DatosJugador.Instancia != null)
+        {
+         
+            DatosJugador.Instancia.ReiniciarProgreso();
+
+        }
     }
 }

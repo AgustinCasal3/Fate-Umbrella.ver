@@ -497,9 +497,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 817220897}
-        m_TargetAssemblyTypeName: DatosJugador, Assembly-CSharp
-        m_MethodName: ReiniciarProgreso
+      - m_Target: {fileID: 1888529415}
+        m_TargetAssemblyTypeName: MenuUIController, Assembly-CSharp
+        m_MethodName: OnClickReiniciarYRefrescar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -867,7 +867,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1655421419}
   - {fileID: 1155801024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2823,11 +2822,11 @@ Transform:
   m_GameObject: {fileID: 1655421417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.87152, y: 139.31512, z: -199.6366}
+  m_LocalPosition: {x: 861.1285, y: 679.3151, z: -199.6366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 512426719}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707343826
 GameObject:
@@ -3290,11 +3289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b501bafbd2230094fab0e0c12748ad7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  datosJugador: {fileID: 817220897}
   textoNombre: {fileID: 1303034362}
   textoNivel: {fileID: 1399409587}
   barraExperiencia: {fileID: 1294804498}
-  idProgresoHistoria: 1.01
 --- !u!1 &1896589202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,5 +3703,6 @@ SceneRoots:
   - {fileID: 763911940}
   - {fileID: 817220896}
   - {fileID: 904038007}
+  - {fileID: 1655421419}
   - {fileID: 512426719}
   - {fileID: 1082139160}
