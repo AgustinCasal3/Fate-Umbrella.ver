@@ -51,18 +51,6 @@ public class ControlTransicion : MonoBehaviour
             yield return null;
         }
 
-        // Asegura que el valor final sea exacto (0 o 1)
-        Color cFinal = panelFondo.color;
-        cFinal.a = opacidadObjetivo;
-        panelFondo.color = cFinal;
-
-        if (opacidadObjetivo == 0f)
-        {
-            panelFondo.gameObject.SetActive(false);
-        }
-        else if (opacidadObjetivo == 1f)
-        {
-            panelFondo.gameObject.SetActive(true);
-        }
+        
     }
 }

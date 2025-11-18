@@ -55,6 +55,7 @@
     <UnityVersion>2022.3.62f3</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -64,6 +65,7 @@
     <Compile Include="Assets\Assets\Scripts\ControlTransicion.cs" />
     <Compile Include="Assets\Assets\Scripts\BotonVolver.cs" />
     <Compile Include="Assets\Assets\Scripts\MenuUIController.cs" />
+    <Compile Include="Assets\Assets\Scripts\BetaController.cs" />
     <Compile Include="Assets\Assets\Scripts\ControladorNovelaVisual.cs" />
     <Compile Include="Assets\Assets\Scripts\LineaDialogo.cs" />
     <Compile Include="Assets\Assets\Scripts\ControlEscenas.cs" />
