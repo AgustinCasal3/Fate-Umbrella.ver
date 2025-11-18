@@ -1,5 +1,7 @@
 import './ServantSeleccionado.css'
 
+// interface servant Usuario
+
 export function ServantSeleccionado() {
     return (
         <>
@@ -23,7 +25,7 @@ export function ServantSeleccionado() {
 
                     <div className="infoServantSeleccionado">
                         <div className="portadaImagenServant">
-                            <img src="../../../imgs/Cuenta/Portadas/AvengerEdmondDantes2.png" alt="" />
+                            <img src="../../../imgs/Cuenta/Portadas/001_Avenger_Edmond_Dantes_2.png" alt="" />
                         </div>
 
                         <div className="statsServantSeleccionado">
@@ -66,7 +68,7 @@ export function ServantSeleccionado() {
                             <h2 className='nombreCraftEssence'>Craft Essence</h2>
                             <div className="infoCraftEssence">
                                 <div className="imgCraftEssence">
-                                    <img src="../../../imgs/Cuenta/CraftEssence/EncounterAtGojouBridge.png" alt="Craft Essence Equipada" />
+                                    <img src="../../../imgs/Cuenta/CraftEssence/001_EncounterAtGojouBridge.png" alt="Craft Essence Equipada" />
                                 </div>
                                 <div className="textoCraftEssence">
                                     <h2>Encounter At Gojou Bridge</h2>

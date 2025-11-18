@@ -1,0 +1,298 @@
+/* SERVANT SELECCIONADO */
+
+.contenedorContenidoServantSeleccionado {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoServantSeleccionado {
+    width: 90%;
+    height: auto;
+
+
+    border-radius: 2.5vh;
+
+    background-color: #434343;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
+
+.tituloServantSeleccionado {
+    width: 100%;
+    height: 25vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.izqTituloServant {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 70%;
+    height: 100%;
+}
+
+.izqTituloServant img {
+    width: 15vh;
+    height: 15vh;
+
+    max-width: 15vw;
+    max-height: 15vw;
+
+    margin: 5vh;
+
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.385)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.714));
+}
+
+.izqTituloServant h1 {
+    width: auto;
+
+    font-size: 7vh;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    color: white;
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.714));
+}
+
+.derTituloServant {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    width: 30%;
+    height: 100%;
+}
+
+.estrellasServant {
+    margin-right: 8vh;
+}
+
+.estrellasServant img {
+    width: 7.5vh;
+    height: 7.5vh;
+
+    max-width: 5vw;
+    max-height: 5vw;
+    
+    margin: 0.5vh;
+}
+
+.infoServantSeleccionado {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portadaImagenServant {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portadaImagenServant img {
+    height: 82vh;
+
+    margin: 5vh;
+    margin-top: 0;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statsServantSeleccionado {
+    width: calc(100% - 20vw);
+    height: auto;
+}
+
+.ataqueServant, .vidaServant {
+    width: 90%;
+    height: auto;
+
+    margin-bottom: 5vh;
+
+    border: 1px solid black;
+    border-radius: 2.5vh;
+
+    padding: 2.5vh;
+
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ataqueServant h2, .vidaServant h2 {
+    font-size: 3.5vh;
+
+    text-align: center;
+    margin-bottom: 2.5vh;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.ataqueServantValores, .vidaServantValores {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ataqueBase, .vidaBase {
+    width: 30%;
+}
+
+.ataqueActual, .vidaActual {
+    width: 30%;
+}
+
+.ataqueMaximo   , .vidaMaximo   {
+    width: 30%;
+}
+
+.ataqueBase h3, .ataqueBase p,
+.vidaBase h3, .vidaBase p {
+    font-size: 2.5vh;
+    text-align: left;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.ataqueActual h3, .ataqueActual p,
+.vidaActual h3, .vidaActual p {
+    font-size: 2.5vh;
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+
+.ataqueMaximo h3, .ataqueMaximo p,
+.vidaMaximo h3, .vidaMaximo p {
+    font-size: 2.5vh;
+    text-align: right;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.nombreCraftEssence {
+    font-size: 5vh;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    color: white;
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.714));
+}
+
+.infoCraftEssence {
+    width: 90%;
+    height: auto;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: start;
+    justify-content: left;
+
+    border: 1px solid black;
+    border-radius: 2.5vh;
+
+    padding: 2.5vh;
+
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imgCraftEssence {
+    width: 20vh;
+    height: 20vh;
+
+    margin-right: 5vh;
+}
+
+.imgCraftEssence img {
+    width: 20vh;
+    height: 20vh;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 1.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textoCraftEssence h2 {
+    font-size: 4.5vh;
+
+    margin-bottom: 2.5vh;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.textoCraftEssence p {
+    font-size: 2.5vh;
+
+    margin-left: 1.5vh;
+    margin-top: 1.5vh;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}

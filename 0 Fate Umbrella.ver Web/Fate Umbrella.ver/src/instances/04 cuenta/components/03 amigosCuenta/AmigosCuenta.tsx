@@ -1,110 +1,103 @@
+import axios from 'axios'
 import './AmigosCuenta.css'
+import { useEffect, useState } from 'react';
 
-export function AmigosCuenta() {
+// interface usuarioAmigo
+interface UserAmigos {
+    usuario: {
+        friends: string[];
+    }
+}
+
+interface UsuarioCompleto {
+    username: string;
+    picture: string;
+    level: number;
+    exp: number;
+}
+
+export function AmigosCuenta({ usuario }: UserAmigos) {
+    const friends = usuario.friends;
+
+    const [amigosData, setAmigosData] = useState<UsuarioCompleto[]>([]);
+
+    async function getUserById(id: string) {
+        try {
+            const res = await axios.get('http://localhost:3001/users/' + id);
+            return res.data ?? null;  // si no existe, devuelve null
+        } catch (err) {
+            console.warn("Usuario no encontrado:", id);
+            return null; // devolvemos null para poder filtrarlo después
+        }
+    }
+
+    useEffect(() => {
+        let mounted = true;
+
+        async function fetchAmigos() {
+            try {
+                const data = await Promise.all(friends.map(id => getUserById(id)));
+                
+                const filtrados = data.filter(amigo => amigo !== null);
+
+                if (mounted) setAmigosData(filtrados);
+            } catch (err) {
+                console.error("Error cargando amigos:", err);
+            }
+        }
+
+        if (friends && friends.length > 0) {
+            fetchAmigos();
+        } else {
+            setAmigosData([]); // limpia si no hay amigos
+        }
+
+        return () => { mounted = false; };
+    }, [friends]);
+
+    console.log("Friends recibidos:", friends);
+
     return (
         <>
             <section className="amigosCuenta">
                 <div className="contenedorAmigosCuenta">
-                    <h2>
-                        Amigos:
-                    </h2>
+                    <h2>Amigos:</h2>
+
                     <div className="listaAmigosCuenta">
                         <div className="contenedorListaAmigosCuenta">
-                            
-                            <div className="tarjetaAmigoCuenta">
-                                <div className="contenidoTarjetaAmigoCuenta">
-                                    <div className="imgAmigoCuenta">
-                                        <img src="../../../imgs/Cuenta/Pfp/Astolfo4.png" alt="" />
-                                    </div>
-                                    <div className="infoAmigoCuenta">
-                                        <span>Aquwus</span>
-                                        <div className="nivelAmigoCuenta">
-                                            <div className="barraNivelAmigoCuenta" style={{
-                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 23%, #6a83e8 46%, #FFF 46%)'
-                                            }}></div>
-                                            <div className="numeroNivelAmigoCuenta">
-                                                <span>12</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div className="tarjetaAmigoCuenta">
-                                <div className="contenidoTarjetaAmigoCuenta">
-                                    <div className="imgAmigoCuenta">
-                                        <img src="../../../imgs/Cuenta/Pfp/MedeaLily2.png" alt="" />
-                                    </div>
-                                    <div className="infoAmigoCuenta">
-                                        <span>ivan.fablab</span>
-                                        <div className="nivelAmigoCuenta">
-                                            <div className="barraNivelAmigoCuenta" style={{
-                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 45%, #6a83e8 90%, #FFF 90%)'
-                                            }}></div>
-                                            <div className="numeroNivelAmigoCuenta">
-                                                <span>478</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {amigosData.length === 0 && (
+                                <p className="sinAmigos">~ Este usuario no tiene amigos (válidos 🥺) ~</p>
+                            )}
 
-                            <div className="tarjetaAmigoCuenta">
-                                <div className="contenidoTarjetaAmigoCuenta">
-                                    <div className="imgAmigoCuenta">
-                                        <img src="../../../imgs/Cuenta/Pfp/Caligula3.png" alt="" />
-                                    </div>
-                                    <div className="infoAmigoCuenta">
-                                        <span>torsido27</span>
-                                        <div className="nivelAmigoCuenta">
-                                            <div className="barraNivelAmigoCuenta" style={{
-                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 11.5%, #6a83e8 23%, #FFF 23%)'
-                                            }}></div>
-                                            <div className="numeroNivelAmigoCuenta">
-                                                <span>69</span>
+                            {amigosData.map(amigo =>
+                                <a href={`${amigo.username}`}>
+                                    <div className="tarjetaAmigoCuenta" key={amigo.username}>
+                                        <div className="contenidoTarjetaAmigoCuenta">
+                                            <div className="imgAmigoCuenta">
+                                                <img src={`../../../imgs/Cuenta/Pfp/${amigo.picture}`} alt={`Foto de ${amigo.username}`} />
+                                            </div>
+                                            <div className="infoAmigoCuenta">
+                                                <span>{amigo.username}</span>
+                                                <div className="nivelAmigoCuenta">
+                                                    <div 
+                                                        className="barraNivelAmigoCuenta">
+                                                            <div 
+                                                                className="progresoNivelAmigoCuenta"
+                                                                style={{
+                                                                    width: (((amigo.exp * 1000) / 5000) / 10) + '%'
+                                                                }}
+                                                            ></div>
+                                                        </div>
+                                                    <div className="numeroNivelAmigoCuenta">
+                                                        <span>{amigo.level}</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="tarjetaAmigoCuenta">
-                                <div className="contenidoTarjetaAmigoCuenta">
-                                    <div className="imgAmigoCuenta">
-                                        <img src="../../../imgs/Cuenta/Pfp/JamesMoriarty2.png" alt="" />
-                                    </div>
-                                    <div className="infoAmigoCuenta">
-                                        <span>emir220</span>
-                                        <div className="nivelAmigoCuenta">
-                                            <div className="barraNivelAmigoCuenta" style={{
-                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 26.5%, #6a83e8 57%, #FFF 57%)'
-                                            }}></div>
-                                            <div className="numeroNivelAmigoCuenta">
-                                                <span>220</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="tarjetaAmigoCuenta">
-                                <div className="contenidoTarjetaAmigoCuenta">
-                                    <div className="imgAmigoCuenta">
-                                        <img src="../../../imgs/Cuenta/Pfp/IllyasvielVonEinzbern2.png" alt="" />
-                                    </div>
-                                    <div className="infoAmigoCuenta">
-                                        <span>tobbiebie(gay)</span>
-                                        <div className="nivelAmigoCuenta">
-                                            <div className="barraNivelAmigoCuenta" style={{
-                                                background: 'linear-gradient(90deg, #b5c6ff 0%, #8ea2ff 36.5%, #6a83e8 77%, #FFF 77%)'
-                                            }}></div>
-                                            <div className="numeroNivelAmigoCuenta">
-                                                <span>7</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                </a>
+                            )}
 
                         </div>
                     </div>

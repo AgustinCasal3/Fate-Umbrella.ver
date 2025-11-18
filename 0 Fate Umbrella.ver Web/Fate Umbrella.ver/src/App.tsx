@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element: <Descarga />,
       },
       {
-        path: 'account', // 04
+        path: 'account/:username', // 04
         element: <Cuenta />,
       },
       {

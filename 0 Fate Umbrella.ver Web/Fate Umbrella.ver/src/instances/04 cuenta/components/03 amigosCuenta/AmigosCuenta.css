@@ -1,0 +1,176 @@
+.contenedorAmigosCuenta {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-position: center;
+    background-size: cover;
+
+    padding: 5vh 0;
+
+    border-top: 2px solid burlywood;
+    border-bottom: 2px solid burlywood;
+}
+
+.contenedorAmigosCuenta h2 {
+    display: inline-block;
+
+    margin-left: 15vh;
+    margin-bottom: 5vh;
+
+    font-size: 5vh;
+}
+
+/* LISTA AMIGOS */
+
+.listaAmigosCuenta {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorListaAmigosCuenta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+    width: 150vh; 
+}
+
+/* TARJETA AMIGOS */
+
+.tarjetaAmigoCuenta {
+    user-select: none;
+    
+    width: auto;
+    height: auto;
+    
+    margin: 2.5vh;
+    padding: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(180deg, #4c3d34 0%, #3b3029 100%);
+    box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjetaAmigoCuenta:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.contenidoTarjetaAmigoCuenta {
+    width: 40vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgAmigoCuenta {
+    width: 10vh;
+    height: 10vh;
+
+    margin-right: 2.5vh;
+}
+
+.imgAmigoCuenta img {
+    width: 10vh;
+    height: 10vh;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 1.5vh;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoAmigoCuenta {
+    width: 27.5vh;
+}
+
+.infoAmigoCuenta span {
+    line-height: 5vh;
+    font-size: 3vh;
+    font-weight: bold;
+
+    color: white;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+
+    font-family: 'Times New Roman', Times, serif;
+
+    margin-bottom: 1vh;
+}
+
+.nivelAmigoCuenta {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barraNivelAmigoCuenta {
+    width: 20vh;
+    max-width: 20vh;
+    height: 0.5vh;
+
+    background-color: white;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a2a;
+}
+
+.progresoNivelAmigoCuenta {
+    height: 0.5vh;
+
+    background: linear-gradient(90deg, #b5c6ff, #8ea2ff, #6a83e8);
+}
+
+.numeroNivelAmigoCuenta {
+    user-select: none;
+
+    width: 5vh;
+    height: 5vh;
+
+    margin-left: 2.5vh;
+
+    background-image: url(../../../imgs/Cuenta/RecuadroNivel.png);
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroNivelAmigoCuenta span {
+    color: white;
+    font-size: 1.5vh;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sinAmigos {
+    width: 100%;
+
+    font-size: 1.5em;
+    text-align: center;
+}

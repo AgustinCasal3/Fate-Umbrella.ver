@@ -1,0 +1,84 @@
+/* SERVANTS CUENTA */
+
+.servantsCuenta {
+    width: 100%;
+    height: auto;
+
+    padding: 5vh 0;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-size: 50px;
+    background-repeat: repeat;
+    background-position: center;
+
+}
+
+.contenedorServantsCuenta {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 5vh;
+}
+
+.contenedorServantsCuenta h2 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 5vh;
+
+    margin-bottom: 5vh;
+}
+
+.listaServantsCuenta {
+    width: 100%;
+    height: 30vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flechaListaServants {
+    width: 5vw;
+    height: 5vw;
+    
+    background-image: url(../../../imgs/Cuenta/Flecha.png);
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.3s ease;
+}
+
+.flechaListaServants:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.flechaInvertidaHorizontal {
+    background-image: url(../../../imgs/Cuenta/FlechaI.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjetasServants {
+    max-width: 80vw;
+    padding: 2.5vh 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    scrollbar-width: none; /* firefox */
+}
+
+.tarjetasServants::-webkit-scrollbar { display: none; }

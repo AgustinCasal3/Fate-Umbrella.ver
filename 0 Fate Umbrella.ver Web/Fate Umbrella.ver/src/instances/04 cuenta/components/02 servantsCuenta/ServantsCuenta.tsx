@@ -3,7 +3,7 @@ import './ServantsCuenta.css'
 import { ServantListaServants } from './01 servantListaServants/ServantListaServants'
 import { ServantSeleccionado } from './02 servantSeleccionado/ServantSeleccionado'
 
-export function ServantsCuenta() {
+export function ServantsCuenta(usuario) {
     return (
         <>
             <section className="servantsCuenta">
