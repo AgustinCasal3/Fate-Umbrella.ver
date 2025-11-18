@@ -11,7 +11,7 @@ export function Footer() {
                                 <a href="https://github.com/izruru" target='_blank' className="devImg">
                                     <img src="../../../imgs/footer/Lucas.jpg" alt="" />
                                 </a>
-                                <a href="" className='devText'>
+                                <a href="https://github.com/izruru" target='_blank' className='devText'>
                                     <p>Izuru</p>
                                 </a>
                             </div>
@@ -19,7 +19,7 @@ export function Footer() {
                                 <a href="https://www.youtube.com/@Aquwus" target='_blank' className="devImg">
                                     <img src="../../../imgs/footer/Agustin.jpg" alt="" />
                                 </a>
-                                <a href="" className='devText'>
+                                <a href="https://www.youtube.com/@Aquwus" target='_blank' className='devText'>
                                     <p>Aquwus</p>
                                 </a>
                             </div>

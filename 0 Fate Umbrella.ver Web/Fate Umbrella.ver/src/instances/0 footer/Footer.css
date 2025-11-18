@@ -66,6 +66,8 @@
 }
 
 .devImg img {
+    user-select: none;
+
     border-radius: 50%;
 
     filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.447));
@@ -117,6 +119,8 @@
 }
 
 .copyImg img {
+    user-select: none;
+
     width: auto;
     height: 100%;
 
