@@ -36,7 +36,7 @@ export function Titulo() {
                 <div className="tituloContenido">
 
                     <div className="tituloImg flotando">
-                        <img src="../../../imgs/Home/Titulo/Logo.png" alt="" />
+                        <img src="../../../imgs/Home/Titulo/Logo5.png" alt="" />
                     </div>
 
                     <div className="tituloTexto flotando">
