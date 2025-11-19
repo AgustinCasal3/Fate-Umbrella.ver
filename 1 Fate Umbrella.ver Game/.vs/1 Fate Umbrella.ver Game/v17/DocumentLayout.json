@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\MenuUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\MenuUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\APIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\APIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\DatosJugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\DatosJugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\LoginIU.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\LoginIU.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\DatosJugadorAPI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\DatosJugadorAPI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\APIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\APIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\MenuUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Assets\\Scripts\\MenuUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "LoginIU.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\LoginIU.cs",
+              "RelativeDocumentMoniker": "Assets\\Assets\\Scripts\\LoginIU.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\LoginIU.cs",
+              "RelativeToolTip": "Assets\\Assets\\Scripts\\LoginIU.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAYwEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T14:38:54.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MenuUIController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\MenuUIController.cs",
               "RelativeDocumentMoniker": "Assets\\Assets\\Scripts\\MenuUIController.cs",
@@ -43,26 +60,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "APIManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\APIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Assets\\Scripts\\APIManager.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\APIManager.cs",
               "RelativeToolTip": "Assets\\Assets\\Scripts\\APIManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T23:06:19.33Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DatosJugadorAPI.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\DatosJugadorAPI.cs",
               "RelativeDocumentMoniker": "Assets\\Assets\\Scripts\\DatosJugadorAPI.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\DatosJugadorAPI.cs",
               "RelativeToolTip": "Assets\\Assets\\Scripts\\DatosJugadorAPI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T23:00:12.972Z",
               "EditorCaption": ""
@@ -75,7 +92,7 @@
               "RelativeDocumentMoniker": "Assets\\Assets\\Scripts\\DatosJugador.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\pepe\\Fate-Umbrella.ver\\1 Fate Umbrella.ver Game\\Assets\\Assets\\Scripts\\DatosJugador.cs",
               "RelativeToolTip": "Assets\\Assets\\Scripts\\DatosJugador.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAIwAwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T14:18:56.835Z",
               "EditorCaption": ""

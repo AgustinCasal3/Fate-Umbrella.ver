@@ -8,4 +8,5 @@ public class DatosJugadorAPI
     public int level;              // Nivel actual
     public int exp;                // Experiencia actual
     public string picture;         // Nombre o ruta del archivo de la imagen del personaje
+    public string passwordHash;    // Hash de la contraseña (ponele)
 }

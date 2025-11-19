@@ -5,25 +5,29 @@ using System;
 
 public class APIManager : MonoBehaviour
 {
+    public static APIManager Instancia;
+
     // --- CONFIGURACIÓN DE LA CONEXIÓN ---
-    [Header("Configuración del Servidor")]
-    [Tooltip("URL base del servidor (Ej: http://localhost:3000 o https://api.tu-juego.com)")]
-    public string apiUrlBase = "http://localhost:3000";
+    public string apiUrlBase = "http://localhost:3001";
+    public string endpointCarga = "/users/";
 
-    [Tooltip("Endpoint para obtener el perfil. Ej: /api/jugador/perfil/")]
-    public string endpointCarga = "/api/jugador/perfil/";
+    // El ID fijo que se usaba antes del login
+    public string idUsuarioPrueba = "1";
 
-    [Tooltip("ID de usuario para cargar (Esto se obtendría del login, pero lo dejamos fijo para pruebas)")]
-    public string idUsuarioACargar = "1";
-
-    // Referencia al Singleton de la UI para actualizar la imagen y los textos
-    private MenuUIController menuUIControllerInstancia => MenuUIController.Instancia;
-
+    void Awake()
+    {
+        if (Instancia != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instancia = this;
+    }
 
     void Start()
     {
-        // Al iniciar la escena, intentamos cargar los datos del perfil desde la API.
-        IniciarCargaDeDatos(idUsuarioACargar);
+        // Al iniciar, siempre cargamos el ID de prueba fijo
+        IniciarCargaDeDatos(idUsuarioPrueba);
     }
 
     public void IniciarCargaDeDatos(string idUsuario)
@@ -32,37 +36,33 @@ public class APIManager : MonoBehaviour
         StartCoroutine(FetchPlayerData(idUsuario));
     }
 
-    // Corrutina para realizar la petición GET (Lectura)
     IEnumerator FetchPlayerData(string idUsuario)
     {
-        // Construye la URL completa (Ej: http://localhost:3000/api/jugador/perfil/1)
         string urlCompleta = $"{apiUrlBase}{endpointCarga}{idUsuario}";
         Debug.Log($"Intentando cargar datos de perfil desde: {urlCompleta}");
 
         using (UnityWebRequest webRequest = UnityWebRequest.Get(urlCompleta))
         {
-            // Enviar la solicitud y esperar
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result != UnityWebRequest.Result.Success)
             {
-                // FALLO: Error de red o servidor. Usamos los datos por defecto/locales.
-                Debug.LogError($"Error de conexión al cargar perfil de la API: {webRequest.error}. Se usarán los datos por defecto/guardados localmente.");
+                Debug.LogError($"Error de conexión al cargar perfil de la API: {webRequest.error}.");
             }
             else
             {
-                // ÉXITO: Procesar JSON y llenar el Singleton
                 string jsonResponse = webRequest.downloadHandler.text;
 
                 try
                 {
-                    // Deserializar el JSON usando la clase DatosJugadorAPI
+                    // Necesitas que DatosJugadorAPI tenga 'passwordHash' para que no falle con el JSON,
+                    // pero no lo usamos. Mantenlo si es necesario.
                     DatosJugadorAPI datos = JsonUtility.FromJson<DatosJugadorAPI>(jsonResponse);
 
-                    // --- ASIGNACIÓN AL SINGLETON (DatosJugador.Instancia) ---
                     if (DatosJugador.Instancia != null)
                     {
                         // Llenamos los datos de perfil: Nombre, Nivel, EXP, Imagen
+                        DatosJugador.Instancia.idUsuario = datos.userId;
                         DatosJugador.Instancia.nombre = datos.username;
                         DatosJugador.Instancia.nivel = datos.level;
                         DatosJugador.Instancia.experienciaActual = datos.exp;
@@ -70,22 +70,18 @@ public class APIManager : MonoBehaviour
 
                         Debug.Log($"Perfil cargado de la API. Jugador: {datos.username} (Nivel {datos.level})");
 
-                        // Una vez que el Singleton tiene los datos, forzamos la actualización de la UI
-                        if (menuUIControllerInstancia != null)
+                        if (MenuUIController.Instancia != null)
                         {
-                            menuUIControllerInstancia.ActualizarDatosUI();
-                            menuUIControllerInstancia.CargarImagenPersonaje();
+                            MenuUIController.Instancia.ActualizarDatosUI();
+                            MenuUIController.Instancia.CargarImagenPersonaje();
                         }
                     }
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"Error al procesar JSON. Revisa la clase DatosJugadorAPI. Error: {e.Message}");
+                    Debug.LogError($"Error al procesar JSON de perfil. Error: {e.Message}");
                 }
             }
         }
     }
-
-    // NOTA: La función de GUARDADO (POST/PUT) se implementará cuando el backend esté listo. 
-    // Por ahora, el guardado de progreso de historia se maneja localmente en DatosJugador.cs.
 }

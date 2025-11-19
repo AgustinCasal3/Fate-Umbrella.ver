@@ -14,6 +14,7 @@ public class DatosJugador : MonoBehaviour
 
     [Header("Datos de API")]
     // Imagen: también se limpia
+    public string idUsuario = "";
     public string nombreImagenPersonaje = "";
 
     [Header("Progreso de Historia (Guardado Local)")]
