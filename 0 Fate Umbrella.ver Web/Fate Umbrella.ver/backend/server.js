@@ -3,13 +3,22 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
 
-import UserRouter from './routes/users.js'
+import UserRouter from './routes/users.js';
+import CraftEssenceRouter from './routes/craftEssences.js';
+import ServantRouter from './routes/servants.js';
+import UserServantsRouter from './routes/usersServants.js';
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/users', UserRouter)
+app.use('/users', UserRouter);
+
+app.use('/craftEssences', CraftEssenceRouter);
+
+app.use('/servants', ServantRouter);
+
+app.use('/userServants', UserServantsRouter);
 
 mongoose.connect(process.env.MONGO_URI)
     .then( () => console.log('Conectado Exitosamente a MongoDB.') )
