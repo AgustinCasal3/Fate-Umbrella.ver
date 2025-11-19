@@ -7,6 +7,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    user-select: none;
 }
 
 .contenidoServantSeleccionado {
@@ -275,8 +277,6 @@
 .textoCraftEssence h2 {
     font-size: 4.5vh;
 
-    margin-bottom: 2.5vh;
-
     color: white;
 
     font-family: 'Times New Roman', Times, serif;
@@ -295,4 +295,35 @@
     font-family: 'Times New Roman', Times, serif;
 
     filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.infoCraftEssence h3 {
+    font-size: 3vh;
+    
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.385)) drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.385));
+}
+
+.tituloCraftEssence {
+    width: 100%;
+
+    margin-bottom: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloCraftEssence .estrellasCraft img {
+    width: 3.5vh;
+    height: 3.5vh;
+
+    margin-left: 0.5vh;
 }

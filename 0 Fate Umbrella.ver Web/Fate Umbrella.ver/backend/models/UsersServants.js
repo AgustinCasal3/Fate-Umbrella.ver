@@ -11,7 +11,8 @@ const UserServantSchema = new mongoose.Schema({
         skill2: Number,
         skill3: Number
     },
-    craftEssenceId: Number
+    craftEssenceId: String,
+    stageSelected: String
 }, {collection: 'UsersServants'});
 
 export const UserServant = mongoose.model('UserServant', UserServantSchema);

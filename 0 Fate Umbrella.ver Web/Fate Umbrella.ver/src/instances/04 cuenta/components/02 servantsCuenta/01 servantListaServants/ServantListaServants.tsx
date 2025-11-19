@@ -1,45 +1,81 @@
+import { useState } from 'react'
 import './ServantListaServants.css'
 
-// interface Servant
+// interfaces Servant
+interface UserServant {
+    userId: string,
+    servantId: string,
+    level: number,
+    exp: number,
+    ascension: number,
+    skillsLevel: {
+        skill1: number,
+        skill2: number,
+        skill3: number
+    },
+    craftEssenceId: string | null,
+    stageSelected: string
+}
 
-export function ServantListaServants() {
+interface ServantBase {
+    servantsId: string,
+    name: string,
+    class: string,
+    rank:number,
+    picture: string,
+    front: string,
+    baseStats: {
+        atk: number,
+        hp: number,
+        npGain: number,
+    }
+}
+
+interface CombinedServant {
+    userData: UserServant,
+    baseData: ServantBase
+}
+
+interface ServantListaProps {
+    servants: CombinedServant[],
+    onSelect: (servant: CombinedServant | null) => void
+}
+
+export function ServantListaServants({ servants, onSelect }: ServantListaProps) {
+
+    const [selectedId, setSelectedId] = useState<string | null>(null);
+
+    const handleSelect = (servant: CombinedServant) => {
+        setSelectedId(servant.baseData.servantsId);
+        onSelect(servant); // 🔥 notifica al padre
+    }
+
     return (
         <>
             {/* Componente Tarjeta Servant */}
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/Avenger.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/001_Edmond_Dantes_1.png" alt="" className="imagenServant"/>
-            </div>
 
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/Avenger.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/004_Angra_Mainyu_1.png" alt="" className="imagenServant"/>
-            </div>
+            {servants.map((s) => (
+                <div
+                    key={s.baseData.servantsId}
+                    className={`tarjetaServant ${selectedId === s.baseData.servantsId ? "selectedServant" : ""}`}
+                    onClick={() => handleSelect(s)}
+                >
 
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/Saber.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/017_Sir_Gawain_1.png" alt="" className="imagenServant"/>
-            </div>
+                    {/* Imagen de clase */}
+                    <img
+                        src={`../../../imgs/Cuenta/Clases/${s.baseData.class}.png`}
+                        alt={s.baseData.class}
+                        className="claseServant"
+                    />
 
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/Rider.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/010_Iskandar_1.png" alt="" className="imagenServant"/>
-            </div>
-
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/AlterEgo.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/013_Okita_Souji_Alter_2.png" alt="" className="imagenServant"/>
-            </div>
-
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/Assasin.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/015_Ryougi_Shiki_1.png" alt="" className="imagenServant"/>
-            </div>
-
-            <div className="tarjetaServant">
-                <img src="../../../imgs/Cuenta/Clases/Rider.png" alt="" className="claseServant"/>
-                <img src="../../../imgs/Cuenta/Pfp/005_Astolfo_4.png" alt="" className="imagenServant"/>
-            </div>
+                    {/* Imagen del Servant */}
+                    <img
+                        src={`../../../imgs/Cuenta/Pfp/${s.baseData.picture}${s.userData.stageSelected}.png`}
+                        alt={s.baseData.name}
+                        className="imagenServant"
+                    />
+                </div>
+            ))}
         </>
     )
 }

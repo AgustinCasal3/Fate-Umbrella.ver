@@ -19,7 +19,7 @@
 }
 
 .tarjetaServant:hover {
-    transform: scale(1.025);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -54,4 +54,13 @@
     display: block;          /* quita gaps debajo de img inline */
     
     z-index: 1;
+}
+
+.selectedServant {
+    width: 25.5vh;
+    transform: scale(1.08);
+
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.75));
+
+    transition: 0.5s;
 }

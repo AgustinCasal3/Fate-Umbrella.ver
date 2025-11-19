@@ -1,30 +1,120 @@
 import './ServantsCuenta.css'
 
+import axios from 'axios'
+
 import { ServantListaServants } from './01 servantListaServants/ServantListaServants'
 import { ServantSeleccionado } from './02 servantSeleccionado/ServantSeleccionado'
+import { useEffect, useRef, useState } from 'react'
 
-interface Usuario {
-    userId: string
+interface InfoCuentaId {
+    usuario: {
+        userId: string
+    };
 }
 
-interface userServant {
+interface UserServant {
     userId: string,
     servantId: string,
     level: number,
     exp: number,
     ascension: number,
     skillsLevel: {
-        skill1: Number,
-        skill2: Number,
-        skill3: Number
+        skill1: number,
+        skill2: number,
+        skill3: number
     },
-    craftEssenceId: String
+    craftEssenceId: string | null,
+    stageSelected: string
 }
 
-export function ServantsCuenta(usuario: Usuario) {
+interface ServantBase {
+    servantsId: string,
+    name: string,
+    class: string,
+    rank:number,
+    picture: string,
+    front: string,
+    baseStats: {
+        atk: number,
+        hp: number,
+        npGain: number,
+    }
+}
+
+
+interface CombinedServant {
+    userData: UserServant,
+    baseData: ServantBase
+}
+
+export function ServantsCuenta({usuario}: InfoCuentaId) {
+
+    const userId = usuario.userId; 
+    
+    const [servants, setServants] = useState<CombinedServant[]>([]);
+    
     // fetch para encontrar los user servants
+    async function getUserServants(userId: string) {
+        const res = await axios.get('http://localhost:3001/userServants/' + userId);
+        return res.data;
+    }
 
     // fetch para encontrar cada servant con el user servants
+    async function getServantBase(id: string) {
+        const res = await axios.get('http://localhost:3001/servants/' + id)
+        return res.data;
+    }
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const userServantsData = await getUserServants(userId);
+
+                const fullCombined = await Promise.all(
+                    userServantsData.map(async (us: UserServant) => {
+                        const servantBase = await getServantBase(us.servantId);
+                        return {
+                            userData: us,
+                            baseData: servantBase
+                        };
+                    })
+                );
+
+                setServants(fullCombined);
+            } catch (err) {
+                console.error('Error cargando servants:', err)
+            }
+        };
+
+        fetchData();
+    }, [userId]);
+
+    //SCROLL LATERAL FLECHAS
+
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const scrollLeft = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({
+                left: -275,   // cantidad a scrollear
+                behavior: "smooth"
+            });
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({
+                left: 275,
+                behavior: "smooth"
+            });
+        }
+    };
+
+    //SERVANT SELECCIONADO
+
+    const [selectedServant, setSelectedServant] = useState<CombinedServant | null>(null);
+
 
     return (
         <>
@@ -33,15 +123,31 @@ export function ServantsCuenta(usuario: Usuario) {
                 <div className="contenedorServantsCuenta">
                     <h2>Servants</h2>
                     <div className="listaServantsCuenta">
-                        <div className="flechaListaServants flechaInvertidaHorizontal"></div>
-                        <div className="tarjetasServants">
-                            <ServantListaServants/>
+                        {servants.length >= 6 ? (
+                            <div className="flechaListaServants flechaInvertidaHorizontal" onClick={scrollLeft}></div>
+                        ) : null}
+
+                        <div className="tarjetasServants" ref={scrollRef}>
+                            {servants.length === 0 ? (
+                                <h1>Este usuario no posee servants aún</h1>
+                            ) : (
+                                <ServantListaServants
+                                    servants={servants}
+                                    onSelect={(servant) => {
+                                        console.log("Seleccionado:", servant);
+                                        setSelectedServant(servant);
+                                    }}
+                                />
+                            )}
                         </div>
-                        <div className="flechaListaServants"></div>
+
+                        {servants.length >= 6 ? (
+                            <div className="flechaListaServants" onClick={scrollRight}></div>
+                        ) : null}
                     </div>
                 </div>
 
-                <ServantSeleccionado/>
+                <ServantSeleccionado servant={selectedServant} />
 
             </section>
         </>
