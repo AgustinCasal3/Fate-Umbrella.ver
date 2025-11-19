@@ -665,7 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   apiUrlBase: http://localhost:3001
   endpointCarga: /users/
-  idUsuarioACargar: 1
+  idUsuarioPrueba: 1
 --- !u!4 &240265478
 Transform:
   m_ObjectHideFlags: 0
@@ -1371,6 +1371,7 @@ MonoBehaviour:
   nivel: 0
   experienciaActual: 0
   experienciaNecesaria: 5000
+  idUsuario: 
   nombreImagenPersonaje: 
   nombreParteActual: C1P1
 --- !u!1 &825105045
