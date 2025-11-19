@@ -63,6 +63,8 @@
     <Compile Include="Assets\Assets\Scripts\Historia.cs" />
     <Compile Include="Assets\Assets\Scripts\DatosJugador.cs" />
     <Compile Include="Assets\Assets\Scripts\ControlTransicion.cs" />
+    <Compile Include="Assets\Assets\Scripts\APIManager.cs" />
+    <Compile Include="Assets\Assets\Scripts\DatosJugadorAPI.cs" />
     <Compile Include="Assets\Assets\Scripts\BotonVolver.cs" />
     <Compile Include="Assets\Assets\Scripts\MenuUIController.cs" />
     <Compile Include="Assets\Assets\Scripts\BetaController.cs" />

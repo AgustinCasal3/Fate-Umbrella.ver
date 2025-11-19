@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class DatosJugador : MonoBehaviour
 {
+    // --- SINGLETON ---
     public static DatosJugador Instancia;
-    public string nombre = "Izuru";
-    public int nivel = 2;
-    public float experienciaActual = 79f;
-    public float experienciaNecesaria = 100f;
 
-    [Header("Progreso de Historia")]
-  
+    public string nombre = ""; // <- LIMPIO
+    public int nivel = 0;      // <- LIMPIO
+    public float experienciaActual = 0f; // <- LIMPIO
+    public float experienciaNecesaria = 5000f; 
+
+    [Header("Datos de API")]
+    // Imagen: también se limpia
+    public string nombreImagenPersonaje = "";
+
+    [Header("Progreso de Historia (Guardado Local)")]
+
     public string nombreParteActual = "C1P1";
 
-    private const string CLAVE_PROGRESO = "ProgresoGuardado";
+    private const string CLAVE_PROGRESO = "ProgresoHistoria";
 
+ 
     void Awake()
     {
         // Implementación del Singleton (asegura que solo exista uno)

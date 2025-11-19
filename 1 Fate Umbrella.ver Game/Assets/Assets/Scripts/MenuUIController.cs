@@ -1,31 +1,44 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;      // Para los textos
-using UnityEngine.UI; // Para el Slider y Image
+using TMPro;
+using UnityEngine.UI; // Para Slider, Image, y Textos
 
 public class MenuUIController : MonoBehaviour
 {
 
+    public static MenuUIController Instancia;
     private DatosJugador datosJugadorInstancia;
+
     public TextMeshProUGUI textoNombre;
     public TextMeshProUGUI textoNivel;
     public Slider barraExperiencia;
 
-    [Header("NotificaciÛn de Desarrollo")]
-    // Arrastra aquÌ el GameObject 'Panel_Notificacion'
-    public GameObject panelNotificacion;
-    // Arrastra aquÌ el TextMeshPro 'Texto_Notificacion'
-    public TextMeshProUGUI textoNotificacion;
+    [Header("Imagen de Perfil")]
+    public Image imagenPersonajeUI; 
 
-    [Tooltip("Tiempo que la notificaciÛn estar· visible")]
+    [Header("Notificaci√≥n de Desarrollo")]
+    public GameObject panelNotificacion;
+    public TextMeshProUGUI textoNotificacion;
+    [Tooltip("Tiempo que la notificaci√≥n estar√° visible")]
     public float tiempoVisibleNotificacion = 2.5f;
+
+
+    void Awake()
+    {
+        if (Instancia == null)
+        {
+            Instancia = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
-
         datosJugadorInstancia = DatosJugador.Instancia;
-        ActualizarDatosUI();
 
         if (panelNotificacion != null)
         {
@@ -35,58 +48,66 @@ public class MenuUIController : MonoBehaviour
 
     void Update()
     {
-        ActualizarDatosUI();
+
     }
 
-    void ActualizarDatosUI()
+
+    public void ActualizarDatosUI()
     {
         if (datosJugadorInstancia != null)
         {
-            
             textoNombre.text = datosJugadorInstancia.nombre;
-            textoNivel.text = "Nivel " + datosJugadorInstancia.nivel.ToString(); 
- 
+            textoNivel.text = "Nivel " + datosJugadorInstancia.nivel.ToString();
             barraExperiencia.maxValue = datosJugadorInstancia.experienciaNecesaria;
             barraExperiencia.value = datosJugadorInstancia.experienciaActual;
         }
     }
 
-    // --- L”GICA DEL BOTON DE REINICIAR PROGRESO ---
+
+    public void CargarImagenPersonaje()
+    {
+        if (imagenPersonajeUI == null || DatosJugador.Instancia == null) return;
+
+        string nombreArchivo = DatosJugador.Instancia.nombreImagenPersonaje;
+        if (string.IsNullOrEmpty(nombreArchivo)) return;
+
+        
+        string nombreRecurso = nombreArchivo.Replace(".png", "").Replace(".jpg", "");
+
+        Sprite nuevoSprite = Resources.Load<Sprite>($"Personajes/{nombreRecurso}");
+
+        if (nuevoSprite != null)
+        {
+            imagenPersonajeUI.sprite = nuevoSprite;
+        }
+        else
+        {
+            Debug.LogError($"IMAGEN NO ENCONTRADA. Aseg√∫rate de que '{nombreRecurso}' est√© en Assets/Resources/Personajes/.");
+        }
+    }
+
 
     public void OnClickFuncionalidadEnDesarrollo()
     {
-    
         StopAllCoroutines();
-        StartCoroutine(MostrarNotificacion("Esta funcionalidad est· todavÌa en desarrollo y estar· disponible en una versiÛn futura."));
+        StartCoroutine(MostrarNotificacion("Esta funcionalidad est√° todav√≠a en desarrollo y estar√° disponible en una versi√≥n futura."));
     }
 
     IEnumerator MostrarNotificacion(string mensaje)
     {
-        // 1. Muestra el panel con el mensaje
-        if (panelNotificacion != null)
-        {
-            panelNotificacion.SetActive(true);
-        }
-        if (textoNotificacion != null)
-        {
-            textoNotificacion.text = mensaje;
-        }
-
+        if (panelNotificacion != null) panelNotificacion.SetActive(true);
+        if (textoNotificacion != null) textoNotificacion.text = mensaje;
         yield return new WaitForSeconds(tiempoVisibleNotificacion);
-
-        if (panelNotificacion != null)
-        {
-            panelNotificacion.SetActive(false);
-        }
+        if (panelNotificacion != null) panelNotificacion.SetActive(false);
     }
 
     public void OnClickReiniciarYRefrescar()
     {
         if (DatosJugador.Instancia != null)
         {
-         
             DatosJugador.Instancia.ReiniciarProgreso();
-
+            // Llama a la API de nuevo para recargar el perfil
+            FindObjectOfType<APIManager>()?.IniciarCargaDeDatos(DatosJugador.Instancia.nombre);
         }
     }
 }
