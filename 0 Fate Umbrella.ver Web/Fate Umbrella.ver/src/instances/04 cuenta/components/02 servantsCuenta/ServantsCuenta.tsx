@@ -53,15 +53,17 @@ export function ServantsCuenta({usuario}: InfoCuentaId) {
     
     const [servants, setServants] = useState<CombinedServant[]>([]);
     
+    const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+
     // fetch para encontrar los user servants
     async function getUserServants(userId: string) {
-        const res = await axios.get('http://localhost:3001/userServants/' + userId);
+        const res = await axios.get(`${backendURL}/userServants/${userId}`);
         return res.data;
     }
 
     // fetch para encontrar cada servant con el user servants
     async function getServantBase(id: string) {
-        const res = await axios.get('http://localhost:3001/servants/' + id)
+        const res = await axios.get(`${backendURL}/servants/${id}`)
         return res.data;
     }
 

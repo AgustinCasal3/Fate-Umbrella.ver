@@ -57,7 +57,8 @@ export function ServantSeleccionado({ servant }: Props) {
     const [craftEssence, setCraftEssence] = useState<CraftEssence | null>(null);
 
     async function getCraftEssenceById(id: string) {
-        const response = await axios.get(`http://localhost:3001/craftEssences/${id}`);
+        const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+        const response = await axios.get(`${backendURL}/craftEssences/${id}`);
         return response.data;
     }
 

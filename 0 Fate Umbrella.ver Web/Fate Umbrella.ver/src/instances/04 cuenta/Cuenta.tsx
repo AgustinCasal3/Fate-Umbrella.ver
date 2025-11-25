@@ -37,7 +37,8 @@ export function Cuenta() {
     const [usuario, setUsuario] = useState<Usuario | null>(null);
 
     async function getUsername(username: string) {
-        const res = await axios.get('http://localhost:3001/users/name/' + username);
+        const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+        const res = await axios.get(`${backendURL}/users/name/${username}`);
         return res.data;
     }
 

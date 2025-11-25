@@ -23,7 +23,8 @@ export function AmigosCuenta({ usuario }: UserAmigos) {
 
     async function getUserById(id: string) {
         try {
-            const res = await axios.get('http://localhost:3001/users/' + id);
+            const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+            const res = await axios.get(`${backendURL}/users/${id}`);
             return res.data ?? null;  // si no existe, devuelve null
         } catch (err) {
             console.warn("Usuario no encontrado:", id);

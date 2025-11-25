@@ -1,0 +1,134 @@
+/* VERSIONADO */
+
+.versiones {
+    border-top: 1px solid lightgray;
+}
+
+.contenedorVersionado {
+    width: 100%;
+}
+
+.contenedorVersionado h2 {
+    width: 100%;
+
+    text-align: center;
+    font-size: 2em;
+
+    padding-top: 5vh;
+}
+
+.contenedorChangelog {
+    width: 100%;
+    height: 85vh;
+
+    padding: 2.5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoCambios {
+    width: 40vw;
+    height: 70vh;
+
+    padding: 2.5vh;
+
+    margin-right: 2.5vw;
+
+    border: 1px solid black;
+    
+    overflow-x: hidden; /* ✅ activa scroll horizontal solo dentro del contenedor */
+    overflow-y: auto;
+    scroll-behavior: smooth; /* animación suave */
+    max-width: 100%;
+    max-height: 100%;
+
+    background-color: white;
+}
+
+.textoCambios h3 {
+    text-align: center;
+    margin-bottom: 2.5vh;
+}
+
+.textoCambios h4 {
+    margin: 2vh 0;
+}
+
+.textoCambios p {
+    margin: 1vh 0;
+}
+
+.listaVersiones {
+    width: auto;
+    height: 70vh;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.listaVersiones a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    height: 3vh;
+}
+
+.listaVersiones a span{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    width: 100%;
+}
+
+.opcionVersionado {
+    display: flex;
+    
+    align-items: center;
+    justify-content: left;
+
+    padding: 1.5vh;
+    margin: 1.5vh;
+
+    background-color: white;
+
+    border: 1px solid lightgray;
+    border-radius: 0.5vh;
+
+    transition: 0.3s ease;
+}
+
+.opcionVersionado:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.opcionVersionado:has(input[type="radio"]:checked) {
+    border: 1px solid black;
+}
+
+.opcionVersionado:has(input[type="radio"]:checked) .imgSelector {
+    background-image: url(../../../imgs/Home/Versionado/SelectorEncendido.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.opcionVersionado input[type="radio"] {
+  display: none;
+}
+
+.imgSelector {
+    width: 3vh;
+    height: 3vh;
+    
+    margin-right: 1vh;
+
+    background-image: url(../../../imgs/Home/Versionado/SelectorApagado.png);
+    background-size: contain;
+    background-position: center;
+
+    transition: 0.3s ease;
+}

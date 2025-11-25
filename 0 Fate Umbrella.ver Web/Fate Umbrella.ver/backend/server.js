@@ -7,6 +7,7 @@ import UserRouter from './routes/users.js';
 import CraftEssenceRouter from './routes/craftEssences.js';
 import ServantRouter from './routes/servants.js';
 import UserServantsRouter from './routes/usersServants.js';
+import FateSeriesRouter from './routes/fateSeries.js'
 
 const app = express();
 app.use(cors());
@@ -19,6 +20,8 @@ app.use('/craftEssences', CraftEssenceRouter);
 app.use('/servants', ServantRouter);
 
 app.use('/userServants', UserServantsRouter);
+
+app.use('/fateSeries', FateSeriesRouter);
 
 mongoose.connect(process.env.MONGO_URI)
     .then( () => console.log('Conectado Exitosamente a MongoDB.') )

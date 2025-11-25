@@ -1,0 +1,144 @@
+/* FATE SERIES */
+
+.fateSeries {
+    width: 100%;
+    height: 92.5vh;
+
+    border-top: 1px solid rgb(214, 188, 85);
+    border-bottom: 1px solid rgb(214, 188, 85);
+
+    background-image: url(../../../imgs/Home/FateSeries/fondo.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.contenedorSeries {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-x: auto; /* ✅ activa scroll horizontal solo dentro del contenedor */
+    overflow-y: hidden;
+    scroll-behavior: smooth; /* animación suave */
+    max-width: 100%;
+}
+
+.contenedorSeries::-webkit-scrollbar {
+  display: none;
+}
+
+.espaciadorSeries {
+    width: 0px;
+    height: 82.5vh;
+
+    margin: 0 5vw;
+
+    border: 1px solid black;
+}
+
+.contenedorUmbrella {
+    margin-left: 5vw;
+}
+
+.contenedorUmbrella h2 {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorFate {
+    margin-right: 5vw;
+}
+
+.contenedorFate h2 {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorChapters {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+}
+
+.contenedorFateSeries {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+}
+
+.itemSeries {
+    user-select: none;
+
+    width: 20vh;
+    height: 70vh;
+
+    margin: 2.5vh;
+
+    border: 1px solid black;
+
+    background-color: rgb(220, 206, 151);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: 0.3s ease;
+}
+
+.itemSeries img {   
+    transition: 0.3s ease;
+    filter: drop-shadow(0px 0px 2.5px rgba(255, 255, 255, 0.6));
+}
+
+.itemSeries:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.4));
+}
+
+.itemSeries:hover img {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.6));
+}
+
+.fondoItemSeries {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSeries a {
+    width: 10vh;
+    height: 70vh;
+}
+
+.contenedorItemSeries {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    border: 1px solid black;
+}
+
+.logoSerie {
+    width: 15vh;
+    height: 15vh;
+
+    margin: 0 2.5vh 5vh;
+}
