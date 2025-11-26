@@ -6,7 +6,7 @@ export function Personajes() {
             <section className="personajes">
                 <div className="fichaPersonaje">
                     <div className="flecha">
-                        <a href=""><img className='flechaIzquierda' src="../../../imgs/Home/Servants/Flecha.png" alt="" /></a>
+                        <a href="#"><img className='flechaIzquierda' src="../../../imgs/Home/Servants/Flecha.png" alt="" /></a>
                     </div>
                     <div className="personaje">
                         <div className="personajeInfo">
@@ -26,14 +26,14 @@ export function Personajes() {
                         </div>
                     </div>
                     <div className="flecha">
-                        <a href=""><img src="../../../imgs/Home/Servants/Flecha.png" alt="" /></a>
+                        <a href="#"><img src="../../../imgs/Home/Servants/Flecha.png" alt="" /></a>
                     </div>
                 </div>
                 <div className="seleccionClase">
-                    <a href="">Saber</a>
-                    <a href="">Archer</a>
-                    <a href="">Lancer</a>
-                    <a href="">Caster</a>
+                    <a href="#">Saber</a>
+                    <a href="#">Archer</a>
+                    <a href="#">Lancer</a>
+                    <a href="#">Caster</a>
                 </div>
             </section>
         </>

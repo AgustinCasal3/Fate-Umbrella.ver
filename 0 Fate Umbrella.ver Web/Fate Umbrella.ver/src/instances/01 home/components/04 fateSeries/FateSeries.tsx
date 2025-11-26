@@ -50,17 +50,14 @@ export function FateSeries() {
 
     return (
         <>
-            {/* Cada uno de los comentarios tiene que ser un componente para que se actualice con la base de datos */}
             <section className="fateSeries">
                 <div className="contenedorSeries">
-
                     <div className="contenedorUmbrella">
                         <h2>Fate/Umbrella.ver</h2>
                         <div className="contenedorChapters">
                             {umbrellaSeries.map(u => (
                                 <ItemSeries key={u.id} objeto={u}/>
                             ))}
-                            
                         </div>
                     </div>
                     <div className="espaciadorSeries">
@@ -72,7 +69,6 @@ export function FateSeries() {
                             {fateSeries.map(fate => (
                                 <ItemSeries key={fate.id} objeto={fate}/>
                             ))}
-                            
                         </div>
                     </div>
                 </div>
