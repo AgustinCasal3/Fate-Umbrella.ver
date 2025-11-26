@@ -14,16 +14,16 @@ router.get('/', async (req, res) => {
 
 router.get('/umbrella', async (req, res) => {
     try {
-        const FateSeriesUmbrella = await FateSeries.find({fate: 'umbrella'});
+        const FateSeriesUmbrella = await FateSeries.find({fate: 'Umbrella'});
         res.json(FateSeriesUmbrella);
     } catch ( err ) {
         res.status(500).json({ error: 'Error consiguiendo los capitulos de Fate Umbrella' });
     }
 });
 
-router.get('/other', async (req, res) => {
+router.get('/fate', async (req, res) => {
     try {
-        const FateSeriesOther = await FateSeries.find({fate: 'other'});
+        const FateSeriesOther = await FateSeries.find({fate: 'Fate'});
         res.json(FateSeriesOther);
     } catch ( err ) {
         res.status(500).json({ error: 'Error consiguiendo las historias recomendadas' });

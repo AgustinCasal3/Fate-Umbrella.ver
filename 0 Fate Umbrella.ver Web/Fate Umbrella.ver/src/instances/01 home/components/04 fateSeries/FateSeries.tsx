@@ -1,41 +1,66 @@
 import './FateSeries.css'
+import axios from 'axios';
+
+import { ItemSeries } from './itemSeries/ItemSeries';
+
+import { useEffect, useState } from 'react';
+
+export interface FateSeries {
+    id: string,
+    fate: string,
+    name: string,
+    character: string,
+    logo: string,
+    link: string
+}
 
 export function FateSeries() {
+
+    const [fateSeries, setFateSeries] = useState<FateSeries[]>([]);
+    const [umbrellaSeries, setUmbrellaSeries] = useState<FateSeries[]>([]);
+    
+    async function getFateSeries() {
+        const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+        const res = await axios.get(`${backendURL}/fateSeries/fate`);
+        return res.data;
+    }
+
+    async function getUmbrellaSeries() {
+        const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+        const res = await axios.get(`${backendURL}/fateSeries/umbrella`);
+        return res.data;
+    }
+
+    useEffect(() => {
+        async function recibirSeries() {
+            try {
+                const datosFate = await getFateSeries();
+                setFateSeries(datosFate);
+
+                const datosUmbrella = await getUmbrellaSeries();
+                setUmbrellaSeries(datosUmbrella);
+
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        recibirSeries();
+    }, []);
+
     return (
         <>
             {/* Cada uno de los comentarios tiene que ser un componente para que se actualice con la base de datos */}
             <section className="fateSeries">
                 <div className="contenedorSeries">
+
                     <div className="contenedorUmbrella">
                         <h2>Fate/Umbrella.ver</h2>
                         <div className="contenedorChapters">
-                            {/* Fate Umbrella Cap 1 */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Umbrella/fondo_ch1.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Umbrella/logo_ch1.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
-                            {/* Fate Umbrella Cap 2 */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Umbrella/fondo_ch2.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Umbrella/logo_ch2.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
-                            {/* Fate Umbrella Cap 3 */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Umbrella/fondo_ch3.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Umbrella/logo_ch3.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
+                            {umbrellaSeries.map(u => (
+                                <ItemSeries key={u.id} objeto={u}/>
+                            ))}
+                            
                         </div>
                     </div>
                     <div className="espaciadorSeries">
@@ -44,51 +69,9 @@ export function FateSeries() {
                     <div className="contenedorFate">
                         <h2>Historias Fate Recomendadas</h2>
                         <div className="contenedorFateSeries">
-                            {/* Fate GO */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Fate/fatego_fondo.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Fate/fatego_logo.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
-                            {/* Fate Zero */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Fate/fatezero_fondo.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Fate/fatezero_logo.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
-                            {/* Fate Stay Night */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Fate/fatesn_fondo.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Fate/fatesn_logo.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
-                            {/* Fate Last Encore */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Fate/fatele_fondo.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Fate/fatele_logo.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
-                            {/* Fate CCC */}
-                            <div className="itemSeries" 
-                                style={{
-                                    backgroundImage: 'url("../../../imgs/Home/FateSeries/Fate/fateccc_fondo.png")'
-                                }}>
-                                <div className="contenedorItemSeries">
-                                    <img src="../../../imgs/Home/FateSeries/Fate/fateccc_logo.png" alt="" className="logoSerie" />
-                                </div>
-                            </div>
+                            {fateSeries.map(fate => (
+                                <ItemSeries key={fate.id} objeto={fate}/>
+                            ))}
                             
                         </div>
                     </div>
