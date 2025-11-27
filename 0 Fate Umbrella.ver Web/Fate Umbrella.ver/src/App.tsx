@@ -2,6 +2,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 
 import './App.css'
 
+import { AuthProvider } from "./context/AuthContext";
+
 import { Home } from './instances/01 home/Home'  // 01
 import { Registro } from './instances/02 registro/Registro' // 02
 import { Login } from './instances/03 login/Login' // 03
@@ -80,7 +82,11 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 };
 
-export default App
+export default App;
