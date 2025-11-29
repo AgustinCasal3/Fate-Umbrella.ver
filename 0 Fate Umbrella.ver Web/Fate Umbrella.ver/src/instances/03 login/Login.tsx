@@ -67,7 +67,7 @@ export function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
 
-                            {errorMsg && <p style={{color: "red"}}>{errorMsg}</p>}
+                            {errorMsg && <p style={{color: "red", margin: "2vh 0"}}>{errorMsg}</p>}
 
                             <button type='submit'>Login</button>
                         </form>

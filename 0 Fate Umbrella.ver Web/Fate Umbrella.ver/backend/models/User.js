@@ -14,7 +14,10 @@ const UserSchema = new mongoose.Schema({
     level: Number,
     exp: Number,
     state: Boolean,
-    friends: [String]
+    friends: [String],
+
+    verificationToken: String,
+    verificationExpires: Date
 }, { collection: 'Users' });
 
 export const User = mongoose.model('User', UserSchema);

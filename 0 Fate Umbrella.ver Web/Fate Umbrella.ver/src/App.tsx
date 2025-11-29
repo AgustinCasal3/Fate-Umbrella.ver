@@ -11,6 +11,7 @@ import { Cuenta } from './instances/04 cuenta/Cuenta' // 04
 import { Descarga } from './instances/05 descarga/Descarga' // 05
 import { Empresa } from './instances/06 empresa/Empresa' // 06
 import { Versionado } from './instances/08 versionado/Versionado' // 08
+import { Verificacion } from './instances/10 verificacion/Verificacion'; //10
 
 function Pagina() {
   return (
@@ -30,7 +31,7 @@ function Index() {
           <a href="/login">Login</a>
           <a href="/account">Cuenta</a>
           <a href="/download">Descargar</a>
-          <a href="/cunny">Empresa</a>
+          <a href="/empresa">Empresa</a>
           <a href="/guide">Guia</a>
           <a href="/versions">Versiones</a>
         </div>
@@ -70,8 +71,12 @@ const router = createBrowserRouter([
         element: <Empresa />,
       },
       {
-        path: 'versionado', // 06
+        path: 'versionado', // 08
         element: <Versionado />,
+      },
+      {
+        path: 'verify/:token', // 10
+        element: <Verificacion />,
       },
       {
         path: 'index', // XX

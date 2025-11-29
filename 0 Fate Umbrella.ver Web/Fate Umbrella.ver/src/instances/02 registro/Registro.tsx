@@ -1,81 +1,91 @@
 import './Registro.css'
+import axios from 'axios';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Header } from '../0 header/Header'
 import { Footer } from '../0 footer/Footer'
+import { InfoRegistro } from './components/01 infoRegistro/InfoRegistro';
 
 export function Registro() {
     document.title = 'Registro | Fate/Umbrella.ver';
 
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [repeat, setRepeat] = useState('');
+    const [error, setError] = useState('');
+    const [succesMsg, setSuccessMsg] = useState('');
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError('');
+        setSuccessMsg('');
+
+        if (password !== repeat) {
+            setError('Las contraseñas no coinciden.');
+            return;
+        }
+
+        try {
+            const backendURL = `${window.location.protocol}//${window.location.hostname}:3001`;
+            const res = await axios.post(`${backendURL}/register`, {
+                username,
+                email,
+                password
+            });
+
+            setSuccessMsg('Usuario creado. Revisa tu email para activar la cuenta.');
+        } catch (err: any) {
+            console.error(err);
+            setError(err?.response?.data?.error || 'Error registrando al usuario');
+        }
+    };
+
     return (
         <>
-            <Header></Header>
+            <Header/>
             
             <section className="registro">
                 <div className="contenedorRegistro">
                     <div className="tituloRegistro">
                         <h1>Bienvenido Aspirante</h1>
                     </div>
+
                     <div className="formularioRegistro">
-                        <form>
+                        <form onSubmit={handleSubmit}>
+                            <label>Username</label>
+                            <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+
                             <label>Email</label>
-                            <input type="text" />
+                            <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
 
-                            <label>Password</label>
-                            <input type='password'/>
+                            <div className="passwords">
+                                <div className="pass">
+                                    <label>Password</label>
+                                    <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
+                                </div>
 
-                            <label>Repeat Password</label>
-                            <input type='password'/>
+                                <div className="pass">
+                                    <label>Repeat Password</label>
+                                    <input type='password' value={repeat} onChange={e => setRepeat(e.target.value)} />
+                                </div>
+                            </div>
 
-                            <button>Aplicar</button>
+                            {error && <p style={{color: 'red'}}>{error}</p>}
+                            {succesMsg && <p style={{color: 'green'}}>{succesMsg}</p>}
+
+                            <button type='submit'>Aplicar</button>
                         </form>
                     </div>
                 </div>
                 <div className="imagenRegistro"></div>
             </section>
 
-            <section className="infoRegistro">
-                <div className="info">
-                    <div className="textoInfo">
-                        <h2>Registro de Progreso</h2>
-                        <p>
-                            Guarda automáticamente cada decisión y avance dentro de la historia. 
-                            Podrás continuar desde el mismo punto en cualquier momento sin perder tus elecciones o datos previos.
-                        </p>
-                        <p>
-                            El registro también muestra un historial de capítulos completados y estadísticas básicas de tu recorrido.
-                        </p>
-                    </div>
-                    <img src="../../../imgs/Registro/Info/Edmond.png" alt="Edmond Dantes Chibi" />
-                </div>
-                <div className="info">
-                    <img src="../../../imgs/Registro/Info/Nemo.png" alt="Nemo Chibi" style={{transform: 'scaleX(-1)'}}/>
-                    <div className="textoInfo">
-                        <h2>Registro de Personajes</h2>
-                        <p>
-                            Consulta información detallada de los personajes que aparecen en la historia, 
-                            incluyendo sus relaciones, apariciones y desarrollo a lo largo del juego.
-                        </p>
-                        <p>
-                            Cada personaje se desbloquea automáticamente a medida que avances, permitiéndote revisarlos cuando quieras.
-                        </p>
-                    </div>
-                </div>
-                <div className="info">
-                    <div className="textoInfo">
-                        <h2>Acceso Remoto</h2>
-                        <p>
-                            Inicia sesión desde cualquier dispositivo y sincroniza tu progreso en la nube. 
-                            Así podrás continuar tu partida sin importar desde dónde juegues.
-                        </p>
-                        <p>
-                            Además, el acceso remoto permite revisar tus registros y configuraciones personales en tiempo real.
-                        </p>
-                    </div>
-                    <img src="../../../imgs/Registro/Info/Mash.png" alt="" />
-                </div>
-            </section>
+            <InfoRegistro/>
 
-            <Footer></Footer>
+            <Footer/>
         </>
     )
 }

@@ -9,6 +9,8 @@ import ServantRouter from './routes/servants.js';
 import UserServantsRouter from './routes/usersServants.js';
 import FateSeriesRouter from './routes/fateSeries.js';
 import LoginRouter from './routes/login.js';
+import RegisterRouter from './routes/register.js';
+import VerifyRouter from './routes/verify.js';
 
 const app = express();
 app.use(cors());
@@ -25,6 +27,10 @@ app.use('/userServants', UserServantsRouter);
 app.use('/fateSeries', FateSeriesRouter);
 
 app.use('/login', LoginRouter);
+
+app.use('/register', RegisterRouter);
+
+app.use('/verify', VerifyRouter);
 
 mongoose.connect(process.env.MONGO_URI)
     .then( () => console.log('Conectado Exitosamente a MongoDB.') )
