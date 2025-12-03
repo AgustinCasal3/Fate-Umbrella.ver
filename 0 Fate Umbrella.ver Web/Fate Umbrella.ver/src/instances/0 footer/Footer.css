@@ -195,3 +195,121 @@
     color: rgb(208, 199, 152);
     filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.318)) drop-shadow(0px 0px 3px rgba(255, 226, 84, 0.447));
 }
+
+@media (orientation: portrait) {
+
+    .contenedorFooter {
+        height: auto;
+        padding-top: 8px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- DEVS --- */
+    .devs {
+        width: 100%;
+        height: auto;
+        
+        margin: 5vh 0 0 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedorDevs {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        gap: 5vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dev {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 0;
+    }
+
+    .devImg {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .devImg img {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .devText p {
+        width: 10vh;
+
+        margin: 0;
+        font-size: 2.2vh;
+        text-align: center;
+    }
+
+    /* --- COPYRIGHT --- */
+    .copyright {
+        width: 100%;
+        height: auto;
+        margin: 5vh 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedorCopyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyImg {
+        margin: 0;
+        margin-bottom: 2.5vh;
+
+        height: auto;
+        width: auto;
+    }
+
+    .copyImg img {
+        height: 12vh;
+        width: auto;
+        margin: 0;
+    }
+
+    .copyText {
+        margin: 0;
+    }
+
+    .copyText p {
+        font-size: 2vh;
+    }
+
+    /* --- LEGAL --- */
+    .legal {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 5vh;
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .legalText a,
+    .legalText p {
+        text-align: center;
+        font-size: 2.2vh;
+    }
+
+    
+}

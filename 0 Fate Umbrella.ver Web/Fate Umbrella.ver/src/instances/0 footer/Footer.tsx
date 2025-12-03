@@ -28,7 +28,7 @@ export function Footer() {
                     <div className="copyright">
                         <div className="contenedorCopyright">
                             <div className="copyImg">
-                                <img src="../../../imgs/footer/LogoJuego.png" alt="" />
+                                <img src="../../../imgs/footer/Logo5.png" alt="" />
                             </div>
                             <div className="copyText">
                                 <p>Todo contenido oficial es derecho de Type/Moon</p>

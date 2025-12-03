@@ -166,7 +166,7 @@ export function Empresa() {
                             <img src="../../../imgs/Empresa/SeparadorTexto2.png" alt="" />
                         </div>
                         <p>
-                            En XXXX tenemos el objetivo principal de brindar software de entretenimiento esencial, 
+                            En CunnyWorks tenemos el objetivo principal de brindar software de entretenimiento esencial, 
                             principalmente videojuegos, que inspiren a las personas a crear y encontrar aquello que les permita perseguir sus sueños. 
                             Mediante historias interactivas profundas, personalización,
                              mecánicas específicas, creemos que nuestros productos permitirán a nuestros usuarios alcanzar sus metas.
@@ -179,7 +179,7 @@ export function Empresa() {
                             <img src="../../../imgs/Empresa/SeparadorTexto2.png" alt="" />
                         </div>
                         <p>
-                            En XXXX buscamos llegar a usuarios en todo el planeta, expandir nuestro software a otras plataformas 
+                            En CunnyWorks buscamos llegar a usuarios en todo el planeta, expandir nuestro software a otras plataformas 
                             (comenzando por PC, continuando con mobile, consolas y VR) y convertirnos en una empresa de desarrollo
                             a nivel global, integrando talento multicultural para colaborar en un objetivo común.
                         </p>

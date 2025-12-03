@@ -181,3 +181,107 @@
 
     color: blue;
 }
+
+@media (orientation: portrait) {
+
+    .contenedorLogin {
+        height: auto;
+        min-height: 92.5vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        padding: 0;
+
+        position: relative;
+    }
+
+    /* ---- IMAGEN DE FONDO DEL PERSONAJE ---- */
+    .imagenLogin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+
+        transform: translate(-50%, -50%);
+
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+        filter: drop-shadow(0px 0px 12px rgba(255, 246, 160, 0.47));
+
+        pointer-events: none; /* no interferir clicks */
+        z-index: -1;
+    }
+
+    /* ---- FORMULARIO ---- */
+    .formularioLogin {
+        width: 75vw;
+        height: auto;
+
+        margin: 7.5vw;
+
+        padding: 5vw;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 3vh;
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formularioLogin h1 {
+        font-size: 2.5vh;
+        margin: 0;
+    }
+
+    .formularioLogin form {
+        width: 60vw;
+
+        margin: 2.5vh 0;
+    }
+
+    .formularioLogin form label {
+        font-size: 2vh;
+
+        width: 100%;
+    }
+    
+    .formularioLogin form input {
+        font-size: 2vh;
+
+        margin-top: 0;
+        margin-bottom: 4vh;
+
+        padding: 0;
+
+        width: 100%;
+
+        transition: 0.3s ease;
+    }
+
+    .formularioLogin form input:focus {
+        margin-bottom: 3vh;
+
+        padding-bottom: 0.5vh;
+    }
+
+    .formularioLogin button {
+
+        width: 100%;
+        height: 6vh;
+        margin: 0;
+        font-size: 2vh;
+    }
+
+    .formularioLogin p {
+        font-size: 1.5vh;
+        margin: 0;
+    }
+}
