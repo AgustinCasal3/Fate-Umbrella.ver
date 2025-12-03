@@ -12,9 +12,19 @@ import LoginRouter from './routes/login.js';
 import RegisterRouter from './routes/register.js';
 import VerifyRouter from './routes/verify.js';
 
+import { getLocalIP } from './utils/getLocalIP.js'
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+const LOCAL_IP = getLocalIP();
+const FRONTEND_PORT = process.env.FRONTEND_PORT || '5173';
+
+process.env.DYNAMIC_FRONTEND_URL = `http://${LOCAL_IP}:${FRONTEND_PORT}`;
+
+console.log(`IP Local: ${LOCAL_IP}`);
+console.log(`Frontend URL: ${process.env.DYNAMIC_FRONTEND_URL}`);
 
 app.use('/users', UserRouter);
 

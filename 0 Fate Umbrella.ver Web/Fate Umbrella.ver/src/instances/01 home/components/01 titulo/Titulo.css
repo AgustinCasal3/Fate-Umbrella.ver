@@ -14,7 +14,7 @@
 }
 
 .tituloImg {
-    height: 40vh;
+    max-height: 40vh;
     width: auto;
 
     display: flex;
@@ -27,8 +27,9 @@
 .tituloImg img {
     user-select: none;
     
-    height: 40vh;
+    max-height: 40vh;
     width: auto;
+    max-width: 90vw;
 }
 
 .tituloTexto h2 {
@@ -105,4 +106,12 @@
 /* Aplicación a elementos */
 .flotando {
   animation: flotacion 5s ease-in-out infinite;
+}
+
+@media (orientation: portrait) {
+    .tituloTexto h2 {
+        font-size: 2.75vh;
+        padding: 0 5vh;
+        margin: 5vh 0;
+    }
 }

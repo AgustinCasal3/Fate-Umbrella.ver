@@ -169,3 +169,13 @@
     cursor: pointer;
     transform: translateY(-7px);
 }
+
+@media (orientation: portrait) {
+    .personajeNombre h1 {
+        width: 100%;
+    }
+
+    .personajeImagen img {
+        display: none;
+    }
+}
