@@ -50,6 +50,7 @@
     user-select: none;
 
     font-size: 6vh;
+    text-align: center;
 
     display: flex;
     align-items: center;
@@ -197,4 +198,24 @@
 
 .pass {
     width: 45%;
+}
+
+@media (orientation: portrait) {
+    .registro {
+        flex-direction: column;
+    }
+
+    .contenedorRegistro {
+        width: 70vw;
+        padding: 5vw;
+        margin-top: 10vw;
+    }
+
+    .tituloRegistro {
+        margin: 0;
+    }
+
+    .tituloRegistro h1 {
+        font-size: 3vh;
+    }
 }

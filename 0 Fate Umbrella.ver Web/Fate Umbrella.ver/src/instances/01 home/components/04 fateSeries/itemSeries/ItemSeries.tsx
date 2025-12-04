@@ -9,16 +9,16 @@ interface Objeto {
 export function ItemSeries({objeto}: Objeto) {
     return (
         <>
-            <a href={objeto.link} target='_blank'>
-                <div className="itemSeries" 
-                    style={{
-                        backgroundImage: `url("../../../imgs/Home/FateSeries/${objeto.fate}/${objeto.character}.png")`
-                    }}>
+            <div className="itemSeries" 
+                style={{
+                    backgroundImage: `url("../../../imgs/Home/FateSeries/${objeto.fate}/${objeto.character}.png")`
+                }}>
+                <a href={objeto.link} target='_blank'>
                     <div className="contenedorItemSeries">
                         <img src={`../../../imgs/Home/FateSeries/${objeto.fate}/${objeto.logo}.png`} alt={`Logo ${objeto.name}`} className="logoSerie" />
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </>
     )
 }
