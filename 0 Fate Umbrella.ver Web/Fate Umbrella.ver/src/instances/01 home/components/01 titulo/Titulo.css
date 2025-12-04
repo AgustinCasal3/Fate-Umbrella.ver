@@ -75,6 +75,7 @@
     color: rgb(49, 41, 12);
     text-decoration: none;
     font-weight: bold;
+    font-size: 2vh;
 
     background: linear-gradient(135deg, #ffd700, #ffbe19, #fff3b0);
     background-size: 200%;

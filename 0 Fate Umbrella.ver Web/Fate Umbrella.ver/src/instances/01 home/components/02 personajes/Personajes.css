@@ -173,6 +173,7 @@
 @media (orientation: portrait) {
     .personajeNombre h1 {
         width: 100%;
+        transform: rotate(0);
     }
 
     .personajeImagen img {
