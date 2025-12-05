@@ -203,6 +203,8 @@
 @media (orientation: portrait) {
     .registro {
         flex-direction: column;
+        min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+        display: flex;
     }
 
     .contenedorRegistro {
@@ -213,9 +215,62 @@
 
     .tituloRegistro {
         margin: 0;
+        margin-top: 2.5vh;
     }
 
     .tituloRegistro h1 {
         font-size: 3vh;
+    }
+
+    .formularioRegistro {
+        margin-bottom: 2.5vh;
+    }
+
+    .formularioRegistro form {
+        width: 90%;
+    }
+
+    .formularioRegistro form label {
+        font-size: 2vh;
+        margin-bottom: 0;
+    }
+    
+    .formularioRegistro form input {
+        padding-left: 0;
+        padding-top: 0.75vh;
+        padding-bottom: 0.25vh;
+        margin-top: 0;
+        margin-bottom: 2vh;
+    }
+    
+    .formularioRegistro input:focus {
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        margin-bottom: 2vh;
+    }
+
+    .formularioRegistro button {
+        margin-top: 2.5vh;
+    }
+    
+    .pass label {
+        height: 4vh;
+    }
+
+    /* PERSONAJE - LO IMPORTANTE */
+    .imagenRegistro {
+        width: 100vw;
+        
+        margin-left: 0;
+        margin-top: 0;
+        
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        
+        background-size: contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
     }
 }

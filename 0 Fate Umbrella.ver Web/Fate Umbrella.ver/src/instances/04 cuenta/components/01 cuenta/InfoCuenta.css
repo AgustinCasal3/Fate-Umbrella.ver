@@ -132,3 +132,61 @@
 
     font-family: 'Times New Roman', Times, serif;
 }
+
+@media (orientation: portrait) {
+    .contenedorCuenta {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .contenedorCuenta img {
+        width: 70vw;
+        height: 70vw;
+
+        margin: 7.5vw 15vw;
+    }
+
+    .infoCuenta {
+        width: 100vw;
+    }
+
+    .infoCuenta h1 {
+        font-size: 7.5vh;
+
+        margin: 0;
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .progresoNivel {
+        justify-content: center;
+        margin-bottom: 7.5vw;
+    }
+
+    .barraNivel {
+        width: 60vw;
+        margin-right: 2.5vh;
+    }
+
+    .numeroNivel {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .numeroNivel span {
+        font-size: 2.25vh;
+    }
+
+    .bioCuenta {
+        width: 60vw;
+        height: auto;
+
+        margin: 5vh 12.5vw;
+        padding: 5vw 7.5vw;
+    }
+
+    .bioCuenta p {
+        font-size: 2.75vh;
+    }
+}

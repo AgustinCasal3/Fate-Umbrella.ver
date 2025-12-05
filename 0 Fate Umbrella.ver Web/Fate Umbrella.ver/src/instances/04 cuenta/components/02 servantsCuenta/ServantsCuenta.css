@@ -90,3 +90,10 @@
 
     margin: 0 2.5vh;
 }
+
+@media (orientation: portrait) {
+    .flechaListaServants,
+    .flechaInvertidaHorizontal {
+        display: none;
+    }
+}

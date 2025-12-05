@@ -115,3 +115,39 @@
 .info .imgEdmond:hover {
     background-image: url("../../../imgs/Registro/Info/EdmondHover.png");
 }
+
+@media (orientation: portrait) {
+    .infoRegistro {
+        padding: 5vh 0;
+    }
+
+    .info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info .imgEdmond,
+    .info .imgNemo,
+    .info .imgMash {
+        min-height: 30vh;
+        max-height: 40vh;
+        min-width: 70vw;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    
+    .textoInfo {
+        width: 80vw;
+    }
+
+    .textoInfo h2 {
+        text-align: center;
+        font-size: 5vh;
+    }
+
+    .textoInfo p {
+        font-size: 2.5vh;
+    }
+}

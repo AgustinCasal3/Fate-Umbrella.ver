@@ -17,7 +17,7 @@ export function InfoRegistro() {
                     </div>
                     <div className="imgEdmond"></div>
                 </div>
-                <div className="info">
+                <div className="info reverse">
                     <div className="imgNemo" style={{transform: 'scaleX(-1)'}}></div>
                     <div className="textoInfo">
                         <h2>Registro de Personajes</h2>
