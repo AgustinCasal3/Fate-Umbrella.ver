@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Titulo.css'
 
+import { useAuth } from '../../../../context/AuthContext';
+
 export function Titulo() {
 
     const [frase, setFrase] = useState('');
@@ -30,6 +32,8 @@ export function Titulo() {
         }
     }, []);
 
+    const { user } = useAuth();
+
     return (
         <>
             <section className="titulo">
@@ -43,9 +47,22 @@ export function Titulo() {
                         <h2>{frase}</h2>
                     </div>
 
-                    <div className="tituloButton">
-                        <a href="/register">Register Now</a>
-                    </div>
+                    {!user && (
+                        <>
+                            <div className="tituloButton">
+                                <a href="/register">Register Now</a>
+                            </div>
+                        </>
+                    )}
+
+                    {user && (
+                        <>
+                            <div className="tituloButton">
+                                <a href={`/account/${user.username}`}>Ver Cuenta</a>
+                            </div>
+                        </>
+                    )}
+                    
                 </div>
             </section>
         </>

@@ -1,0 +1,134 @@
+.empresa {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-image: url(../../../imgs/Empresa/FondoEmpresa.png);
+    background-position: center;
+    background-size: cover;
+
+    user-select: none;
+}
+
+/* Capa superpuesta para blur y opacidad */
+.empresa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: inherit; /* usa la misma imagen de fondo */
+    background-position: center;
+    background-size: cover;
+
+    filter: blur(6px) brightness(1.2); /* blur + un poco menos de brillo */
+    opacity: 0.7; /* controla la transparencia */
+    z-index: 0;
+}
+
+/* Asegura que el contenido quede por encima */
+.empresa > * {
+    position: relative;
+    z-index: 1;
+}
+
+.nombreEmpresa {
+    user-select: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombreEmpresa img {
+    margin: 5vh;
+    max-height: 25vh;
+
+    max-width: 90vw;
+
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.separadorBlanco {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloIntegrantesEmpresa {
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+
+    padding: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloIntegrantesEmpresa img {
+    height: 8vh;
+    margin-bottom: 1vh;
+}
+
+.tituloIntegrantesEmpresa span {
+    font-family: 'Rosie Brown';
+    font-weight: bold;
+
+    margin: 0 2.5vh;
+
+    text-align: center;
+    font-size: 8vh;
+
+    transition: 0.5s ease;
+}
+
+.tituloIntegrantesEmpresa:hover span {
+    margin: 0 5vh;
+    transform: scale(1.02);
+}
+
+.invertidoHorizontal {
+    transform: scaleX(-1);
+}
+
+.lineaBlanca {
+    width: 50vw;
+
+    border: 2px solid white;
+}
+
+@media (orientation: portrait) {
+    .tituloIntegrantesEmpresa {
+        height: auto;
+        padding: 0;
+    }
+
+    .tituloIntegrantesEmpresa span {
+        max-width: 50vw;
+        font-size: 3vh;
+
+        text-align: center;
+
+        margin: 0 1.5vh;
+
+        filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 15px white);
+    }
+    
+    .tituloIntegrantesEmpresa:hover span {
+        margin: 0 2.5vh;
+    }
+
+    .tituloIntegrantesEmpresa img {
+        max-width: 15vw;
+        height: auto;
+    }
+}

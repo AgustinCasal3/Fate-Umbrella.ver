@@ -1,0 +1,110 @@
+/* VALORES */
+
+.valores {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-repeat: repeat;
+    background-size: 50px;
+    background-position: center;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    user-select: none;
+    padding-bottom: 2.5vh;
+}
+
+.contenedorValores {
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+
+}
+
+.contenedorValores h2 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4em;
+    margin: 5vh 0;
+
+    font-weight: normal;
+}
+
+.contenedorTarjetas {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.tarjetaValor {
+    width: 20vw;
+    height: auto;
+
+    border: 1px solid lightgray;
+    border-radius: 2.5vh;
+
+    background-color: white;
+
+    padding: 2.5vh;
+    margin: 2.5vh;
+
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.253));
+
+    transition: 0.3s ease;
+}
+
+.tarjetaValor h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+
+    margin-bottom: 5vh;
+}
+
+.tarjetaValor p {
+    width: 100%;
+    text-align: center;
+    font-size: 2.75vh;
+}
+
+.tarjetaValor:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 0.253)) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.253));
+}
+
+@media (orientation: portrait) {
+    .contenedorValores h2 {
+        text-align: center;
+        font-size: 5vh;
+    }
+
+    .contenedorTarjetas {
+        flex-direction: column;
+    }
+
+    .tarjetaValor {
+        width: 70vw;
+    }
+
+    .tarjetaValor h3 {
+        font-size: 2.75vh;
+        margin-bottom: 2.5vh;
+    }
+
+    .tarjetaValor p {
+        font-size: 2.25vh;
+    }
+}

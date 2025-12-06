@@ -1,0 +1,129 @@
+/* RECLUTAMIENTO */
+
+.reclutamiento {
+    user-select: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../../imgs/Empresa/PuertasCamelotNoche.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-top: rgb(255, 215, 100) 2px solid;
+    border-bottom: rgb(255, 215, 100) 2px solid;
+}
+
+.contenedorReclutamiento {
+    width: 70%;
+    height: auto;
+}
+
+.contenedorImgReclutamiento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorReclutamiento img {
+    width: 40vw;
+    filter: drop-shadow(0px 0px 8px rgba(255, 215, 100, 0.4));
+
+    margin: 7.5vh 0;
+}
+
+.contenedorReclutamiento h3 {
+    font-size: 5em;
+    font-weight: normal;
+
+    text-align: center;
+
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    filter: drop-shadow(0px 0px 10px black);
+
+    margin-bottom: 5vh;
+}
+
+.contenedorButtonReclutamiento {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorButtonReclutamiento a {
+    padding: 4vh 6.5vh;
+
+    border: 1px solid goldenrod; 
+    border-radius: 10vh;
+
+    color: rgb(49, 41, 12); 
+
+    text-decoration: none; 
+    font-size: 2em;
+    font-weight: bold; 
+
+    background: linear-gradient(135deg, #F8E18F, #C9A740, #fff3b0); 
+    background-size: 200%; box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); 
+    
+    transition: background-position 0.6s ease, transform 0.3s, border 0.3s;
+}
+
+.contenedorButtonReclutamiento a:hover {
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(139, 119, 0, 0.575); 
+    border: 1px solid rgb(255, 225, 119); 
+    transform: scale(1.025); 
+    background-position: right center;
+}
+
+.invertidoVertical {
+    transform: scaleY(-1);
+}
+
+@media (orientation: portrait) {
+    .contenedorReclutamiento {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedorImgReclutamiento img {
+        margin: 7.5vh 0;
+
+        width: 90%;
+    }
+
+    .contenedorReclutamiento h3 {
+        width: 80%;
+        font-size: 4.5vh;
+    }
+
+    .contenedorButtonReclutamiento {
+        width: auto;
+        height: auto;
+    }
+
+    .contenedorButtonReclutamiento a {
+        text-align: center;
+
+        max-width: 90vw;
+
+        font-size: 2.75vh;
+        padding: 2.5vh 4.5vh;
+    }
+}

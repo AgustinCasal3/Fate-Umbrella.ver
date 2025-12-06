@@ -11,6 +11,7 @@ import FateSeriesRouter from './routes/fateSeries.js';
 import LoginRouter from './routes/login.js';
 import RegisterRouter from './routes/register.js';
 import VerifyRouter from './routes/verify.js';
+import EmpleadosRouter from './routes/empleados.js';
 
 import { getLocalIP } from './utils/getLocalIP.js'
 
@@ -41,6 +42,8 @@ app.use('/login', LoginRouter);
 app.use('/register', RegisterRouter);
 
 app.use('/verify', VerifyRouter);
+
+app.use('/empleados', EmpleadosRouter);
 
 mongoose.connect(process.env.MONGO_URI)
     .then( () => console.log('Conectado Exitosamente a MongoDB.') )

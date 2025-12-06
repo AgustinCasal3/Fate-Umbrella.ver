@@ -1,0 +1,135 @@
+.misionVision {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Empresa/FondoMV.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 3px solid #C9A740;
+    border-bottom: 3px solid #C9A740;
+}
+
+.contenedorMisionVision {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separadorMV {
+    height: 80vh;
+    width: 3px;
+
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    filter: drop-shadow(0px 0px 8px rgba(255, 215, 100, 0.4));
+
+    margin: 2.5vh 2.5vw;
+}
+
+.mision, .vision {
+    width: 40vw;
+    height: auto;
+
+    transition: 0.5s ease;
+
+    user-select: none;
+}
+
+.imgContainer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision img, .vision img {
+    width: 20vw;
+
+    margin: 5vh 0;
+
+    filter: drop-shadow(0 0 8px rgba(255, 215, 100, 0.4));
+}
+
+.mision:hover, .vision:hover {
+    transform: translateY(-5px);
+}
+
+.mision h2, .vision h2 {
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    font-size: 7.5vh;
+
+    width: 100%;
+
+    margin-top: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision p, .vision p {
+    background: linear-gradient(180deg, #F8E18F, #C9A740);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 215, 100, 0.4);
+
+    height: 70%;
+    padding: 0 10vh;
+
+    margin-bottom: 10vh;
+
+    font-size: 3vh;
+    line-height: 4vh;
+
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .contenedorMisionVision {
+        flex-direction: column;
+    }
+
+    .mision,
+    .vision {
+        width: 90vw;
+        height: auto;
+    }
+
+    .mision h2,
+    .vision h2 {
+        margin-top: 5vh;
+    }
+
+    .imgContainer img{
+        width: 90%;
+        margin: 2.5vh 0;
+    }
+
+    .mision p,
+    .vision p {
+        padding: 0;
+        width: 100%;
+
+        font-size: 2.5vh;
+        line-height: 2.75vh;
+
+        margin-bottom: 5vh;
+    }
+    .separadorMV {
+        height: 3px;
+        width: 80vw;
+    }
+}

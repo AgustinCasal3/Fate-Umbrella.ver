@@ -1,0 +1,103 @@
+/* QUIENES SOMOS */
+
+.quienesSomos {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../../../imgs/Home/FondoRepeat.png);
+    background-repeat: repeat;
+    background-size: 50px;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.quienesSomos img {
+    width: 40vh;
+}
+
+.contenedorQuienesSomos {
+    width: auto;
+
+    margin: 5vh 0;
+}
+
+.contenedorQuienesSomos h2 {
+    font-size: 4em;
+    margin: 5vh 0;
+
+    font-weight: normal;
+}
+
+.contenedorQuienesSomos p {
+    width: 60vw;
+
+    margin: 5vh 10vh;
+    font-size: 1.8em;
+    text-align: justify;
+
+    font-weight: lighter;
+}
+
+.imagenSaber {
+    height: 40vh;
+    width: 40vw;
+
+    background-image: url(../../../../../imgs/Empresa/SaberChibi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.5s ease;
+}
+
+.imagenSaber:hover {
+    background-image: url(../../../../../imgs/Empresa/SaberChibiHover.png);
+    transition: 0.5s ease;
+}
+
+@media (orientation: portrait) {
+    .quienesSomos {
+        flex-direction: column;
+
+        padding-bottom: 5vh;
+    }
+
+    .contenedorQuienesSomos {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 5vh;
+    }
+
+    .contenedorQuienesSomos h2 {
+        width: 100%;
+
+        text-align: center;
+        font-size: 5vh;
+
+        margin: 0;
+    }
+
+    .contenedorQuienesSomos p {
+        font-size: 2.5vh;
+        font-weight: normal;
+        text-indent: 5vh;
+
+        width: 80vw;
+    
+        margin: 0;
+    }
+
+    .imagenSaber {
+        width: 80vw;
+    }
+}
