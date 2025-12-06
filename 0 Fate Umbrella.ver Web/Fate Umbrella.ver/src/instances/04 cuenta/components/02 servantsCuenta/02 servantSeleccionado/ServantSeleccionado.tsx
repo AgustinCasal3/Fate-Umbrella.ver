@@ -79,7 +79,7 @@ export function ServantSeleccionado({ servant }: Props) {
 
     if (!servant) {
         return (
-            <div className="contenedorContenidoServantSeleccionado">
+            <div className="noHayServant">
                 <h1>No hay ningún servant seleccionado</h1>
             </div>
         );  
@@ -98,17 +98,19 @@ export function ServantSeleccionado({ servant }: Props) {
                         </div>
 
                         {/* ESTRELLAS */}
-                        <div className="derTituloServant">
-                            <div className="estrellasServant">
-                                {[...Array(servant.baseData.rank)].map((_, i) => (
-                                    <img 
+                        {(servant.baseData.rank != 0) ? (
+                            <div className="derTituloServant">
+                                <div className="estrellasServant">
+                                    {[...Array(servant.baseData.rank)].map((_, i) => (
+                                        <img 
                                         key={i} 
                                         src="../../../imgs/Cuenta/Estrellas/Estrella.png" 
                                         alt="Estrella"
-                                    />
-                                ))}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        ) : (null)}
                     </div>
 
                     {/* INFO SERVANT SELECCIONADO */}
@@ -123,7 +125,7 @@ export function ServantSeleccionado({ servant }: Props) {
 
                         <div className="statsServantSeleccionado">
                             <div className="ataqueServant">
-                                <h2>--------- Ataque ---------</h2>
+                                <h2>------- Ataque -------</h2>
                                 <div className="ataqueServantValores">
                                     <div className="ataqueBase">
                                         <h3>Base</h3>
@@ -141,7 +143,7 @@ export function ServantSeleccionado({ servant }: Props) {
                             </div>
 
                             <div className="vidaServant">
-                                <h2>----------- Vida -----------</h2>
+                                <h2>--------- Vida ---------</h2>
                                 <div className="vidaServantValores">
                                     <div className="vidaBase">
                                         <h3>Base</h3>   

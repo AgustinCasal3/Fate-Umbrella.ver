@@ -77,15 +77,21 @@
 }
 
 .imgAmigoCuenta {
-    width: 10vh;
-    height: 10vh;
+    max-width: 10vh;
+    width: auto;
+    min-width: 5vh;
+
+    aspect-ratio: 1 / 1;
 
     margin-right: 2.5vh;
 }
 
 .imgAmigoCuenta img {
-    width: 10vh;
-    height: 10vh;
+    max-width: 10vh;
+    width: auto;
+    min-width: 5vh;
+
+    aspect-ratio: 1 / 1;
 
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.4),
@@ -141,14 +147,19 @@
 .numeroNivelAmigoCuenta {
     user-select: none;
 
+    min-width: 5vh;
     width: 5vh;
+    max-width: 5vh;
+    min-width: 5vh;
     height: 5vh;
+    max-height: 5vh;
 
     margin-left: 2.5vh;
 
     background-image: url(../../../imgs/Cuenta/RecuadroNivel.png);
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
 
     display: flex;
     align-items: center;
@@ -173,4 +184,38 @@ a {
 
     font-size: 1.5em;
     text-align: center;
+}
+
+@media (orientation: portrait) {
+    .contenedorAmigosCuenta {
+        padding-bottom: 1.5vh;
+    }
+
+    .contenedorAmigosCuenta h2 {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    .contenedorListaAmigosCuenta a {
+        width: 100vw;
+        height: 17.5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+    }
+
+    .infoAmigoCuenta {
+        width: auto;
+        max-width: 25vh;
+    }
+
+    .tarjetaAmigoCuenta {
+        margin: 0;
+        max-width: 80vw;
+    }
 }

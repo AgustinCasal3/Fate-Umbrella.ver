@@ -9,7 +9,7 @@
     background-image: url(../../../imgs/Home/FondoRepeat.png);
     background-size: 50px;
     background-repeat: repeat;
-    background-position: center;
+    background-position: top center;
 
 }
 
@@ -92,8 +92,26 @@
 }
 
 @media (orientation: portrait) {
+    .servantsCuenta {
+        padding-bottom: 2.5vh;
+    }
+
     .flechaListaServants,
     .flechaInvertidaHorizontal {
         display: none;
+    }
+
+    .contenedorServantsCuenta h2 {
+        margin-bottom: 2.5vh;
+    }
+
+    .listaServantsCuenta {
+        height: auto;
+        width: 100vw;
+    }
+
+    .tarjetasServants {
+        max-width: 87.5vw;
+        padding: 1.5vh 0;
     }
 }

@@ -152,7 +152,7 @@
 @media (orientation: portrait) {
     .contenedorChangelog {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         padding: 0;
 
