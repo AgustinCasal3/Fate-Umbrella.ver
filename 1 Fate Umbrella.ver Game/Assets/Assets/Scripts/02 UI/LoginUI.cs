@@ -12,7 +12,7 @@ public class LoginUI : MonoBehaviour
 
     [Header("Referencias Sistema")]
     public APIManager apiManager;
-    public TextMeshProUGUI textoError; // Opcional: para mostrar errores
+    public TextMeshProUGUI textoError; 
 
     void Awake()
     {

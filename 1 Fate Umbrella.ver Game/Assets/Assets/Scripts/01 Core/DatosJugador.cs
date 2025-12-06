@@ -12,7 +12,9 @@ public class DatosJugador : MonoBehaviour
     public string nombre = ""; // <- LIMPIO
     public int nivel = 0;      // <- LIMPIO
     public float experienciaActual = 0f; // <- LIMPIO
-    public float experienciaNecesaria = 5000f; 
+    public float experienciaNecesaria = 5000f;
+
+    public List<ServantData> inventarioServants = new List<ServantData>();
 
     [Header("Datos de API")]
     // Imagen: también se limpia
