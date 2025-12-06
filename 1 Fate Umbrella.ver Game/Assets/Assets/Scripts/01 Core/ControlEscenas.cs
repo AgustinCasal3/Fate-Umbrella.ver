@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ControlEscenas : MonoBehaviour
 {
-    // Función pública que se activará con el botón
-    // Añade esta referencia en el script que controla el botón
-    // Añade esta referencia en el script que controla el botón
+    
     public ControlTransicion gestorTransicion;
 
     public void CargarEscenaConTransicion(string nombreEscena)

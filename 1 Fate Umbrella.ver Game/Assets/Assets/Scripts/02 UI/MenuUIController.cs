@@ -38,7 +38,12 @@ public class MenuUIController : MonoBehaviour
 
     void Start()
     {
-        datosJugadorInstancia = DatosJugador.Instancia;
+        if (DatosJugador.Instancia != null)
+        {
+            // Los datos ya están cargados en el Singleton después del login.
+            ActualizarDatosUI();
+            CargarImagenPersonaje();
+         }
 
         if (panelNotificacion != null)
         {
@@ -46,20 +51,21 @@ public class MenuUIController : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-
-    }
-
 
     public void ActualizarDatosUI()
     {
-        if (datosJugadorInstancia != null)
+        DatosJugador datos = DatosJugador.Instancia; 
+
+        if (datos != null)
         {
-            textoNombre.text = datosJugadorInstancia.nombre;
-            textoNivel.text = "Nivel " + datosJugadorInstancia.nivel.ToString();
-            barraExperiencia.maxValue = datosJugadorInstancia.experienciaNecesaria;
-            barraExperiencia.value = datosJugadorInstancia.experienciaActual;
+            // diagnostico porque no se que esta pasando
+            Debug.Log($"DIAGNÓSTICO: Asignando Nombre: '{datos.nombre}', Nivel: {datos.nivel}");
+
+            
+            textoNombre.text = datos.nombre;
+            textoNivel.text = "Nivel " + datos.nivel.ToString();
+            barraExperiencia.maxValue = datos.experienciaNecesaria;
+            barraExperiencia.value = datos.experienciaActual;
         }
     }
 
@@ -87,6 +93,11 @@ public class MenuUIController : MonoBehaviour
     }
 
 
+
+
+
+    // mensajes del sech 
+
     public void OnClickFuncionalidadEnDesarrollo()
     {
         StopAllCoroutines();
@@ -106,8 +117,9 @@ public class MenuUIController : MonoBehaviour
         if (DatosJugador.Instancia != null)
         {
             DatosJugador.Instancia.ReiniciarProgreso();
+            string idACargar = DatosJugador.Instancia.idUsuario;
             // Llama a la API de nuevo para recargar el perfil
-            FindObjectOfType<APIManager>()?.IniciarCargaDeDatos(DatosJugador.Instancia.nombre);
+            APIManager.Instancia.IniciarCargaDeDatos(idACargar);
         }
     }
 }

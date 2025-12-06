@@ -60,17 +60,24 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Assets\Scripts\Historia.cs" />
-    <Compile Include="Assets\Assets\Scripts\DatosJugador.cs" />
-    <Compile Include="Assets\Assets\Scripts\ControlTransicion.cs" />
-    <Compile Include="Assets\Assets\Scripts\APIManager.cs" />
-    <Compile Include="Assets\Assets\Scripts\DatosJugadorAPI.cs" />
-    <Compile Include="Assets\Assets\Scripts\BotonVolver.cs" />
-    <Compile Include="Assets\Assets\Scripts\MenuUIController.cs" />
-    <Compile Include="Assets\Assets\Scripts\BetaController.cs" />
-    <Compile Include="Assets\Assets\Scripts\ControladorNovelaVisual.cs" />
-    <Compile Include="Assets\Assets\Scripts\LineaDialogo.cs" />
-    <Compile Include="Assets\Assets\Scripts\ControlEscenas.cs" />
+    <Compile Include="Assets\Assets\Scripts\01 Core\ControlEscenas.cs" />
+    <Compile Include="Assets\Assets\Scripts\01 Core\ControlTransicion.cs" />
+    <Compile Include="Assets\Assets\Scripts\03 Modelos API\DatosJugadorAPI.cs" />
+    <Compile Include="Assets\Assets\Scripts\03 Modelos API\ServantUsuarioAPI.cs" />
+    <Compile Include="Assets\Assets\Scripts\01 Core\DatosJugador.cs" />
+    <Compile Include="Assets\Assets\Scripts\04 Logica del juego\02 Servants\ServantData.cs" />
+    <Compile Include="Assets\Assets\Scripts\02 UI\BetaController.cs" />
+    <Compile Include="Assets\Assets\Scripts\03 Modelos API\LoginResponse.cs" />
+    <Compile Include="Assets\Assets\Scripts\02 UI\MenuUIController.cs" />
+    <Compile Include="Assets\Assets\Scripts\03 Modelos API\LoginData.cs" />
+    <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\Historia.cs" />
+    <Compile Include="Assets\Assets\Scripts\01 Core\APIManager.cs" />
+    <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\LineaDialogo.cs" />
+    <Compile Include="Assets\Assets\Scripts\02 UI\LoginUI.cs" />
+    <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\ControladorNovelaVisual.cs" />
+    <Compile Include="Assets\Assets\Scripts\02 UI\BotonVolver.cs" />
+    <Compile Include="Assets\Assets\Scripts\02 UI\TituloController.cs" />
+    <Compile Include="Assets\Assets\Scripts\03 Modelos API\ServantBaseAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
