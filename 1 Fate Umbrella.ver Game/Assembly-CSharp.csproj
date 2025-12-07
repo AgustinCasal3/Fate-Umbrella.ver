@@ -73,7 +73,9 @@
     <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\Historia.cs" />
     <Compile Include="Assets\Assets\Scripts\01 Core\APIManager.cs" />
     <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\LineaDialogo.cs" />
+    <Compile Include="Assets\Assets\Scripts\04 Logica del juego\02 Servants\ServantMenuController.cs" />
     <Compile Include="Assets\Assets\Scripts\02 UI\LoginUI.cs" />
+    <Compile Include="Assets\Assets\Scripts\04 Logica del juego\02 Servants\ServantSlotUI.cs" />
     <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\ControladorNovelaVisual.cs" />
     <Compile Include="Assets\Assets\Scripts\02 UI\BotonVolver.cs" />
     <Compile Include="Assets\Assets\Scripts\02 UI\TituloController.cs" />

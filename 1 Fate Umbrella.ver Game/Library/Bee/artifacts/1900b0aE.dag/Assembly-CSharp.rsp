@@ -371,6 +371,8 @@
 "Assets/Assets/Scripts/04 Logica del juego/01 Historia/Historia.cs"
 "Assets/Assets/Scripts/04 Logica del juego/01 Historia/LineaDialogo.cs"
 "Assets/Assets/Scripts/04 Logica del juego/02 Servants/ServantData.cs"
+"Assets/Assets/Scripts/04 Logica del juego/02 Servants/ServantMenuController.cs"
+"Assets/Assets/Scripts/04 Logica del juego/02 Servants/ServantSlotUI.cs"
 -langversion:9.0
 /deterministic
 /optimize+

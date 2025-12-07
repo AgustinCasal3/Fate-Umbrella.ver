@@ -35,7 +35,7 @@ public class ServantData
     public string NPEffect;
 
     // Campos Calculados (Opcional, pero vital) 
-    public int TotalATK;
-    public int TotalHP;
+    public int TotalATK => BaseATK;
+    public int TotalHP => BaseHP;
 
 }
