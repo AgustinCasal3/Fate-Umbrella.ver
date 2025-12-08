@@ -9,8 +9,10 @@ router.get('/:token', async (req, res) => {
     try {
         const user = await User.findOne({ verificationToken: token });
 
-        if (!user) return res.status(400).json({ error: 'Token invalido.'});
-
+        if (!user) {
+            return res.status(400).json({ error: 'Token invalido.'});
+        }
+        
         //Verificar Expiracion
         if (!user.verificationExpires || new Date() > new Date(user.verificationExpires)) {
             return res.status(400).json({ error: 'Token Expirado.'});

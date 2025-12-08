@@ -34,7 +34,6 @@ export function Verificacion() {
             <section className="verificacion">
                 <div className="mensajes">
                     <h1>{msg}</h1>
-                    <br />
                     <p>Si fuiste redirigido: Esperarás a ser llevado a iniciar sesión.</p>
                 </div>
             </section>

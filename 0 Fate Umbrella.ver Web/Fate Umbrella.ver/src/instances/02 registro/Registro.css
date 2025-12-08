@@ -252,6 +252,10 @@
     .formularioRegistro button {
         margin-top: 2.5vh;
     }
+
+    .formularioRegistro form p {
+        margin: 1.5vh 0;
+    }
     
     .pass label {
         height: 4vh;

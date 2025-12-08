@@ -118,7 +118,7 @@ export function Header() {
                         {menuLinks.map((link, index) => (
                             <a
                                 key={index}
-                                href={link.href}
+                                href={link.href || '/'}
                                 onClick={link.onClick || cerrarMenu}
                                 target={link.target}
                                 className={menuAbierto ? 'aparecer' : ''}
