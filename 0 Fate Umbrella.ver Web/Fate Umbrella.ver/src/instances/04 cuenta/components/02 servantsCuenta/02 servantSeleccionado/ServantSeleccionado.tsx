@@ -133,7 +133,7 @@ export function ServantSeleccionado({ servant }: Props) {
                                     </div>
                                     <div className="ataqueActual">
                                         <h3>Actual</h3>
-                                        <p>2249</p>
+                                        <p>5000</p>
                                     </div>
                                     <div className="ataqueMaximo">
                                         <h3>Maximo</h3>
@@ -151,7 +151,7 @@ export function ServantSeleccionado({ servant }: Props) {
                                     </div>
                                     <div className="vidaActual">
                                         <h3>Actual</h3>
-                                        <p>1963</p>
+                                        <p>6000</p>
                                     </div>
                                     <div className="vidaMaximo">
                                         <h3>Maximo</h3>

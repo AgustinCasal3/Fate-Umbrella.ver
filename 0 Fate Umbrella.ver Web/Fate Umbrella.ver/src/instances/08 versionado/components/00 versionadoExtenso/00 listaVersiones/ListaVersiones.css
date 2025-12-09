@@ -1,0 +1,101 @@
+/* LISTA VERSIONADO */
+
+.listaVersionesExtenso {
+    width: auto;
+    height: 75vh;
+
+    margin: 2.5vh 5vh 0 0 ;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.listaVersionesExtenso::-webkit-scrollbar {
+    display: none;
+}
+
+.listaVersionesExtenso a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    height: 3vh;
+}
+
+.listaVersionesExtenso a span{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    width: 100%;
+}
+
+.opcionVersionadoExtenso {
+    display: flex;
+    
+    align-items: center;
+    justify-content: left;
+
+    padding: 1.5vh;
+    margin: 1.5vh;
+
+    filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.15));
+
+    background-color: white;
+
+    border: 1px solid lightgray;
+    border-radius: 0.5vh;
+
+    transition: 0.3s ease;
+}
+
+.opcionVersionadoExtenso:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.opcionVersionadoExtenso:has(input[type="radio"]:checked) {
+    border: 1px solid black;
+}
+
+.opcionVersionadoExtenso:has(input[type="radio"]:checked) .imgSelectorExtenso {
+    background-image: url(../../../imgs/Home/Versionado/SelectorEncendido.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.opcionVersionadoExtenso input[type="radio"] {
+    display: none;
+}
+
+.imgSelectorExtenso {
+    min-width: 3vh;
+    width: 3vh;
+    max-width: 3vh;
+    
+    min-height: 3vh;
+    height: 3vh;
+    max-height: 3vh;
+    
+    margin-right: 1vh;
+
+    background-image: url(../../../imgs/Home/Versionado/SelectorApagado.png);
+    background-size: contain;
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transition: 0.3s ease;
+}
+
+@media (orientation: portrait) {
+    .listaVersionesExtenso {
+        width: 80vw;
+        height: 30vh;
+        margin: 0;
+        margin-bottom: 5vh;
+    }
+}
