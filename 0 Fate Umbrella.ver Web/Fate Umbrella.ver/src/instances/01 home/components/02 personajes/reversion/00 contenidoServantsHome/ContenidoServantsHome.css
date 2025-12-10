@@ -1,0 +1,21 @@
+
+/* CONTENIDO */
+
+.contenidoServantsHome {
+    width: 65%;
+
+    padding: 0 17.5%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 135vw 50vh;
+}
+
+.cargandoServants {
+    width: 100%;
+    font-size: 5vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

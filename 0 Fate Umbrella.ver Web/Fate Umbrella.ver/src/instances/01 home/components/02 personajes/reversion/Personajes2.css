@@ -1,0 +1,92 @@
+/* TODO */
+
+.servantsHome {
+    width: 100%;
+
+    border-top: 3px solid lightgray;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* BOTONES */
+
+.contenedorClasesBotones {
+    width: 95%;
+
+    margin: 5vh 0;
+    padding: 0 2.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    
+    gap: 0.5vh;
+
+    position: relative;
+    z-index: 10;
+}
+
+.botonClase {
+    min-width: 10vw;
+    width: auto;
+    height: 5vh;
+}
+
+.botonClase button {
+    width: auto;
+    height: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #EDE9C1;
+    border-bottom: 1px solid #EDE9C1;
+
+    color: #EDE9C1;
+
+    background-color: #281C15;
+
+    transition: 0.3s ease;
+
+    z-index: 999;
+}
+
+.botonClase button:hover {
+    cursor: pointer;
+
+    color: #f5f2ce;
+    background-color: #1e1510;
+}
+
+.botonClase button:hover img {
+    transform: scale(1.05);
+}
+
+.botonClase button img {
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    margin: 0 0 0 0.75vw;
+
+    transition: 0.3s ease;
+}
+
+.botonClase button:hover span {
+    transform: scale(1.025);
+}
+
+.botonClase button span {
+    margin: 0 0.75vw;
+    width: 5vw;
+    font-size: 2vh;
+
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    transition: 0.3s ease;
+}

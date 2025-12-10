@@ -1,0 +1,167 @@
+/* CARRUSEL */
+
+.carruselInfoServant {
+    width: 100%;
+    height: 100%;
+
+    margin: 5vh 0;
+    margin-bottom: 5vh;
+
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.espaciadorInfoServant {
+    height: 127px;
+    margin: 5vh 0;
+}
+
+.textoInfoServant h1 {
+    font-size: 5vh;
+    font-weight: normal;
+    margin: 5vh 0;
+
+    width: 30vw;
+
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.textoInfoServant h2 {
+    font-size: 2vh;
+    font-weight: normal;
+    margin: 1vh 0;
+
+    width: 30vw;
+
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    z-index: 2;
+}
+
+.textoInfoServant h3 {
+    font-size: 1.75vh;
+    font-weight: normal;
+    margin: 1vh 0;
+
+    width: 30vw;
+
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    z-index: 2;
+}
+
+.contenedorIframe {
+    position: relative;
+
+    width: 600px;
+    height: 340px;
+
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+
+    z-index: 2;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contenedorIframe iframe {
+    width: 100%;
+    height: 100%;
+    
+    pointer-events: none;
+}
+
+.contenedorIframe::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(../../../../../../imgs/Home/Servants/FrameBorde.png) no-repeat center;
+    background-size: contain;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Modal para video expandido */
+.modalVideo {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contenedorVideoExpandido {
+    position: relative;
+
+    width: 80vw;
+
+    aspect-ratio: 16/9;
+
+    max-height: 90vh;
+
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contenedorVideoExpandido iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.imagenInfoServant {
+    position: absolute;
+    left: 20vw;
+
+    transform: translateY(-15vh);
+    z-index: 1;
+}
