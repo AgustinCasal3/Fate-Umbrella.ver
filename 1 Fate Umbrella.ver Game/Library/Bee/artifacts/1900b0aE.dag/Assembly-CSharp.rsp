@@ -357,6 +357,7 @@
 "Assets/Assets/Scripts/01 Core/ControlEscenas.cs"
 "Assets/Assets/Scripts/01 Core/ControlTransicion.cs"
 "Assets/Assets/Scripts/01 Core/DatosJugador.cs"
+"Assets/Assets/Scripts/01 Core/JsonHelper.cs"
 "Assets/Assets/Scripts/02 UI/BetaController.cs"
 "Assets/Assets/Scripts/02 UI/BotonVolver.cs"
 "Assets/Assets/Scripts/02 UI/LoginUI.cs"

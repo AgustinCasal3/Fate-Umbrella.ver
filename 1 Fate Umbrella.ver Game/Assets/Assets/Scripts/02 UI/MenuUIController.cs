@@ -93,7 +93,23 @@ public class MenuUIController : MonoBehaviour
     }
 
 
+    public void LoadServantScene()
+    {
+        // Aseguramos que el ControlTransicion esté asignado
+        ControlTransicion controlTransicion = APIManager.Instancia.controlTransicion;
 
+        if (controlTransicion != null)
+        {
+            // El nombre de tu escena de Servants es 'Escena_Servants'
+            controlTransicion.IniciarTransicion("Escena_Servants");
+        }
+        else
+        {
+            Debug.LogError("ControlTransicion no está disponible. No se puede iniciar la transición.");
+            // Carga directa si la transición falla (fallback)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Escena_Servants");
+        }
+    }
 
 
     // mensajes del sech 

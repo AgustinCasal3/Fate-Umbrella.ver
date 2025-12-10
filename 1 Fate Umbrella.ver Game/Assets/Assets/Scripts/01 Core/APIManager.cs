@@ -2,8 +2,8 @@
 using UnityEngine.Networking;
 using System.Collections;
 using System;
-using TMPro; 
-
+using System.Collections.Generic; // Agregado para List<T>
+using TMPro;
 
 public class APIManager : MonoBehaviour
 {
@@ -12,10 +12,10 @@ public class APIManager : MonoBehaviour
     [Header("Configuración de Servidor")]
     public string apiUrlBase = "http://localhost:3001";
     public string endpointCarga = "/users/";
-    public string idUsuarioPrueba = "2"; 
+    public string idUsuarioPrueba = "2";
 
     [Header("Login POST")]
-    public string endpointLogin = "/login"; 
+    public string endpointLogin = "/login";
 
     [Header("Transición de Escena")]
     public ControlTransicion controlTransicion;
@@ -32,10 +32,8 @@ public class APIManager : MonoBehaviour
 
     void Start()
     {
-        
-    }
 
-    //Carga de datos
+    }
 
     public void IniciarCargaDeDatos(string idUsuario)
     {
@@ -66,7 +64,6 @@ public class APIManager : MonoBehaviour
 
                     if (DatosJugador.Instancia != null)
                     {
-                        // Usamos la función de mapeo para rellenar los datos
                         DatosJugador.Instancia.idUsuario = datos.userId;
                         DatosJugador.Instancia.MapearDesdeAPI(datos);
 
@@ -80,8 +77,6 @@ public class APIManager : MonoBehaviour
             }
         }
     }
-
-    //login
 
     public void IntentarLogin(string login, string password, TextMeshProUGUI textoErrorUI)
     {
@@ -97,7 +92,6 @@ public class APIManager : MonoBehaviour
 
         using (UnityWebRequest webRequest = UnityWebRequest.PostWwwForm(urlCompleta, "POST"))
         {
-            // Configuración para enviar JSON
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonPayload);
             webRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
             webRequest.downloadHandler = new DownloadHandlerBuffer();
@@ -107,7 +101,6 @@ public class APIManager : MonoBehaviour
 
             if (webRequest.result != UnityWebRequest.Result.Success)
             {
-                // Muestra un error genérico, ya sea por conexión o credenciales (código 401)
                 string errorMsg = webRequest.error.Contains("401") ? "Usuario o contraseña incorrectos." : "Error de conexión con el servidor.";
                 textoErrorUI.text = errorMsg;
                 Debug.LogError($"Error de Login: {webRequest.error}. URL: {urlCompleta}");
@@ -123,7 +116,6 @@ public class APIManager : MonoBehaviour
                     DatosJugador.Instancia.idUsuario = response.user.userId;
                     DatosJugador.Instancia.MapearDesdeAPI(response.user);
 
-                    //Guarda el ID de usuario en PlayerPrefs para futuras sesiones
                     PlayerPrefs.SetString("SavedUserId", response.user.userId);
                     PlayerPrefs.Save();
 
@@ -132,13 +124,12 @@ public class APIManager : MonoBehaviour
                         LoginUI.Instancia.CerrarPanel();
                     }
 
-                    // 2. Realiza la Transición a la escena de menú.
                     if (controlTransicion != null)
                     {
                         controlTransicion.IniciarTransicion("Escena_MenuPrincipal");
                     }
                     else
-                    { 
+                    {
                         Debug.LogError("Error: ControlTransicion no está asignado o es null. Cargando escena directamente.");
                         UnityEngine.SceneManagement.SceneManager.LoadScene("Escena_MenuPrincipal");
                     }
@@ -151,11 +142,8 @@ public class APIManager : MonoBehaviour
         }
     }
 
-    // FUNCIÓN 1: OBTENER DATOS BASE Y FUSIONAR
     private IEnumerator FetchAndFuseServantData(ServantUsuarioAPI userServant)
     {
-        // 1. OBTENER LA DATA BASE (usando el servantId: "3", etc.)
-        // AJUSTA ESTE ENDPOINT para que traiga la data base de un solo Servant dado su ID.
         string baseEndpoint = $"{apiUrlBase}/servants/{userServant.servantId}";
 
         using (UnityWebRequest webRequest = UnityWebRequest.Get(baseEndpoint))
@@ -164,13 +152,10 @@ public class APIManager : MonoBehaviour
 
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
-                // Deserializamos la data base
                 ServantBaseAPI baseData = JsonUtility.FromJson<ServantBaseAPI>(webRequest.downloadHandler.text);
 
-                // 2. FUSIÓN: Crear el modelo ServantData completo
                 ServantData fusedData = new ServantData
                 {
-                    // Datos de Usuario (ServantUsuarioAPI) 
                     ServantBaseId = userServant.servantId,
                     Level = userServant.level,
                     Exp = userServant.exp,
@@ -179,19 +164,16 @@ public class APIManager : MonoBehaviour
                     Skill2Level = userServant.skillsLevel.skill2,
                     Skill3Level = userServant.skillsLevel.skill3,
 
-                    // Datos de Base (ServantBaseAPI) 
                     Name = baseData.name,
                     Class = baseData.@class,
                     Rank = baseData.rank,
                     PictureName = baseData.picture,
                     FrontName = baseData.front,
 
-                    // Stats
                     BaseATK = baseData.baseStats.atk,
                     BaseHP = baseData.baseStats.hp,
                     NPGain = baseData.baseStats.npGain,
 
-                    // Habilidades y NP (Copiamos las referencias de los arrays/objetos)
                     Skills = baseData.skills,
                     Passives = baseData.passives,
                     NPName = baseData.np.name,
@@ -199,7 +181,6 @@ public class APIManager : MonoBehaviour
 
                 };
 
-                // 3. AÑADIR al Singleton
                 DatosJugador.Instancia.inventarioServants.Add(fusedData);
             }
             else
@@ -209,21 +190,8 @@ public class APIManager : MonoBehaviour
         }
     }
 
-    // FUNCIÓN 2: OBTENER LA LISTA DE SERVANTS DEL INVENTARIO
-
-    // NOTA: Para que Unity deserialice correctamente un array JSON (ej: [{}, {}, {}]),
-    // necesitamos un "Wrapper" si la respuesta es solo el array.
-    // Si tu API devuelve { "servants": [{}, {}, {}] }, usa un Wrapper.
-    [System.Serializable]
-    public class UserServantListWrapper
-    {
-        public ServantUsuarioAPI[] servants; // Ajusta el nombre del campo si es diferente
-    }
-
     public IEnumerator FetchUserServants(string userId)
     {
-        // El endpoint debe devolver una lista/array de ServantUsuarioAPI para el userId.
-        // AJUSTA ESTE ENDPOINT.
         string endpoint = $"{apiUrlBase}/userServants/{userId}";
 
         using (UnityWebRequest webRequest = UnityWebRequest.Get(endpoint))
@@ -233,33 +201,22 @@ public class APIManager : MonoBehaviour
             if (webRequest.result == UnityWebRequest.Result.Success)
             {
                 string jsonResponse = webRequest.downloadHandler.text;
-
-                // Suponemos que la respuesta es un array simple de ServantUsuarioAPI. 
-                // Si tu API devuelve { "servants": [...] }, usa UserServantListWrapper
                 ServantUsuarioAPI[] userServants;
 
                 try
                 {
-                    // INTENTO 1: Deserializar como Wrapper (Si viene con llave raíz)
-                    UserServantListWrapper wrapper = JsonUtility.FromJson<UserServantListWrapper>(jsonResponse);
-                    userServants = wrapper.servants;
+                    userServants = JsonHelper.FromJson<ServantUsuarioAPI>(jsonResponse);
                 }
-                catch
+                catch (Exception ex)
                 {
-                    // INTENTO 2: Deserializar como array directo (Si el JSON es solo [...])
-                    // Requiere librerías externas o un truco, pero lo intentaremos simple:
-                    // Si tienes problemas aquí, AJUSTA el endpoint para que devuelva un objeto con una clave raíz.
-                    // Por simplicidad, asumiremos que el Wrapper funciona.
-                    Debug.LogWarning("No se pudo deserializar con Wrapper. La API debe devolver un objeto contenedor.");
+                    Debug.LogError($"Error CRÍTICO al deserializar Servants. Error: {ex.Message}");
                     yield break;
                 }
 
-                // Limpiamos la lista global y empezamos la fusión
                 DatosJugador.Instancia.inventarioServants.Clear();
 
                 foreach (ServantUsuarioAPI userServant in userServants)
                 {
-                    // Ejecutamos la corrutina de fusión para cada Servant individualmente
                     yield return StartCoroutine(FetchAndFuseServantData(userServant));
                 }
 

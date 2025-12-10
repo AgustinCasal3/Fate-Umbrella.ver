@@ -1,5 +1,3 @@
-// ServantSlotUI.cs
-
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -33,14 +31,29 @@ public class ServantSlotUI : MonoBehaviour
             Debug.LogError($"Sprite no encontrado: {resourcePath}.");
         }
 
-        // 2. Asignar el evento Click (transición de escena)
+        string classResourcePath = $"ClassIcons/{data.Class}";
+
+        Sprite classSprite = Resources.Load<Sprite>(classResourcePath);
+
+        if (classSprite != null)
+        {
+            rankIcon.sprite = classSprite;
+           
+            rankIcon.enabled = true;
+        }
+        else
+        {
+            
+            Debug.LogError($"Ícono de Clase NO encontrado: {classResourcePath}. Verifica la carpeta ClassIcons y el nombre del archivo.");
+            rankIcon.enabled = false; // Oculta el ícono si no se encuentra
+        }
+
         slotButton.onClick.RemoveAllListeners();
         slotButton.onClick.AddListener(OnClickSlot);
     }
 
     private void OnClickSlot()
     {
-        // Pasa el ID del Servant al Manager para iniciar la transición
         if (menuController != null)
         {
             menuController.LoadServantDetailScene(currentServantData.ServantBaseId);

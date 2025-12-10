@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escena_Historia.unity
     guid: 8d72914cba5d60e4383f18360cbb4fc2
+  - enabled: 1
+    path: Assets/Scenes/Escena_Servants.unity
+    guid: f91615e253729dd45a1fb0951ccdb474
   m_configObjects: {}

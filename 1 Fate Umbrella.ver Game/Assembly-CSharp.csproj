@@ -55,6 +55,7 @@
     <UnityVersion>2022.3.62f3</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Assets\Scripts\04 Logica del juego\02 Servants\ServantSlotUI.cs" />
     <Compile Include="Assets\Assets\Scripts\04 Logica del juego\01 Historia\ControladorNovelaVisual.cs" />
     <Compile Include="Assets\Assets\Scripts\02 UI\BotonVolver.cs" />
+    <Compile Include="Assets\Assets\Scripts\01 Core\JsonHelper.cs" />
     <Compile Include="Assets\Assets\Scripts\02 UI\TituloController.cs" />
     <Compile Include="Assets\Assets\Scripts\03 Modelos API\ServantBaseAPI.cs" />
   </ItemGroup>
