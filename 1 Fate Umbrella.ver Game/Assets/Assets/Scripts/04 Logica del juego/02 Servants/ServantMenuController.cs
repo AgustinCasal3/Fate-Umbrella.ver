@@ -15,16 +15,9 @@ public class ServantMenuController : MonoBehaviour
 
     void Start()
     {
-        // 1. Cargar datos si es necesario.
-        if (DatosJugador.Instancia != null && DatosJugador.Instancia.inventarioServants.Count == 0)
-        {
+        // 1. Cargar datos
             StartCoroutine(APIManager.Instancia.FetchUserServants(DatosJugador.Instancia.idUsuario));
             Invoke("CheckAndDisplayServants", 1.5f);
-        }
-        else
-        {
-            DisplayServants();
-        }
     }
 
     private void CheckAndDisplayServants()
@@ -37,11 +30,7 @@ public class ServantMenuController : MonoBehaviour
 
     private void DisplayServants()
     {
-        // Limpiamos los slots
-        foreach (Transform child in contentParent)
-        {
-            Destroy(child.gameObject);
-        }
+        
 
         List<ServantData> servants = DatosJugador.Instancia.inventarioServants;
 
