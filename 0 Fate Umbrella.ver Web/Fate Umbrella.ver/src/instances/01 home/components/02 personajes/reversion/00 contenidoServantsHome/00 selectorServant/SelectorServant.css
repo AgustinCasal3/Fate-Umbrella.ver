@@ -1,6 +1,8 @@
 /* SELECTOR SERVANT */
 
 .selectorServant {
+    user-select: none;
+
     width: auto;
 
     position: absolute;

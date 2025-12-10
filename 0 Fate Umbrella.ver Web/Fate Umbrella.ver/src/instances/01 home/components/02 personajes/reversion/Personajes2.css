@@ -36,6 +36,8 @@
 }
 
 .botonClase button {
+    user-select: none;
+
     width: auto;
     height: 5vh;
 

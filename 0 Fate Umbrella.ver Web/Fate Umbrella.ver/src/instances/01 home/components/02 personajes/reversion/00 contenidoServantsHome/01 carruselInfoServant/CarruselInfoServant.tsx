@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import './carruselInfoServant.css';
 
@@ -46,7 +47,8 @@ export function CarruselInfoServant({ servant }: CarruselInfoServantProps) {
                 </div>
             </div>
 
-            {videoExpandido && (
+            {/* ← CAMBIO: Usa createPortal para renderizar fuera del DOM */}
+            {videoExpandido && createPortal(
                 <div className="modalVideo" onClick={() => setVideoExpandido(false)}>
                     <div className="contenedorVideoExpandido" onClick={(e) => e.stopPropagation()}>
                         <iframe 
@@ -55,7 +57,8 @@ export function CarruselInfoServant({ servant }: CarruselInfoServantProps) {
                             allow="autoplay"
                         ></iframe>
                     </div>
-                </div>
+                </div>,
+                document.body // ← Renderiza directamente en el body
             )}
         </>
     )
