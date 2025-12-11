@@ -63,7 +63,16 @@ export function ContenidoServantsHome({ clase }: Clase) {
     return (
         <>
             <div className="contenidoServantsHome"
-                style={{backgroundImage: `url(../../../../../../imgs/Home/Servants/Fondo/${clase}BG.png)`}}
+                style={{
+                    background: `
+                    url(../../../../../../imgs/Home/Servants/Fondo/${clase}BG.png) no-repeat center 35%,
+                    url(../../../../../../imgs/Home/Servants/Fondo/${clase}BG2.png) no-repeat left calc(35% - 217px)
+                    `,
+                    backgroundSize: `
+                    auto 425px,
+                    auto 105px
+                    `
+                }}
             >
                 <SelectorServant servants={homeServants} onServantChange={setSelectedServant}/>
 

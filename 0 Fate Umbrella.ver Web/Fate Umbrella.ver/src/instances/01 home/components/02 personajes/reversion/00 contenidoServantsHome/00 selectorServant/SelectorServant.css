@@ -20,12 +20,15 @@
 
 .opcionServant {
     width: 125px;
-    height: 125px;
+
+    aspect-ratio: 1/1;
 
     position: relative;
     cursor: pointer;
     filter: brightness(0.7);
     transition: filter 0.3s ease;
+    
+    overflow: hidden;
 }
 
 .opcionServant:hover {
@@ -57,8 +60,12 @@
 }
 
 .opcionServant img {
+    position: relative;
     width: 100%;
     height: 100%;
+
+    object-fit: cover;
+    object-position: center;
 
     z-index: 1;
 }
@@ -70,4 +77,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (orientation: portrait) {
+    .selectorServant {
+        width: 100%;
+
+        overflow-x: scroll;
+
+        margin: 0;
+    }
+
+    .opcionServant,
+    .opcionServant img {
+        width: 22.5vw;
+
+        aspect-ratio: 1/1;
+    }
+    
+    .opcionServant::after {
+        background-size: 22.5vw;
+    }
 }

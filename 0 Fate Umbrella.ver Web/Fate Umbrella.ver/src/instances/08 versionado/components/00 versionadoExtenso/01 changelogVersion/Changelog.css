@@ -18,16 +18,19 @@
 }
 
 .tituloVersionado p {
-    margin: 0 2.5vh;
+    margin: 0 2.5vh !important; 
+    padding-top: 0.75vh;
 
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5vh;
+    justify-content: center;
 
     transition: 0.5s ease;
 }
 
 .tituloVersionado:hover p {
-    margin: 0 7.5vh;
+    margin: 0 5vh !important;
     transform: scale(1.02);
 }
 
@@ -35,11 +38,14 @@
     font-family: 'Rosie Brown';
     font-weight: bold;
 
-    height: 5vh;
+    height: auto;
+    min-height: 5vh;
     font-size: 5vh;
     line-height: 5.75vh;
 
     transition: 0.5s ease;
+    
+    white-space: nowrap;
 }
 
 .changelogVersionExtenso {
@@ -165,45 +171,51 @@
     }
 
     .tituloVersionado {
-        width: 85vw;
+        width: 90vw;
         height: auto;
-        margin: 2.5vh 2.5vw;
+        margin: 2.5vh 0;
     }
 
     .tituloVersionado p {
-        margin: 0;
-
-        display: block;
+        margin: 0 1.5vh !important;
+        padding-top: 0;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 0vh;
+        align-items: center;
+        
         transition: 0.5s ease;
     }
 
     .tituloVersionado:hover p {
-        margin: 0;
+        margin: 0 2.5vh !important;
         transform: scale(1.025);
-    }
-
-    .tituloVersionado p span {
-        display: block;
-
-        max-width: 50vw;
-        height: auto;
-        font-size: 2.75vh;
-        line-height: 3vh;
-
-        text-align: center;
-
-        margin: 0 1.5vh;
-
-        filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 15px white);
-    }
-    
-    .tituloVersionado:hover span {
-        margin: 0 2.5vh;
     }
 
     .tituloVersionado img {
         max-width: 15vw;
         height: auto;
+    }
+
+    .tituloVersionado p span {
+        display: block;
+
+        max-width: 70vw;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        font-size: clamp(2vh, 2.5vh, 3vh);
+        line-height: normal;
+
+        text-align: center;
+
+        margin: 0;
+        padding: 0;
+
+        filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 15px white);
+        
+        word-wrap: break-word;
     }
 
     .changelogVersionExtenso h2 {

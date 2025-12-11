@@ -38,8 +38,22 @@ export function CarruselInfoServant({ servant }: CarruselInfoServantProps) {
                     ))}
 
                     <div className="contenedorIframe" onClick={() => setVideoExpandido(true)}>
-                        <iframe src={`https://www.youtube.com/embed/${servant.npVideo}`} title={`Noble Phantasm ${servant.name}`}></iframe>
-                    </div>  
+
+                        {/* ▶ Thumbnail + Botón personalizado */}
+                        {!videoExpandido && (
+                            <>
+                                <img
+                                    className="thumbnailNP"
+                                    src={`https://img.youtube.com/vi/${servant.npVideo}/maxresdefault.jpg`}
+                                    alt="Thumbnail"
+                                />
+
+                                <div className="botonPlayPersonalizado"></div>
+                            </>
+                        )}
+
+                    </div>
+
                 </div>
 
                 <div className="imagenInfoServant">

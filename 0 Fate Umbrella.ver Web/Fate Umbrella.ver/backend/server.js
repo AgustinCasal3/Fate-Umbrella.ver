@@ -13,6 +13,7 @@ import RegisterRouter from './routes/register.js';
 import VerifyRouter from './routes/verify.js';
 import EmpleadosRouter from './routes/empleados.js';
 import HomeServantsRouter from './routes/homeServants.js';
+import VersionsRouter from './routes/versions.js';
 
 import { getLocalIP } from './utils/getLocalIP.js'
 
@@ -47,6 +48,8 @@ app.use('/verify', VerifyRouter);
 app.use('/empleados', EmpleadosRouter);
 
 app.use('/homeServants', HomeServantsRouter);
+
+app.use('/versions', VersionsRouter);
 
 mongoose.connect(process.env.MONGO_URI)
     .then( () => console.log('Conectado Exitosamente a MongoDB.') )
