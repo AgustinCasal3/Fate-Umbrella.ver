@@ -15,6 +15,7 @@ export function ServantsHome() {
         'Assassin', 
         'Berserker', 
         'Ruler',
+        'Avenger',
         'Alter Ego',
         'Foreigner',
         'MoonCancer',
