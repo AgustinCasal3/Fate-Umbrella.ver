@@ -18,6 +18,7 @@ export function ServantsHome() {
         'Alter Ego',
         'Foreigner',
         'MoonCancer',
+        'Pretender',
         'Shielder'
     ]
 
